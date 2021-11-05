@@ -4,6 +4,8 @@ This dictionary grew out of an effort to define any terms I did not understand. 
 
 Feel free to create an issue or open a pull request if a term is incorrect or you want to add more.
 
+Also, please star this repository if you find it useful. Thanks!
+
 ## Copyright
 
 © Jake Knerr at Blotli
