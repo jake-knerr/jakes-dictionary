@@ -2,7 +2,7 @@
 
 This dictionary grew out of an effort to define any terms I did not understand. Some of the terms herein are pretty basic, but as they say, one has to start somewhere.
 
-Feel free to submit an issue or open a pull request if a term is incorrect or you want to add more.
+Feel free to create an issue or open a pull request if a term is incorrect or you want to add more.
 
 ## Copyright
 
