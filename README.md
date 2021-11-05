@@ -16,10 +16,7 @@ The first sentence of the definition is the _summary_. The summary has an implie
 
 ## Terms To Be Added
 
-- https://en.wikipedia.org/wiki/Clean_room_design
-- identifier (https://developer.mozilla.org/en-US/docs/Glossary/Identifier)
-- algorithm
-- foot gun
+- None at the moment...
 
 ---
 
@@ -152,6 +149,10 @@ The "Agile Manifesto" introduced the term in 2001 after a conference of 17 devel
   - `a × (b + c) = a × b + a × c`
 - Identity.
   - `a = b`
+
+#### Algorithm
+
+a series of steps to solve a problem.
 
 #### Aliasing
 
@@ -670,6 +671,10 @@ properties that are shared by all instances of a class, including the class itse
 a technique characterized by using classes as templates to define objects and creating subclasses to extend functionality.
 
 _White_ in _white-box_ because the parent implementation is visible to the subclass.
+
+#### Clean Room Design, Clean-Room Design, Chinese Wall Technique
+
+copying a design by reverse engineering and then recreating a new design with the knowledge gained from the reverse engineering, but without infringing any original design's copyrights.
 
 #### Client Code
 
@@ -1626,6 +1631,10 @@ functions that are not higher-order functions.
 
 a object that minimizes memory use by sharing as much data as possible with other similar objects.
 
+#### Footgun
+
+a feature that has a high likelihood of causing the developer or user to shoot themselves in the foot.
+
 #### Forking
 
 with regards to Git, duplicating a repository, and creating a new independent repository.
@@ -2097,6 +2106,16 @@ Generally, i18n refers to enabling easy localization for specific target audienc
 an operation that is safe to perform multiple times.
 
 Pronounced (I-DEM-PO-TENT).
+
+#### Identifier
+
+characters in code that identify variables, functions, or other properties.
+
+Identifiers differ from strings in that strings are data and identifiers are not.
+
+```javascript
+const iAmAIdentifier = 10;
+```
 
 #### Idiomatic, Idiomatic JavaScript
 
