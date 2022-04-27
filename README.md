@@ -8,7 +8,7 @@ Also, please star this repository if you find it useful. Thanks!
 
 ## Author
 
-© Jake Knerr
+© Jake Knerr - Ardisia Labs LLC
 
 ## Structure
 
