@@ -16,9 +16,17 @@ Term definitions are grouped by the first letter in the term, just like in a sta
 
 The first sentence of the definition is the _summary_. The summary has an implied subject that is the term being defined and concisely answers the question, "What does [insert term here] mean?" Also, the summary may be a sentence fragment. Any further sentences in the definition are complete sentences.
 
+## Good Sources
+
+- See the [The Jargon File](http://www.catb.org/~esr/jargon/html/go01.html) for definitions of many terms in hacker culture.
+
 ## Terms To Be Added
 
-- None at the moment...
+- knurd
+- clustergeeking
+- codewalker
+- tenured grad student
+- language lawyer
 
 ---
 
