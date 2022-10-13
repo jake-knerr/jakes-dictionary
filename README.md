@@ -1448,7 +1448,9 @@ ActionScript (_wipes tear_), good times man, good times...
 
 #### Edge Computing
 
-an architectural approach that brings computation and storage closer to requests to reduce latency. Imagine the source of truth server replicating itself to many edge servers across the world. Next, user requests can be routed to the closest edge server to reduce latency.
+an architectural approach that brings computation and storage closer to requests to reduce latency.
+
+Imagine the source of truth server replicating itself to many edge servers across the world. Next, user requests can be routed to the closest edge server to reduce latency.
 
 #### Eiffel
 
@@ -2404,7 +2406,9 @@ all of one's knowledge and experience.
 
 #### Knurd
 
-alternative spelling of nerd. Originates from slang referring to college students who pursued interests that are the opposite of getting "drunk", which spelled backwards is knurd.
+alternative spelling of nerd.
+
+Originates from slang referring to college students who pursued interests that are the opposite of getting "drunk", which spelled backwards is knurd.
 
 **[⬆ back to index](#index)**
 
@@ -3956,7 +3960,9 @@ let x = "outer scope";
 
 #### Tenured Grad Student
 
-one who has been in graduate school for 10 years because they are a "ten-yeared" student. Also, can refer to a seventh-year student because they have most likely been around longer than any untentured faculty.
+one who has been in graduate school for 10 years because they are a "ten-yeared" student.
+
+Can also refer to a seventh-year student because they have most likely been around longer than any untentured faculty.
 
 #### Ternary Operator, Conditional Operator
 
