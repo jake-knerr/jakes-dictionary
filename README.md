@@ -22,13 +22,7 @@ The first sentence of the definition is the _summary_. The summary has an implie
 
 ## Terms To Be Added
 
-- knurd
-- clustergeeking
-- codewalker
-- tenured grad student
-- language lawyer
-
----
+-
 
 ## Index
 
@@ -735,6 +729,10 @@ let boo = foo();
 boo();
 ```
 
+#### Cluster Geeking
+
+spending a lot of time in the computer cluster/lab.
+
 #### COBOL, Common Business-Oriented Language
 
 a compiled language designed in 1959 that added OOP features in 2002.
@@ -748,6 +746,10 @@ when no more work will be done to the code before release.
 #### Code Smell
 
 a surface indication in code that usually corresponds to a deeper problem.
+
+#### Codewalker
+
+a program that traverses the source code of other programs.
 
 #### Cognitive Load
 
@@ -1444,6 +1446,10 @@ ECMAScript was initially based on JavaScript. Other implementations of ECMAScrip
 
 ActionScript (_wipes tear_), good times man, good times...
 
+#### Edge Computing
+
+an architectural approach that brings computation and storage closer to requests to reduce latency. Imagine the source of truth server replicating itself to many edge servers across the world. Next, user requests can be routed to the closest edge server to reduce latency.
+
 #### Eiffel
 
 a compiled, object-oriented language created to increase the reliability of commercial software development.
@@ -1828,6 +1834,10 @@ Functors come from category theory and observe a set of functor laws that ensure
 Note, this is a reductive definition of functors but is essentially accurate.
 
 Functors are also known as containers, wrapped values, boxes, mappables, and many other terms.
+
+#### Fuzzing, Fuzz Testing
+
+a software testing technique that provides invalid, unexpected, and/or random inputs to software to gauge the response.
 
 **[⬆ back to index](#index)**
 
@@ -2392,6 +2402,10 @@ Kludge is indirectly derived from the German word _klug_, which means clever.
 
 all of one's knowledge and experience.
 
+#### Knurd
+
+alternative spelling of nerd. Originates from slang referring to college students who pursued interests that are the opposite of getting "drunk", which spelled backwards is knurd.
+
 **[⬆ back to index](#index)**
 
 ## L
@@ -2424,6 +2438,10 @@ loopI: for (i = 0; i < 1; i++) {
 #### Lambda Expressions, Anonymous Functions
 
 a function that is not bound to a pointer.
+
+#### Language Lawyer
+
+a software engineer familiar with many drawbacks and features of a particular programming language.
 
 #### Last In First Out (LIFO)
 
@@ -3935,6 +3953,10 @@ let x = "outer scope";
   let x = "inner scope";
 })();
 ```
+
+#### Tenured Grad Student
+
+one who has been in graduate school for 10 years because they are a "ten-yeared" student. Also, can refer to a seventh-year student because they have most likely been around longer than any untentured faculty.
 
 #### Ternary Operator, Conditional Operator
 
