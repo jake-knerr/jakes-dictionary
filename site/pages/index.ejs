@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dictionary</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="preload"
+      href="/assets/fonts/Inter.var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <style>
+      @font-face {
+        font-family: Inter var;
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url("/assets/fonts/Inter.var.woff2") format("woff2");
+        font-named-instance: Regular;
+      }
+      @font-face {
+        font-family: Inter var;
+        font-style: italic;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url("/assets/fonts/Inter-italic.var.woff2") format("woff2");
+        font-named-instance: Italic;
+      }
+
+      html,
+      body {
+        background: #fff;
+        font-size: 1rem;
+        margin: 0;
+        scrollbar-gutter: stable;
+      }
+
+      .header {
+        background: #fff;
+        height: 48px;
+        border-bottom: 1px solid #000;
+        position: sticky;
+        top: 0;
+      }
+
+      .header > div {
+        margin: 0 auto;
+        max-width: 1024px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .content {
+        margin: 0 auto;
+        max-width: 1024px;
+        padding: 0 16px;
+      }
+
+      .scroll-top-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .highlight {
+        background: rgba(255, 0, 0, 0.25);
+        border-radius: 2px;
+        padding: 2px;
+      }
+
+      @media (min-width: 768px) {
+        .scroll-top-btn {
+          bottom: 50px;
+          right: 50px;
+        }
+      }
+    </style>
+    <script type="module">
+      const main = document.querySelector(".content");
+      const cloned = main.cloneNode(true);
+
+      const parseNode = document.createElement("div");
+
+      const search = document.getElementById("search-field");
+
+      search.oninput = () => {
+        const searchValue = search.value;
+        if (!searchValue) return (main.innerHTML = cloned.innerHTML);
+
+        let innerHTML = "";
+        let include = false;
+
+        for (const $ of cloned.querySelectorAll(":scope > *")) {
+          if ($.tagName === "H4") {
+            if (
+              $.innerText.toLowerCase().indexOf(searchValue.toLowerCase()) > -1
+            ) {
+              parseNode.innerHTML = $.outerHTML;
+              parseNode.firstChild.innerHTML =
+                parseNode.firstChild.innerHTML.replace(
+                  // regexp will ensure not matching across a tag
+                  new RegExp(`(?<!<[^>]*)(${search.value})`, "gi"),
+                  `<span class="highlight">$1</span>`
+                );
+
+              innerHTML += parseNode.innerHTML;
+              include = true;
+            } else {
+              include = false;
+            }
+          } else if ($.tagName === "P" && include) {
+            innerHTML += $.outerHTML;
+          }
+        }
+
+        main.innerHTML = innerHTML;
+      };
+
+      const topBtn = document.querySelector(".scroll-top-btn");
+
+      document.addEventListener(
+        "scroll",
+        (event) => {
+          topBtn.style.display =
+            document.scrollingElement.scrollTop > 500 ? "block" : "none";
+        },
+        {
+          passive: true,
+          capture: true,
+        }
+      );
+    </script>
+  </head>
+  <body>
+    <div>
+      <header class="header">
+        <div>
+          <div>
+            <input
+              id="search-field"
+              autocomplete="off"
+              autocorrect="off"
+              placeholder="Filter..."
+              spellcheck="false"
+            />
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                height="16"
+                width="16"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <a href="">Github Repo</a>
+        </div>
+      </header>
+      <main class="content"><%- data %></main>
+      <button
+        class="scroll-top-btn"
+        onclick="document.scrollingElement.scrollTo({top: 0, behavior: 'smooth'})"
+      >
+        Return to Top
+      </button>
+    </div>
+  </body>
+</html>
