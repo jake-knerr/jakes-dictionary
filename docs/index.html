@@ -100,8 +100,19 @@
 
       .scroll-top-btn {
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        top: 80px;
+        left: 0;
+        right: 0;
+        max-width: 100px;
+        margin: auto;
+        opacity: 0;
+        transform: translateY(-40px);
+        transition: transform 300ms, opacity 300ms;
+      }
+
+      .scroll-top-btn--show {
+        transform: translateY(0px);
+        opacity: 1;
       }
 
       :target {
@@ -134,11 +145,6 @@
       @media (min-width: 768px) {
         .content {
           padding: 0 32px;
-        }
-
-        .scroll-top-btn {
-          bottom: 50px;
-          right: 50px;
         }
       }
     </style>
@@ -182,15 +188,19 @@
       };
 
       const topBtn = document.querySelector(".scroll-top-btn");
+      topBtn.onclick = () =>
+        document.scrollingElement.scrollTo({ top: 0, behavior: "smooth" });
       document.addEventListener(
         "scroll",
-        (event) =>
-          (topBtn.style.display =
-            document.scrollingElement.scrollTop > 500 ? "block" : "none"),
-        {
-          passive: true,
-          capture: true,
-        }
+        (event) => (
+          topBtn.classList[
+            document.scrollingElement.scrollTop > 500 ? "add" : "remove"
+          ]("scroll-top-btn--show"),
+          {
+            passive: true,
+            capture: true,
+          }
+        )
       );
     </script>
   </head>
@@ -2629,12 +2639,7 @@ if (10 === foo) {
 <p><strong><a href="#index">⬆ back to index</a></strong></p>
 </div>
       </main>
-      <button
-        class="scroll-top-btn"
-        onclick="document.scrollingElement.scrollTo({top: 0, behavior: 'smooth'})"
-      >
-        Return to Top
-      </button>
+      <button class="scroll-top-btn">Return to Top</button>
     </div>
   </body>
 </html>
