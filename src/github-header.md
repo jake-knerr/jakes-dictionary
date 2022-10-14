@@ -1,6 +1,6 @@
 # Dictionary
 
-Please visit the [searchable version]() of this dictionary.
+Please visit the [searchable version](https://jake-knerr.github.io/dictionary/) of this dictionary.
 
 This dictionary grew out of an effort to define any terms I did not understand. Some of the terms herein are pretty basic, but as they say, one has to start somewhere.
 
@@ -25,3 +25,5 @@ The first sentence of the definition is the _summary_. The summary has an implie
 ## Terms To Be Added
 
 -
+
+---

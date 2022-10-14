@@ -1,4 +1,12 @@
+## Index
+
+[A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
+
+---
+
 ## A
+
+---
 
 #### A Duck
 
@@ -289,7 +297,13 @@ the process by which JavaScript adds semicolons to the end of code lines when th
 
 As a general rule, newlines trigger ASI.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## B
+
+---
 
 #### B-Tree
 
@@ -520,7 +534,13 @@ Some Microsoft text software, like Notepad, requires the BOM to use UTF-8 encodi
 
 a more efficient version of source code designed for faster execution by a virtual machine. Bytecode is not as low-level as object/machine code.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## C
+
+---
 
 #### C
 
@@ -1003,7 +1023,13 @@ a metric used to measure the complexity of a program.
 
 Cyclomatic complexity is calculated by counting the number of paths through the source code using control flow graphs. For instance, if the source code contained no branching points (`if` or `for` statements), the complexity would be one since there is only a single path. However, if the code had a single branching point (one `if` statement) then the complexity would be two.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## D
+
+---
 
 #### Daemon
 
@@ -1390,7 +1416,13 @@ Dynamic programming is used most often for recursive problems.
 
 checking type at runtime as opposed to compile time.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## E
+
+---
 
 #### Eager Evaluations, Strict Evaluations, Greedy Evaluations
 
@@ -1553,7 +1585,13 @@ code that produces a value and can be used anywhere a value is expected.
 
 a type of agile software development that advocates frequent releases, code review, unit testing, pair programming, a flat management structure, and more.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## F
+
+---
 
 #### Factory Function
 
@@ -1799,7 +1837,13 @@ Functors are also known as containers, wrapped values, boxes, mappables, and man
 
 a software testing technique that provides invalid, unexpected, and/or random inputs to software to gauge the response.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## G
+
+---
 
 #### Garbage Collection, Automatic Memory Management
 
@@ -1905,7 +1949,13 @@ To grok something is not only to understand it, but to have deeply entered the w
 
 writing code to make sure that the input data is the expected type or to more generally look for a potential error.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## H
+
+---
 
 #### Handler
 
@@ -2067,7 +2117,13 @@ an extension of the term hypertext, a non-linear medium of information , which i
 
 The web is hypermedia.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## I
+
+---
 
 #### i18n
 
@@ -2263,7 +2319,13 @@ a control structure that executes a group of statements multiple times.
 
 an object with behavior used to traverse a collection.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## J
+
+---
 
 #### Java
 
@@ -2312,7 +2374,13 @@ a technique where source code is compiled right before execution.
 
 Modern JavaScript environments use JIT.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## K
+
+---
 
 #### Kaizen
 
@@ -2358,7 +2426,13 @@ alternative spelling of nerd.
 
 Originates from slang referring to college students who pursued interests that are the opposite of getting "drunk", which spelled backwards is knurd.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## L
+
+---
 
 #### L10n
 
@@ -2568,7 +2642,13 @@ type of currying where more than one argument may be passed per function call.
 
 Loose currying is loose because strict currying only allows one argument per call.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## M
+
+---
 
 #### Machine Epsilon
 
@@ -2778,7 +2858,13 @@ See [accessor method](#accessor-method-getter).
 
 when multiple functions recursively call each other.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## N
+
+---
 
 #### Namespaces
 
@@ -2842,7 +2928,13 @@ null is a specific value applied to a typed object.
 
 A famous bug in JavaScript is `typeof null == "object"`
 
+**[⬆ back to index](#index)**
+
+---
+
 ## O
+
+---
 
 #### Object
 
@@ -2963,7 +3055,13 @@ Higher orthogonality means changes are more isolated and trigger fewer changes e
 
 the result when a numerical result is so large that it cannot be presented in numerical format.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## P
+
+---
 
 #### Paging
 
@@ -3299,7 +3397,13 @@ an interpreted language designed to emphasize code readability and conciseness.
 
 Designed in 1991 by Guido van Rossum. The name was inspired by Monty Python's Flying Circus sketch comedy show.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## Q
+
+---
 
 #### Quality Without a Name (QWAN)
 
@@ -3321,7 +3425,13 @@ A random element is selected from the array, and then the array is partitioned s
 
 dive in and get stuck.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## R
+
+---
 
 #### Race Condition
 
@@ -3509,7 +3619,13 @@ Ruby was designed in 1995 by Yukihiro Matsumoto in Japan. Mr. Matsumoto is also 
 
 functions that are executed completely before any other functions are executed.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## S
+
+---
 
 #### Safe Programming Language
 
@@ -3839,7 +3955,13 @@ defines the allowable sequence of characters in code.
 
 refers to a system that is being tested for correct operation.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## T
+
+---
 
 #### Tacit Knowledge
 
@@ -4076,7 +4198,13 @@ when multiple characters combine into a single character.
 
 The ampersand "&" character developed from a Latin ligature in which e and t were combined.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## U
+
+---
 
 #### Unary Function
 
@@ -4150,7 +4278,13 @@ functions that handle common, often reused tasks and usually do not have side-ef
 
 Generally speaking, utility functions are more generalized and less specific than other functions.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## V
+
+---
 
 #### Variable Live Time
 
@@ -4200,7 +4334,13 @@ in JavaScript, the `void` operator evaluates the given expression and returns `u
 
 In some other languages, like C, when a function returns a void type, it is returning an empty result.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## W
+
+---
 
 #### Waterfall
 
@@ -4271,9 +4411,21 @@ a tongue-in-cheek way to describe the result of not being DRY.
 
 an editor where users edit structured data rather than the visual presentation.
 
+**[⬆ back to index](#index)**
+
+---
+
 ## X
 
+---
+
+**[⬆ back to index](#index)**
+
+---
+
 ## Y
+
+---
 
 #### You Aren't Gonna Need It (YAGNI)
 
@@ -4301,4 +4453,12 @@ if (10 === foo) {
 }
 ```
 
+**[⬆ back to index](#index)**
+
+---
+
 ## Z
+
+---
+
+**[⬆ back to index](#index)**

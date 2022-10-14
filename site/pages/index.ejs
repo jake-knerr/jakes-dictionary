@@ -40,6 +40,7 @@
         font-size: 1rem;
         margin: 0;
         scrollbar-gutter: stable;
+        scroll-margin-top: 200px;
       }
 
       .header {
@@ -62,7 +63,12 @@
       .content {
         margin: 0 auto;
         max-width: 1024px;
-        padding: 0 8px;
+        padding: 0 16px;
+      }
+
+      .primary > p:first-of-type {
+        display: flex;
+        justify-content: space-between;
       }
 
       .scroll-top-btn {
@@ -71,15 +77,37 @@
         right: 20px;
       }
 
+      :target {
+        animation-duration: 1000ms;
+        animation-name: fade;
+      }
+
+      @keyframes fade {
+        from {
+          background: rgba(255, 0, 0, 0.25);
+        }
+
+        to {
+          background: #fff;
+        }
+      }
+
+      h2,
+      h4,
+      a {
+        scroll-margin-top: 120px;
+      }
+
       .highlight {
         background: rgba(255, 0, 0, 0.25);
         border-radius: 2px;
         padding: 2px;
+        transition: background 500ms;
       }
 
       @media (min-width: 768px) {
         .content {
-          padding: 0 16px;
+          padding: 0 32px;
         }
 
         .scroll-top-btn {
@@ -89,7 +117,7 @@
       }
     </style>
     <script type="module">
-      const main = document.querySelector(".content");
+      const main = document.querySelector(".primary");
       const cloned = main.cloneNode(true);
 
       const parseNode = document.createElement("div");
@@ -98,7 +126,9 @@
 
       search.oninput = () => {
         const searchValue = search.value;
-        if (!searchValue) return (main.innerHTML = cloned.innerHTML);
+        if (!searchValue) {
+          return (main.innerHTML = cloned.innerHTML);
+        }
 
         let innerHTML = "";
         let include = false;
@@ -174,11 +204,14 @@
               </svg>
             </button>
           </div>
-
           <a href="">Github Repo</a>
         </div>
       </header>
-      <main class="content"><%- data %></main>
+
+      <main class="content">
+        <div><h1>Jake's Dictionary</h1></div>
+        <div class="primary"><%- data %></div>
+      </main>
       <button
         class="scroll-top-btn"
         onclick="document.scrollingElement.scrollTo({top: 0, behavior: 'smooth'})"
