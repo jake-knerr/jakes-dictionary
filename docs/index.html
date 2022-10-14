@@ -46,8 +46,27 @@
         scrollbar-gutter: stable;
       }
 
+      h1 {
+        margin: 40px 0;
+      }
+
+      h2::before {
+        content: "";
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+
       pre {
         overflow: auto;
+      }
+
+      a:link,
+      a:visited {
+        color: blue;
+      }
+
+      a:active {
+        color: red;
       }
 
       .header {
@@ -64,7 +83,15 @@
         padding: 0 16px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         height: 100%;
+      }
+
+      .header input {
+        border: 1px solid #000;
+        border-radius: 0;
+        height: 32px;
+        padding: 4px 8px;
       }
 
       .content {
@@ -184,32 +211,14 @@
     <div>
       <header class="header">
         <div>
-          <div>
-            <input
-              id="search-field"
-              autocomplete="off"
-              autocorrect="off"
-              placeholder="Filter..."
-              spellcheck="false"
-            />
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                height="16"
-                width="16"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
+          <input
+            id="search-field"
+            autocomplete="off"
+            autocorrect="off"
+            placeholder="Filter..."
+            spellcheck="false"
+            type="search"
+          />
           <a href="https://github.com/jake-knerr/dictionary">Github Repo</a>
         </div>
       </header>
