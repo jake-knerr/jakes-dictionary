@@ -35,8 +35,6 @@ The first sentence of the definition is the _summary_. The summary has an implie
 
 ## A
 
----
-
 #### A Duck
 
 a software feature added merely to draw attention, be noticed by management, and ultimately be removed.
@@ -328,11 +326,7 @@ As a general rule, newlines trigger ASI.
 
 **[⬆ back to index](#index)**
 
----
-
 ## B
-
----
 
 #### B-Tree
 
@@ -565,11 +559,7 @@ a more efficient version of source code designed for faster execution by a virtu
 
 **[⬆ back to index](#index)**
 
----
-
 ## C
-
----
 
 #### C
 
@@ -1054,11 +1044,7 @@ Cyclomatic complexity is calculated by counting the number of paths through the 
 
 **[⬆ back to index](#index)**
 
----
-
 ## D
-
----
 
 #### Daemon
 
@@ -1447,11 +1433,7 @@ checking type at runtime as opposed to compile time.
 
 **[⬆ back to index](#index)**
 
----
-
 ## E
-
----
 
 #### Eager Evaluations, Strict Evaluations, Greedy Evaluations
 
@@ -1616,11 +1598,7 @@ a type of agile software development that advocates frequent releases, code revi
 
 **[⬆ back to index](#index)**
 
----
-
 ## F
-
----
 
 #### Factory Function
 
@@ -1868,11 +1846,7 @@ a software testing technique that provides invalid, unexpected, and/or random in
 
 **[⬆ back to index](#index)**
 
----
-
 ## G
-
----
 
 #### Garbage Collection, Automatic Memory Management
 
@@ -1980,11 +1954,7 @@ writing code to make sure that the input data is the expected type or to more ge
 
 **[⬆ back to index](#index)**
 
----
-
 ## H
-
----
 
 #### Handler
 
@@ -2148,11 +2118,7 @@ The web is hypermedia.
 
 **[⬆ back to index](#index)**
 
----
-
 ## I
-
----
 
 #### i18n
 
@@ -2350,11 +2316,7 @@ an object with behavior used to traverse a collection.
 
 **[⬆ back to index](#index)**
 
----
-
 ## J
-
----
 
 #### Java
 
@@ -2405,11 +2367,7 @@ Modern JavaScript environments use JIT.
 
 **[⬆ back to index](#index)**
 
----
-
 ## K
-
----
 
 #### Kaizen
 
@@ -2457,11 +2415,7 @@ Originates from slang referring to college students who pursued interests that a
 
 **[⬆ back to index](#index)**
 
----
-
 ## L
-
----
 
 #### L10n
 
@@ -2673,11 +2627,7 @@ Loose currying is loose because strict currying only allows one argument per cal
 
 **[⬆ back to index](#index)**
 
----
-
 ## M
-
----
 
 #### Machine Epsilon
 
@@ -2889,11 +2839,7 @@ when multiple functions recursively call each other.
 
 **[⬆ back to index](#index)**
 
----
-
 ## N
-
----
 
 #### Namespaces
 
@@ -2959,11 +2905,7 @@ A famous bug in JavaScript is `typeof null == "object"`
 
 **[⬆ back to index](#index)**
 
----
-
 ## O
-
----
 
 #### Object
 
@@ -3086,11 +3028,7 @@ the result when a numerical result is so large that it cannot be presented in nu
 
 **[⬆ back to index](#index)**
 
----
-
 ## P
-
----
 
 #### Paging
 
@@ -3428,11 +3366,7 @@ Designed in 1991 by Guido van Rossum. The name was inspired by Monty Python's Fl
 
 **[⬆ back to index](#index)**
 
----
-
 ## Q
-
----
 
 #### Quality Without a Name (QWAN)
 
@@ -3456,11 +3390,7 @@ dive in and get stuck.
 
 **[⬆ back to index](#index)**
 
----
-
 ## R
-
----
 
 #### Race Condition
 
@@ -3650,11 +3580,7 @@ functions that are executed completely before any other functions are executed.
 
 **[⬆ back to index](#index)**
 
----
-
 ## S
-
----
 
 #### Safe Programming Language
 
@@ -3986,11 +3912,7 @@ refers to a system that is being tested for correct operation.
 
 **[⬆ back to index](#index)**
 
----
-
 ## T
-
----
 
 #### Tacit Knowledge
 
@@ -4229,11 +4151,7 @@ The ampersand "&" character developed from a Latin ligature in which e and t wer
 
 **[⬆ back to index](#index)**
 
----
-
 ## U
-
----
 
 #### Unary Function
 
@@ -4309,11 +4227,7 @@ Generally speaking, utility functions are more generalized and less specific tha
 
 **[⬆ back to index](#index)**
 
----
-
 ## V
-
----
 
 #### Variable Live Time
 
@@ -4365,11 +4279,7 @@ In some other languages, like C, when a function returns a void type, it is retu
 
 **[⬆ back to index](#index)**
 
----
-
 ## W
-
----
 
 #### Waterfall
 
@@ -4442,19 +4352,11 @@ an editor where users edit structured data rather than the visual presentation.
 
 **[⬆ back to index](#index)**
 
----
-
 ## X
-
----
 
 **[⬆ back to index](#index)**
 
----
-
 ## Y
-
----
 
 #### You Aren't Gonna Need It (YAGNI)
 
@@ -4484,10 +4386,6 @@ if (10 === foo) {
 
 **[⬆ back to index](#index)**
 
----
-
 ## Z
-
----
 
 **[⬆ back to index](#index)**
