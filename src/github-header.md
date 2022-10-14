@@ -24,6 +24,6 @@ The first sentence of the definition is the _summary_. The summary has an implie
 
 ## Terms To Be Added
 
--
+- ***
 
----
+  ***
