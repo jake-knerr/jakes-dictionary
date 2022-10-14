@@ -156,7 +156,6 @@
 
       search.oninput = () => {
         const searchValue = search.value;
-        alert(searchValue, "input");
         if (!searchValue) return (main.innerHTML = cloned.innerHTML);
 
         let innerHTML = "";
@@ -170,8 +169,7 @@
               parseNode.innerHTML = $.outerHTML;
               parseNode.firstChild.innerHTML =
                 parseNode.firstChild.innerHTML.replace(
-                  // regexp will ensure not matching across a tag
-                  new RegExp(`(?<!<[^>]*)(${search.value})`, "gi"),
+                  new RegExp(`(${search.value})`, "gi"),
                   `<span class="highlight">$1</span>`
                 );
 
