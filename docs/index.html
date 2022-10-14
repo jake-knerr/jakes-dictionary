@@ -145,16 +145,12 @@
     <script type="module">
       const main = document.querySelector(".primary");
       const cloned = main.cloneNode(true);
-
       const parseNode = document.createElement("div");
-
       const search = document.getElementById("search-field");
 
       search.oninput = () => {
         const searchValue = search.value;
-        if (!searchValue) {
-          return (main.innerHTML = cloned.innerHTML);
-        }
+        if (!searchValue) return (main.innerHTML = cloned.innerHTML);
 
         let innerHTML = "";
         let include = false;
@@ -186,13 +182,11 @@
       };
 
       const topBtn = document.querySelector(".scroll-top-btn");
-
       document.addEventListener(
         "scroll",
-        (event) => {
-          topBtn.style.display =
-            document.scrollingElement.scrollTop > 500 ? "block" : "none";
-        },
+        (event) =>
+          (topBtn.style.display =
+            document.scrollingElement.scrollTop > 500 ? "block" : "none"),
         {
           passive: true,
           capture: true,
