@@ -8,10 +8,10 @@
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#fff" />
     <link
       rel="preload"
-      href="/assets/fonts/Inter.var.woff2"
+      href="./assets/fonts/Inter.var.woff2"
       as="font"
       type="font/woff2"
       crossorigin=""
@@ -40,12 +40,15 @@
         font-size: 1rem;
         margin: 0;
         scrollbar-gutter: stable;
-        scroll-margin-top: 200px;
+      }
+
+      pre {
+        overflow: auto;
       }
 
       .header {
         background: #fff;
-        height: 48px;
+        height: 56px;
         border-bottom: 1px solid #000;
         position: sticky;
         top: 0;
@@ -102,7 +105,6 @@
         background: rgba(255, 0, 0, 0.25);
         border-radius: 2px;
         padding: 2px;
-        transition: background 500ms;
       }
 
       @media (min-width: 768px) {
