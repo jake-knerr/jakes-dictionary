@@ -155,8 +155,8 @@
       const search = document.getElementById("search-field");
 
       search.oninput = () => {
-        alert("input");
         const searchValue = search.value;
+        alert(searchValue, "input");
         if (!searchValue) return (main.innerHTML = cloned.innerHTML);
 
         let innerHTML = "";
