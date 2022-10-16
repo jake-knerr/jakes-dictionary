@@ -1,6 +1,6 @@
 # Jake's Dictionary
 
-**[Searchable Version](https://jake-knerr.github.io/dictionary/)**
+**[Searchable Version](https://jake-knerr.github.io/jakes-dictionary/)**
 
 This dictionary grew out of an effort to define any terms I did not understand. Some of the terms herein are pretty basic, but as they say, one has to start somewhere.
 
