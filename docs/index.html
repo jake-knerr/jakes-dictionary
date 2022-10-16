@@ -100,15 +100,19 @@
       }
 
       .scroll-top-btn {
+        background: #fff;
+        border: 1px solid #000;
+        padding: 8px;
         position: fixed;
         top: 80px;
         left: 0;
         right: 0;
-        max-width: 100px;
+        max-width: 120px;
         margin: auto;
         opacity: 0;
         transform: translateY(-40px);
         transition: transform 300ms, opacity 300ms;
+        cursor: pointer;
       }
 
       .scroll-top-btn--show {
@@ -2639,7 +2643,7 @@ if (10 === foo) {
 <p><strong><a href="#index">⬆ back to index</a></strong></p>
 </div>
       </main>
-      <button class="scroll-top-btn">Return to Top</button>
+      <button class="scroll-top-btn">⮝ Return to Top</button>
     </div>
   </body>
 </html>
