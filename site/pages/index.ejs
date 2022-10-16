@@ -16,6 +16,10 @@
       type="font/woff2"
       crossorigin=""
     />
+    <link
+      rel="stylesheet"
+      href="./css/vendor/highlightjs/stackoverflow-light.css"
+    />
     <style>
       @font-face {
         font-family: Inter var;
@@ -46,6 +50,11 @@
         scrollbar-gutter: stable;
       }
 
+      p {
+        text-overflow: ellipsis;
+        overflow-x: hidden;
+      }
+
       h1 {
         margin: 40px 0;
       }
@@ -58,10 +67,6 @@
       hr {
         border-width: 1px 0 0;
         border-top: 1px solid #000;
-      }
-
-      pre {
-        overflow: auto;
       }
 
       a:link,

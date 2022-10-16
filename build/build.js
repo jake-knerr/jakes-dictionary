@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ejs = require("ejs");
+const hljs = require("highlight.js");
 const marked = require("marked");
 
 console.log("Building site...");
@@ -9,6 +10,12 @@ console.log("Building site...");
 marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,
+  highlight: function (code, lang) {
+    const language = hljs.getLanguage(lang) ? lang : "plaintext";
+
+    return hljs.highlight(code, { language }).value;
+  },
+  langPrefix: "hljs language-",
 });
 
 fs.writeFileSync(
