@@ -1,4 +1,4 @@
-# Dictionary
+# Jake's Dictionary
 
 **[Searchable Version](https://jake-knerr.github.io/dictionary/)**
 
