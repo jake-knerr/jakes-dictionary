@@ -179,7 +179,7 @@
             } else {
               include = false;
             }
-          } else if ($.tagName === "P" && include) {
+          } else if ($.tagName !== "H2" && include) {
             innerHTML += $.outerHTML;
           }
         }
