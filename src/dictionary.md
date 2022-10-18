@@ -4,26 +4,6 @@
 
 ---
 
-#### Internet Protocol version 6 (IPv6)
-
-current standard for representing internet IP addresses, which is eight groups of four hexadecimal digits.
-
-```
-IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
-```
-
-IPv6 solves the problem of IPv4 address exhaustion.
-
-See [IPv4](#internet-protocol-version-4-ipv4).
-
-#### OSI Model - 7 layers
-
-#### TCP
-
-#### UDP
-
-#### Domain Name System (DNS)
-
 #### DNS Zones
 
 #### Reverse DNS
@@ -1360,6 +1340,10 @@ In other words, the names and structure of the code match the language of the pu
 
 the DOM is the data representation of a web document and also provides an interface to interact with the document.
 
+#### Domain Name System (DNS)
+
+a hierarchical and decentralized naming system used to map domain names to other information, chiefly IP addresses.
+
 #### Domain Logic, Business Logic
 
 a general term referring to program code for business rules.
@@ -2293,6 +2277,18 @@ IPv4 allows for 2^32 addresses.
 
 See [IPv6](#internet-protocol-version-6-ipv6).
 
+#### Internet Protocol version 6 (IPv6)
+
+current standard for representing internet IP addresses, which is eight groups of four hexadecimal digits.
+
+```
+IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+```
+
+IPv6 solves the problem of IPv4 address exhaustion.
+
+See [IPv4](#internet-protocol-version-4-ipv4).
+
 #### Interpolate, Interpolation, Lerp
 
 estimating a value based on other known data.
@@ -3032,6 +3028,18 @@ when files are not locked for editing.
 If two people edit the same file in optimistic locking, the first committer wins. The second person must resolve any conflicts before committing their changes. Git is an example.
 
 See [pessimistic locking](#pessimistic-locking).
+
+#### OSI Model
+
+a conceptual model for communications between different parts of a computing system created by splitting the system into seven layers.
+
+- Physical Layer
+- Data Link Layer
+- Network Layer
+- Transport Layer
+- Session Layer
+- Presentation Layer
+- Application Layer
 
 #### Oracle
 
@@ -4130,6 +4138,18 @@ a technique used to limit the growth of the call stack by not making the final c
 
 Imagine how a recursive function keeps adding to the call stack with each recursive iteration. Because of this, memory consumption can grow out of control. Now, instead of immediately calling the recursive function, return the intent to call the recursive function to a trampoline, which allows the initial function to end, get popped off the call stack, and then the trampoline calls the recursive function. This technique keeps the call stack from growing.
 
+#### Transactions
+
+a block of SQL statements executed together.
+
+Changes are only made at the end after the COMMIT statement. If the COMMIT statement fails to execute, the data is automatically rolled back.
+
+#### Transcompiler, Transpiler, Transpiling
+
+a compiler that converts one language to another when both languages are at approximately the same level of abstraction.
+
+An example would be the TypeScript to JavaScript compiler.
+
 #### Transducer Function, Transducer
 
 a pattern that involves functions that accept a reducer as input and return a different reducer.
@@ -4144,17 +4164,15 @@ const transducer => reducer => {
 }
 ```
 
-#### Transactions
+#### Transmission Control Protocol (TCP)
 
-a block of SQL statements executed together.
+a protocol for data transmission between connected clients and servers.
 
-Changes are only made at the end after the COMMIT statement. If the COMMIT statement fails to execute, the data is automatically rolled back.
+TCP is reliable because it provides error checking and sends data in the order it was requested. Since TCP is reliable, it is slower than other protocols.
 
-#### Transcompiler, Transpiler, Transpiling
+TCP is one of the primary protocols of the internet. SSL/TLS runs on top of TCP.
 
-a compiler that converts one language to another when both languages are at approximately the same level of abstraction.
-
-An example would be the TypeScript to JavaScript compiler.
+See [UDP](#user-datagram-protocol-udp).
 
 #### Tree
 
@@ -4247,6 +4265,14 @@ an integer that cannot be negative.
 sending code back to the original developers of the software.
 
 Upstream code is usually a patch or bug fix for the original codebase.
+
+#### User Datagram Protocol (UDP)
+
+a simple, connection-less data transmission protocol that eschews the reliability of TCP for faster transmission speeds.
+
+DNS, DHCP, voice, and video traffic uses UDP.
+
+See [TCP](#transmission-control-protocol-tcp).
 
 #### UTF-8
 

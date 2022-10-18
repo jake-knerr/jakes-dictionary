@@ -246,16 +246,6 @@
         <div class="primary"><h2 id="index">Index</h2>
 <p><a href="#a">A</a> <a href="#b">B</a> <a href="#c">C</a> <a href="#d">D</a> <a href="#e">E</a> <a href="#f">F</a> <a href="#g">G</a> <a href="#h">H</a> <a href="#i">I</a> <a href="#j">J</a> <a href="#k">K</a> <a href="#l">L</a> <a href="#m">M</a> <a href="#n">N</a> <a href="#o">O</a> <a href="#p">P</a> <a href="#q">Q</a> <a href="#r">R</a> <a href="#s">S</a> <a href="#t">T</a> <a href="#u">U</a> <a href="#v">V</a> <a href="#w">W</a> <a href="#x">X</a> <a href="#y">Y</a> <a href="#z">Z</a></p>
 <hr>
-<h4 id="internet-protocol-version-6-ipv6">Internet Protocol version 6 (IPv6)</h4>
-<p>current standard for representing internet IP addresses, which is eight groups of four hexadecimal digits.</p>
-<pre><code>IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
-</code></pre>
-<p>IPv6 solves the problem of IPv4 address exhaustion.</p>
-<p>See <a href="#internet-protocol-version-4-ipv4">IPv4</a>.</p>
-<h4 id="osi-model---7-layers">OSI Model - 7 layers</h4>
-<h4 id="tcp">TCP</h4>
-<h4 id="udp">UDP</h4>
-<h4 id="domain-name-system-dns">Domain Name System (DNS)</h4>
 <h4 id="dns-zones">DNS Zones</h4>
 <h4 id="reverse-dns">Reverse DNS</h4>
 <h4 id="dns-loookup">DNS Loookup</h4>
@@ -996,6 +986,8 @@
 <p>In other words, the names and structure of the code match the language of the purpose of the application. e.g., for a driving simulator, a class could be <code>DriveAtNight</code> etc.</p>
 <h4 id="document-object-model-dom">Document Object Model (DOM)</h4>
 <p>the DOM is the data representation of a web document and also provides an interface to interact with the document.</p>
+<h4 id="domain-name-system-dns">Domain Name System (DNS)</h4>
+<p>a hierarchical and decentralized naming system used to map domain names to other information, chiefly IP addresses.</p>
 <h4 id="domain-logic-business-logic">Domain Logic, Business Logic</h4>
 <p>a general term referring to program code for business rules.</p>
 <p>Domain logic is specific to the <em>domain</em> of the application.</p>
@@ -1507,6 +1499,12 @@
 </code></pre>
 <p>IPv4 allows for 2^32 addresses.</p>
 <p>See <a href="#internet-protocol-version-6-ipv6">IPv6</a>.</p>
+<h4 id="internet-protocol-version-6-ipv6">Internet Protocol version 6 (IPv6)</h4>
+<p>current standard for representing internet IP addresses, which is eight groups of four hexadecimal digits.</p>
+<pre><code>IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+</code></pre>
+<p>IPv6 solves the problem of IPv4 address exhaustion.</p>
+<p>See <a href="#internet-protocol-version-4-ipv4">IPv4</a>.</p>
 <h4 id="interpolate-interpolation-lerp">Interpolate, Interpolation, Lerp</h4>
 <p>estimating a value based on other known data.</p>
 <h4 id="interpreted-language">Interpreted Language</h4>
@@ -1922,6 +1920,17 @@ patchedFunc = <span class="hljs-keyword">function</span> (<span class="hljs-para
 <p>when files are not locked for editing.</p>
 <p>If two people edit the same file in optimistic locking, the first committer wins. The second person must resolve any conflicts before committing their changes. Git is an example.</p>
 <p>See <a href="#pessimistic-locking">pessimistic locking</a>.</p>
+<h4 id="osi-model">OSI Model</h4>
+<p>a conceptual model for communications between different parts of a computing system created by splitting the system into seven layers.</p>
+<ul>
+<li>Physical Layer</li>
+<li>Data Link Layer</li>
+<li>Network Layer</li>
+<li>Transport Layer</li>
+<li>Session Layer</li>
+<li>Presentation Layer</li>
+<li>Application Layer</li>
+</ul>
 <h4 id="oracle">Oracle</h4>
 <p>the code in a test that determines if the test passed.</p>
 <h4 id="ordinal">Ordinal</h4>
@@ -2532,6 +2541,12 @@ arr[<span class="hljs-number">0</span>] == <span class="hljs-literal">undefined<
 <h4 id="trampolining">Trampolining</h4>
 <p>a technique used to limit the growth of the call stack by not making the final continuation call inside the called function, but rather exit and return the continuation call to a trampoline that then loops and invokes the continuations.</p>
 <p>Imagine how a recursive function keeps adding to the call stack with each recursive iteration. Because of this, memory consumption can grow out of control. Now, instead of immediately calling the recursive function, return the intent to call the recursive function to a trampoline, which allows the initial function to end, get popped off the call stack, and then the trampoline calls the recursive function. This technique keeps the call stack from growing.</p>
+<h4 id="transactions">Transactions</h4>
+<p>a block of SQL statements executed together.</p>
+<p>Changes are only made at the end after the COMMIT statement. If the COMMIT statement fails to execute, the data is automatically rolled back.</p>
+<h4 id="transcompiler-transpiler-transpiling">Transcompiler, Transpiler, Transpiling</h4>
+<p>a compiler that converts one language to another when both languages are at approximately the same level of abstraction.</p>
+<p>An example would be the TypeScript to JavaScript compiler.</p>
 <h4 id="transducer-function-transducer">Transducer Function, Transducer</h4>
 <p>a pattern that involves functions that accept a reducer as input and return a different reducer.</p>
 <p>Unlike reducers, which cannot be composed because they have an arity of &gt; 1, transducers can be composed because they have an arity of one. The composition of transducers can be useful to only iterate over an iterable once instead of creating intermediate step iterables when, for example, performing multiple mappings or reduce operations.</p>
@@ -2541,12 +2556,11 @@ arr[<span class="hljs-number">0</span>] == <span class="hljs-literal">undefined<
   }
 }
 </code></pre>
-<h4 id="transactions">Transactions</h4>
-<p>a block of SQL statements executed together.</p>
-<p>Changes are only made at the end after the COMMIT statement. If the COMMIT statement fails to execute, the data is automatically rolled back.</p>
-<h4 id="transcompiler-transpiler-transpiling">Transcompiler, Transpiler, Transpiling</h4>
-<p>a compiler that converts one language to another when both languages are at approximately the same level of abstraction.</p>
-<p>An example would be the TypeScript to JavaScript compiler.</p>
+<h4 id="transmission-control-protocol-tcp">Transmission Control Protocol (TCP)</h4>
+<p>a protocol for data transmission between connected clients and servers.</p>
+<p>TCP is reliable because it provides error checking and sends data in the order it was requested. Since TCP is reliable, it is slower than other protocols.</p>
+<p>TCP is one of the primary protocols of the internet. SSL/TLS runs on top of TCP.</p>
+<p>See <a href="#user-datagram-protocol-udp">UDP</a>.</p>
 <h4 id="tree">Tree</h4>
 <p>a tree is a type of graph data structure that is hierarchical and unidirectional.</p>
 <p>Trees have a root value and subtrees of children and are represented as a series of linked nodes. Each node has a value and then pointers to its children. A common example is a binary tree, which is a tree where a parent node has 2 child nodes at most.</p>
@@ -2593,6 +2607,10 @@ arr[<span class="hljs-number">0</span>] == <span class="hljs-literal">undefined<
 <h4 id="upstream">Upstream</h4>
 <p>sending code back to the original developers of the software.</p>
 <p>Upstream code is usually a patch or bug fix for the original codebase.</p>
+<h4 id="user-datagram-protocol-udp">User Datagram Protocol (UDP)</h4>
+<p>a simple, connection-less data transmission protocol that eschews the reliability of TCP for faster transmission speeds.</p>
+<p>DNS, DHCP, voice, and video traffic uses UDP.</p>
+<p>See <a href="#transmission-control-protocol-tcp">TCP</a>.</p>
 <h4 id="utf-8">UTF-8</h4>
 <p>character encoding that uses 8-bit code units to encode UTF code points.</p>
 <p>UTF-8 is a variable-length encoding that uses one to four bytes per character. Approximately 90% of the web uses this encoding.</p>
