@@ -22,8 +22,4 @@ The first sentence of the definition is the _summary_. The summary has an implie
 
 - See the [The Jargon File](http://www.catb.org/~esr/jargon/html/go01.html) for definitions of many terms in hacker culture.
 
-## Terms To Be Added
-
-- ...
-
 ---
