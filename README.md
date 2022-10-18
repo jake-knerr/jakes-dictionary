@@ -37,6 +37,8 @@ The first sentence of the definition is the _summary_. The summary has an implie
 
 #### Load Balancing
 
+#### - computer cluster, clustering - Ideally, a cluster functions as if it were a single system. A user accessing the cluster should not need to know whether the system is a cluster or an individual machine. Furthermore, a cluster should be designed to minimize latency and prevent bottlenecks in node-to-node communication. not load balancers cuz all aware of eachother
+
 ---
 
 ## A
@@ -2295,7 +2297,7 @@ let strB = "def";
 type of IP addresses that are represented using the familiar four numbers with three decimals separating the numbers.
 
 ```
-127.169.0.1
+IPv4: 127.169.0.1
 ```
 
 IPv4 allows for 2^32 addresses.

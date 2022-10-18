@@ -102,6 +102,7 @@
         font-size: 1rem;
         height: 32px;
         padding: 4px 8px;
+        width: 280px;
       }
 
       .content {
@@ -225,6 +226,13 @@
           }
         )
       );
+
+      document.onkeydown = (event) => {
+        if (event.key === "/" && document.activeElement !== search) {
+          event.preventDefault();
+          search.focus();
+        }
+      };
     </script>
   </head>
   <body>
@@ -236,7 +244,7 @@
             autocomplete="off"
             autocorrect="off"
             autofocus
-            placeholder="Filter..."
+            placeholder='Search entries (Press "/" to focus)'
             spellcheck="false"
             type="search"
           />
@@ -253,6 +261,7 @@
 <h4 id="reverse-dns">Reverse DNS</h4>
 <h4 id="dns-loookup">DNS Loookup</h4>
 <h4 id="load-balancing">Load Balancing</h4>
+<h4 id="--computer-cluster-clustering---ideally-a-cluster-functions-as-if-it-were-a-single-system-a-user-accessing-the-cluster-should-not-need-to-know-whether-the-system-is-a-cluster-or-an-individual-machine-furthermore-a-cluster-should-be-designed-to-minimize-latency-and-prevent-bottlenecks-in-node-to-node-communication-not-load-balancers-cuz-all-aware-of-eachother">- computer cluster, clustering - Ideally, a cluster functions as if it were a single system. A user accessing the cluster should not need to know whether the system is a cluster or an individual machine. Furthermore, a cluster should be designed to minimize latency and prevent bottlenecks in node-to-node communication. not load balancers cuz all aware of eachother</h4>
 <hr>
 <h2 id="a">A</h2>
 <h4 id="a-duck">A Duck</h4>
@@ -1498,7 +1507,7 @@
 </code></pre>
 <h4 id="internet-protocol-version-4-ipv4">Internet Protocol version 4 (IPv4)</h4>
 <p>type of IP addresses that are represented using the familiar four numbers with three decimals separating the numbers.</p>
-<pre><code>127.169.0.1
+<pre><code>IPv4: 127.169.0.1
 </code></pre>
 <p>IPv4 allows for 2^32 addresses.</p>
 <p>See <a href="#internet-protocol-version-6-ipv6">IPv6</a>.</p>

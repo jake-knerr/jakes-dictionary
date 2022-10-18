@@ -102,6 +102,7 @@
         font-size: 1rem;
         height: 32px;
         padding: 4px 8px;
+        width: 280px;
       }
 
       .content {
@@ -225,6 +226,13 @@
           }
         )
       );
+
+      document.onkeydown = (event) => {
+        if (event.key === "/" && document.activeElement !== search) {
+          event.preventDefault();
+          search.focus();
+        }
+      };
     </script>
   </head>
   <body>
@@ -236,7 +244,7 @@
             autocomplete="off"
             autocorrect="off"
             autofocus
-            placeholder="Filter..."
+            placeholder='Search entries (Press "/" to focus)'
             spellcheck="false"
             type="search"
           />
