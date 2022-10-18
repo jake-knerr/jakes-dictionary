@@ -33,6 +33,36 @@ The first sentence of the definition is the _summary_. The summary has an implie
 
 ---
 
+#### Internet Protocol version 6 (IPv6)
+
+current standard for representing internet IP addresses, which is eight groups of four hexadecimal digits.
+
+```
+IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+```
+
+IPv6 solves the problem of IPv4 address exhaustion.
+
+See [IPv4](#data-structure).
+
+#### OSI Model - 7 layers
+
+#### TCP
+
+#### UDP
+
+#### Domain Name System (DNS)
+
+#### DNS Zones
+
+#### Reverse DNS
+
+#### DNS Loookup
+
+#### Load Balancing
+
+---
+
 ## A
 
 #### A Duck
@@ -1349,6 +1379,12 @@ when web developers add a doctype declaration to a web page but then do not writ
 
 demonstrating software to customers or clients.
 
+#### Domain-Driven Design, Domain Driven Design (DDD)
+
+a software development approach where the structure and language of the code matches the business domain.
+
+In other words, the names and structure of the code match the language of the purpose of the application. e.g., for a driving simulator, a class could be `DriveAtNight` etc.
+
 #### Document Object Model (DOM)
 
 the DOM is the data representation of a web document and also provides an interface to interact with the document.
@@ -2274,6 +2310,16 @@ let strB = "def";
 ("dabecf"); // yes, interleaved
 ```
 
+#### Internet Protocol version 4 (IPv4)
+
+type of IP addresses that are represented using the familiar four numbers with three decimals separating the numbers.
+
+```
+127.169.0.1
+```
+
+IPv4 allows for 2^32 addresses.
+
 #### Interpolate, Interpolation, Lerp
 
 estimating a value based on other known data.
@@ -2990,6 +3036,12 @@ In other words, one should be able to alter the functionality of an entity witho
 
 See [SOLID](#solid-solid).
 
+#### OpenGL (Open Graphics Library)
+
+an agnostic API for rendering vector graphics initially developed by Silicon Graphics in 1991.
+
+Typically, OpenGL is used to interface with a GPU.
+
 #### Operand
 
 the values that an operator operates on.
@@ -3531,6 +3583,12 @@ an architectural design for creating web services.
 
 Requires adherence to a number of invariants. In the interest of simplicity, RESTful systems are often web services that use POST, GET, PUT, DELETE (and other) verbs combined with HTTP based URLs to create a web API.
 
+#### ReScript, Reason, or BuckleScript
+
+a typed language that compiles to human-readable JavaScript.
+
+Bucklescript was renamed to Reason, which was again renamed to ReScript. ReScript started as a fork of OCaml.
+
 #### Rest parameters
 
 the rest parameter syntax in JavaScript allows for representing an indefinite number of arguments as an array.
@@ -3905,6 +3963,10 @@ It makes the language "sweeter." The `class` construct in JavaScript is often (i
 #### Syntax
 
 defines the allowable sequence of characters in code.
+
+#### System Design
+
+the process of designing the architecture, components, interfaces, and data for a system that satisfies end-user requirements.
 
 #### System Under Test (SUT)
 
