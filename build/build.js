@@ -11,9 +11,7 @@ marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,
   highlight: function (code, lang) {
-    const language = hljs.getLanguage(lang) ? lang : "plaintext";
-
-    return hljs.highlight(code, { language }).value;
+    return hljs.highlightAuto(code).value;
   },
   langPrefix: "hljs language-",
 });

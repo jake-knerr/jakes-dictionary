@@ -298,7 +298,7 @@
 <p>See <a href="#mutator-method-setter">mutator method</a>.</p>
 <h4 id="accumulator">Accumulator</h4>
 <p>a variable used to store intermediate results — for example, a variable in a loop that is added to in successive iterations.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {} <span class="hljs-comment">// i is the accumulator</span>
+<pre><code class="hljs language-javascript">for <span class="hljs-comment">(let i = 0; i &lt; 10; i++)</span> {} <span class="hljs-comment">// i is the accumulator</span>
 </code></pre>
 <h4 id="architecture-vs-design">Architecture vs. Design</h4>
 <p>architecture is concerned with the design of software in the broadest sense. Think layers and high-level modules and how they interact with one another. Changes to architecture generally cause changes to the entire codebase.</p>
@@ -357,7 +357,7 @@
 <p>For example, JSDoc comments in JavaScript code are annotations. Anecdotally, annotations are consumed by a different compiler than the code compiler.</p>
 <h4 id="anonymous-function-lambda-function">Anonymous Function, Lambda Function</h4>
 <p>a function definition that is not bound to an identifier.</p>
-<pre><code class="hljs language-javascript">(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {})(); <span class="hljs-comment">// function has no identifier</span>
+<pre><code class="hljs language-javascript">(<span class="hljs-keyword">function</span> <span class="hljs-title"></span>() {})(); // <span class="hljs-keyword">function</span> <span class="hljs-title">has</span> no identifier
 </code></pre>
 <h4 id="apache-ant">Apache Ant</h4>
 <p>a scripting tool for creating automated build processes for your project.</p>
@@ -373,7 +373,7 @@
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// getJSON :: String -&gt; Task</span>
 
 <span class="hljs-comment">// each getJSON Task monad will deliver an argument to the curry(x, y) function</span>
-<span class="hljs-title class_">Task</span>.<span class="hljs-title function_">of</span>(<span class="hljs-title function_">curry</span>(<span class="hljs-function">(<span class="hljs-params">x, y</span>) =&gt;</span> {})).<span class="hljs-title function_">ap</span>(<span class="hljs-title function_">getJSON</span>(./a.<span class="hljs-property">js</span>)).<span class="hljs-title function_">ap</span>(<span class="hljs-title function_">getJSON</span>(./b.<span class="hljs-property">js</span>));
+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Task</span>.</span></span><span class="hljs-keyword">of</span>(curry((x, y) =&gt; {})).ap(get<span class="hljs-constructor">JSON(.<span class="hljs-operator">/</span><span class="hljs-params">a</span>.<span class="hljs-params">js</span>)</span>).ap(get<span class="hljs-constructor">JSON(.<span class="hljs-operator">/</span><span class="hljs-params">b</span>.<span class="hljs-params">js</span>)</span>);
 </code></pre>
 <h4 id="architectural-frameworks">Architectural Frameworks</h4>
 <p>a framework that provides guidance when implementing an architectural pattern within a software system.</p>
@@ -385,9 +385,9 @@
 <h4 id="arguments">Arguments</h4>
 <p>the values passed to an invoked function.</p>
 <p>Do not confuse arguments with parameters, which are the variables listed as part of a function definition.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span>(<span class="hljs-params">x, y</span>) {} <span class="hljs-comment">// parameters x and y</span>
+<pre><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">x, y</span>) </span>{} <span class="hljs-comment">// parameters x and y</span>
 
-<span class="hljs-title function_">fn</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// fn called with arguments 1 and 2</span>
+<span class="hljs-function"><span class="hljs-keyword">fn</span>(<span class="hljs-params"><span class="hljs-number">1</span>, <span class="hljs-number">2</span></span>)</span>; <span class="hljs-comment">// fn called with arguments 1 and 2</span>
 </code></pre>
 <h4 id="arity">Arity</h4>
 <p>the number of arguments a function accepts.</p>
@@ -515,7 +515,7 @@
 <h4 id="bound-variables">Bound Variables</h4>
 <p>a variable used within a function, which is either a parameter to the function or defined in the function&#39;s body.</p>
 <p>See <a href="#free-variables">free variables</a>.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> (<span class="hljs-params">x</span>) { <span class="hljs-comment">// x is the bound variable</span>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-params">(x)</span> { <span class="hljs-comment">// x is the bound variable</span>
    <span class="hljs-keyword">return</span> x + y;
 }
 </code></pre>
@@ -562,7 +562,7 @@
 <p>It is less verbose than Java.</p>
 <h4 id="callback">Callback</h4>
 <p>a reference to a function passed as an argument to other functions.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;click&quot;</span>, callback);
+<pre><code class="hljs language-javascript">add<span class="hljs-constructor">EventListener(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-params">callback</span>)</span>;
 </code></pre>
 <h4 id="call-stack-execution-stack-program-stack-control-stack">Call Stack, Execution Stack, Program Stack, Control Stack</h4>
 <p>an abstraction that represents a vertical stack of called functions.</p>
@@ -570,9 +570,9 @@
 <h4 id="callback-hell-pyramid-of-doom">Callback Hell, Pyramid of Doom</h4>
 <p>name given to deeply nested callbacks.</p>
 <p>Nested callbacks are hard to reason around. Pyramid of Doom derives from the fact that they can look like a pyramid on its side.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">a</span>(<span class="hljs-params">b</span>) {
-  b.<span class="hljs-title function_">forEach</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params">c</span>) {
-    c.<span class="hljs-title function_">forEach</span>(d);
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> a(b) {
+  b.<span class="hljs-keyword">for</span><span class="hljs-constructor">Each(<span class="hljs-params">function</span> (<span class="hljs-params">c</span>)</span> {
+    c.<span class="hljs-keyword">for</span><span class="hljs-constructor">Each(<span class="hljs-params">d</span>)</span>;
   });
 }
 </code></pre>
@@ -580,15 +580,15 @@
 <p>a naming convention where each letter in a compound word is capitalized except for the first letter.</p>
 <p>The name is derived from the humps on a camel&#39;s back.</p>
 <p>See <a href="#camelcase-uppercamelcase-pascal-case">UpperCamelCase</a>.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> smallVar;
-<span class="hljs-keyword">let</span> camelCaseVar;
+<pre><code class="hljs language-javascript">let smallVar<span class="hljs-comment">;</span>
+let camelCaseVar<span class="hljs-comment">;</span>
 </code></pre>
 <h4 id="camelcase-uppercamelcase-pascal-case">CamelCase, UpperCamelCase, Pascal Case</h4>
 <p>a naming convention where each letter in a compound word is capitalized.</p>
 <p>The name is derived from the humps on a camel&#39;s back.</p>
 <p>See <a href="#camelcase-lowercamelcase-dromedary-case">LowerCamelCase</a>.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> <span class="hljs-title class_">BigVar</span>;
-<span class="hljs-keyword">let</span> <span class="hljs-title class_">CamelCaseVar</span>;
+<pre><code class="hljs language-javascript">let BigVar<span class="hljs-comment">;</span>
+let CamelCaseVar<span class="hljs-comment">;</span>
 </code></pre>
 <h4 id="casting">Casting</h4>
 <p>code that explicitly tells the compiler that a value is of a certain type.</p>
@@ -626,13 +626,13 @@
 <p>a function that can access its outer variables.</p>
 <p>Unlike many languages, which do not allow closures or require special techniques, in JavaScript nearly all functions are closures because functions in JavaScript retain an internal reference to the lexical environment that created it.</p>
 <p>Sometimes people require that a closure be observable. In the code below, <code>bar()</code> does not reference bindings in its outer lexical environment and thus isn&#39;t an observable closure.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params"></span>) {
-  <span class="hljs-keyword">let</span> x = <span class="hljs-number">1</span>;
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>() {
+  let x = 1;
 
-  <span class="hljs-keyword">function</span> <span class="hljs-title function_">bar</span>(<span class="hljs-params"></span>) {}
-  <span class="hljs-title function_">bar</span>();
+  <span class="hljs-keyword">function</span> <span class="hljs-title">bar</span>() {}
+  bar();
 }
-<span class="hljs-title function_">foo</span>();
+foo();
 </code></pre>
 <p>In the code below, <code>bar()</code> does reference outer free variables, and therefore we have observed a function that is a closure.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params"></span>) {
@@ -723,8 +723,8 @@
 <p>a variable that is used to point to a current item in a collection, and is reassigned when you move to a new item in the collection.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> currentItem;
 <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
-  <span class="hljs-comment">// currentItem is the context variable</span>
-  currentItem = array[i];
+  // currentItem <span class="hljs-literal">is</span> the <span class="hljs-keyword">context</span> <span class="hljs-keyword">variable</span>
+  currentItem = <span class="hljs-keyword">array</span>[i];
 }
 </code></pre>
 <h4 id="continuation-line-continued-line">Continuation Line, Continued Line</h4>
@@ -732,8 +732,8 @@
 <h4 id="continuation-passing-style-cps">Continuation Passing Style (CPS)</h4>
 <p>a style of programming in which functions take an explicit <em>continuation</em> argument.</p>
 <p>When the function finishes, it calls the continuation function and passes any calculated values. CPS is associated with functional programming and recursion.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">calc</span>(<span class="hljs-params">x, y, callback</span>) {
-  <span class="hljs-title function_">callback</span>(x + y);
+<pre><code class="hljs language-javascript">function <span class="hljs-built_in">calc</span>(x, y, callback) {
+  <span class="hljs-built_in">callback</span>(x + y);
 }
 </code></pre>
 <h4 id="control-flow">Control Flow</h4>
@@ -813,7 +813,7 @@
 }
 
 <span class="hljs-comment">// these provide the same value</span>
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">foo</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>) === <span class="hljs-title function_">bar</span>(<span class="hljs-number">1</span>)(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>));
+<span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(foo(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>) === bar(<span class="hljs-number">1</span>)(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>));
 </code></pre>
 <h4 id="cyclomatic-complexity">Cyclomatic Complexity</h4>
 <p>a metric used to measure the complexity of a program.</p>
@@ -913,20 +913,20 @@
 <p>DI <em>inverts</em> the typical way of creating object dependencies.</p>
 <p>Robert Martin and Martin Fowler popularized the term.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// classic way of making Goodyear a hard-wired dependency of Car</span>
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span> {
-  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">wheel</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Goodyear</span>();
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>{
+  constructor() {
+    <span class="hljs-built_in">this</span>.wheel = <span class="hljs-keyword">new</span> <span class="hljs-type">Goodyear</span>();
   }
 }
 
 <span class="hljs-comment">// DI - the wheel dependency is passed when Car is instantiated; Car is not explicitly creating a dependency on Goodyear</span>
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span> {
-  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">wheel</span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">wheel</span> = wheel;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>{
+  constructor(wheel) {
+    <span class="hljs-built_in">this</span>.wheel = wheel;
   }
 }
 
-<span class="hljs-keyword">let</span> car = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Car</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Goodyear</span>());
+let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</span>(<span class="hljs-keyword">new</span> <span class="hljs-type">Goodyear</span>());
 </code></pre>
 <h4 id="dependency-inversion-principle">Dependency Inversion Principle</h4>
 <ul>
@@ -1064,7 +1064,7 @@
 <p>a brace style where the opening brace goes on the end of the line.</p>
 <p>Egyptian brackets are named after the hand positions from the famous Bangles song &quot;Walk Like an Egyptian.&quot;</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
- ...
+ <span class="hljs-params">...</span>
 }
 </code></pre>
 <h4 id="elm">Elm</h4>
@@ -1084,14 +1084,14 @@
 <h4 id="enum-types-enumerated-types">Enum Types, Enumerated Types</h4>
 <p>a data type that is a set of named constants.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// pseudo enum; not an actual enum but has the spirit of an enum</span>
-<span class="hljs-keyword">const</span> <span class="hljs-variable constant_">COLORS</span> = {
-  <span class="hljs-attr">RED</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-attr">BLUE</span>: <span class="hljs-number">2</span>,
-  <span class="hljs-attr">GREEN</span>: <span class="hljs-number">3</span>,
+<span class="hljs-keyword">const</span> COLORS = {
+  <span class="hljs-attribute">RED</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attribute">BLUE</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-attribute">GREEN</span>: <span class="hljs-number">3</span>,
 };
 
-<span class="hljs-keyword">let</span> color = <span class="hljs-variable constant_">COLORS</span>.<span class="hljs-property">RED</span>;
-<span class="hljs-keyword">if</span> (color == <span class="hljs-variable constant_">COLORS</span>.<span class="hljs-property">RED</span>) {
+<span class="hljs-keyword">let</span> <span class="hljs-built_in">color</span> = COLORS.RED;
+<span class="hljs-keyword">if</span> (<span class="hljs-built_in">color</span> == COLORS.RED) {
 }
 </code></pre>
 <h4 id="enumeration">Enumeration</h4>
@@ -1127,7 +1127,7 @@
 <p>Execution contexts are placed on the execution stack.</p>
 <h4 id="expando-properties">Expando Properties</h4>
 <p>properties added to DOM nodes that are not a part of the node&#39;s specification.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-variable language_">window</span>.<span class="hljs-property">xyz</span> = <span class="hljs-number">1</span>; <span class="hljs-comment">// xyz is an expando property</span>
+<pre><code class="hljs language-javascript"><span class="hljs-attr">window.xyz</span> = <span class="hljs-number">1</span><span class="hljs-comment">; // xyz is an expando property</span>
 </code></pre>
 <h4 id="expression">Expression</h4>
 <p>code that produces a value and can be used anywhere a value is expected.</p>
@@ -1213,11 +1213,11 @@
 <p>Knowing this provides us with <em>free theorems</em> about the behavior of the function. They are <em>free</em> because you do not need to look at the function&#39;s code to derive them.</p>
 <h4 id="free-variables">Free Variables</h4>
 <p>with regard to a function, a variable that is used but is not declared locally and not passed as a parameter.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> x;
+<pre><code class="hljs language-javascript">let x;
 
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">y</span>(<span class="hljs-params"></span>) {
-  <span class="hljs-comment">// x is a free variable for function y</span>
-  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x);
+<span class="hljs-keyword">function</span> <span class="hljs-title">y</span>() {
+  // x <span class="hljs-keyword">is</span> a free variable <span class="hljs-keyword">for</span> <span class="hljs-keyword">function</span> <span class="hljs-title">y</span>
+  console.log(x);
 }
 </code></pre>
 <h4 id="friend-class-friend-function">Friend Class, Friend Function</h4>
@@ -1233,15 +1233,15 @@
 <h4 id="function-composition-functional-composition">Function Composition, Functional Composition</h4>
 <p>feeding the output of a function to the input of another function.</p>
 <p>The functional programming paradigm is characterized by function composition.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-title function_">f</span>(<span class="hljs-title function_">g</span>(x));
+<pre><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-title">f</span>(<span class="hljs-title">g</span>(<span class="hljs-variable">x</span>));</span>
 </code></pre>
 <h4 id="function-declaration-function-statement">Function Declaration, Function Statement</h4>
 <p>a named function not assigned to a variable as an expression.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span>(<span class="hljs-params"></span>) {}
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span><span class="hljs-params">()</span> {}
 </code></pre>
 <h4 id="function-expression">Function Expression</h4>
 <p>either an unnamed function, a function assigned to a variable as an expression, or a function defined as an IIFE.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> fn = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {};
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> fn = <span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {};
 </code></pre>
 <h4 id="function-overloading">Function Overloading</h4>
 <p>a feature of some programming languages (like Java) that allows for the creation of several methods with the same name that accept different argument types, and depending on the type of the passed argument, the appropriate method is called.</p>
@@ -1287,19 +1287,19 @@
 <h4 id="generic-functions">Generic Functions</h4>
 <p>a function declared with generic types.</p>
 <p>Generic functions are not supported in JavaScript.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-comment">// generic function</span>
-<span class="hljs-keyword">function</span> ducky&lt;T&gt;(<span class="hljs-attr">arg</span>: T): T {
-  <span class="hljs-keyword">return</span> arg;
+<pre><code class="hljs language-javascript">// <span class="hljs-keyword">generic</span> <span class="hljs-keyword">function</span>
+<span class="hljs-title">function</span> ducky&lt;T&gt;(arg: T): T {
+  <span class="hljs-keyword">return</span> <span class="hljs-type">arg</span>;
 }
 </code></pre>
 <h4 id="generic-types-parameterized-types">Generic Types, Parameterized Types</h4>
 <p>when a programming language allows users to define a placeholder for the type in a function signature.</p>
 <p>When using generic types, users pass in the explicit types when the method is called. In other words, the specification of one or more types is deferred until the class or method is instantiated or called by client code.</p>
 <p>Not supported in JavaScript, but they are supported in Typescript.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-comment">// T below is the generic type</span>
-<span class="hljs-keyword">function</span> ducky&lt;T&gt;(<span class="hljs-attr">arg</span>: T): T {
-  <span class="hljs-keyword">return</span> arg;
-}
+<pre><code class="hljs language-javascript"><span class="hljs-operator">/</span><span class="hljs-operator">/</span> <span class="hljs-built_in">T</span> below is the generic type
+<span class="hljs-keyword">function</span> ducky<span class="hljs-operator">&lt;</span><span class="hljs-built_in">T</span><span class="hljs-operator">&gt;</span><span class="hljs-punctuation">(</span>arg<span class="hljs-operator">:</span> <span class="hljs-built_in">T</span><span class="hljs-punctuation">)</span><span class="hljs-operator">:</span> <span class="hljs-built_in">T</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-built_in">return</span> arg;
+<span class="hljs-punctuation">}</span>
 </code></pre>
 <h4 id="global-gary">Global Gary</h4>
 <p>a lousy programmer who uses the global namespace.</p>
@@ -1374,8 +1374,8 @@
 <h4 id="hindley-milner-hm-type-system">Hindley-Milner (HM) Type System</h4>
 <p>used by many functional programming languages to describe the signatures of pure functions.</p>
 <p>HM syntax is borrowed from the classical type system used in lambda calculus.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-comment">// power :: Number → Number</span>
-<span class="hljs-keyword">const</span> <span class="hljs-title function_">power</span> = (<span class="hljs-params">num</span>) =&gt; <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">pow</span>(num, <span class="hljs-number">2</span>);
+<pre><code class="hljs language-javascript"><span class="hljs-regexp">//</span> power :: <span class="hljs-built_in">Number</span> → <span class="hljs-built_in">Number</span>
+const power = <span class="hljs-function"><span class="hljs-params">(num)</span> =&gt;</span> <span class="hljs-built_in">Math</span>.pow(num, <span class="hljs-number">2</span>);
 </code></pre>
 <h4 id="hoisting-early-activation">Hoisting, Early Activation</h4>
 <p>in JavaScript, the process by which function and variable declarations are moved to the top of their containing scope.</p>
@@ -1427,7 +1427,7 @@
 <h4 id="identifier">Identifier</h4>
 <p>characters in code that identify variables, functions, or other properties.</p>
 <p>Identifiers differ from strings in that strings are data and identifiers are not.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> iAmAIdentifier = <span class="hljs-number">10</span>;
+<pre><code class="hljs language-javascript">const iAmAIdentifier <span class="hljs-operator">=</span> <span class="hljs-number">10</span><span class="hljs-comment">;</span>
 </code></pre>
 <h4 id="idiomatic-idiomatic-javascript">Idiomatic, Idiomatic JavaScript</h4>
 <p>code that is written in a natural and familiar way to programmers.</p>
@@ -1455,9 +1455,9 @@
 <p>the process by which a compiler or runtime engine automatically converts data to a specific type.</p>
 <p>The conversion is not explicit in the code.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// `1` is implicitly coerced to a string before being concatenated with `abc`</span>
-<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;abc&quot;</span> + <span class="hljs-number">1</span>;
+<span class="hljs-built_in">let</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">&quot;abc&quot;</span> + <span class="hljs-number">1</span>;
 
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(str); <span class="hljs-comment">// outputs abc1</span>
+console.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">str</span>); <span class="hljs-comment">// outputs abc1</span>
 </code></pre>
 <h4 id="incremental-development">Incremental Development</h4>
 <p>a type of software development characterized by building small portions of a program at a time.</p>
@@ -1496,26 +1496,26 @@
 <li>Combining iterable data structures like strings or arrays while preserving their original order with respect to themselves; or</li>
 <li>The order of function calls.</li>
 </ul>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> strA = <span class="hljs-string">&quot;abc&quot;</span>;
-<span class="hljs-keyword">let</span> strB = <span class="hljs-string">&quot;def&quot;</span>;
+<pre><code class="hljs language-javascript">let strA = <span class="hljs-string">&quot;abc&quot;</span>;
+let strB = <span class="hljs-string">&quot;def&quot;</span>;
 
-<span class="hljs-comment">// combine `strA` and `strB` and determine if the resulting combination is an</span>
-<span class="hljs-comment">// interleaved version of them</span>
+<span class="hljs-regexp">//</span> combine `strA` and `strB` and determine <span class="hljs-keyword">if</span> the resulting combination is an
+<span class="hljs-regexp">//</span> interleaved version of them
 
-(<span class="hljs-string">&quot;adefcb&quot;</span>); <span class="hljs-comment">// no, not interleaved; because c should not come before b</span>
-(<span class="hljs-string">&quot;eabdfbc&quot;</span>); <span class="hljs-comment">// no, not interleaved; because e should not come before d</span>
-(<span class="hljs-string">&quot;abdecf&quot;</span>); <span class="hljs-comment">// yes, interleaved</span>
-(<span class="hljs-string">&quot;dabecf&quot;</span>); <span class="hljs-comment">// yes, interleaved</span>
+(<span class="hljs-string">&quot;adefcb&quot;</span>); <span class="hljs-regexp">//</span> no, not interleaved; because c should not come before b
+(<span class="hljs-string">&quot;eabdfbc&quot;</span>); <span class="hljs-regexp">//</span> no, not interleaved; because e should not come before d
+(<span class="hljs-string">&quot;abdecf&quot;</span>); <span class="hljs-regexp">//</span> yes, interleaved
+(<span class="hljs-string">&quot;dabecf&quot;</span>); <span class="hljs-regexp">//</span> yes, interleaved
 </code></pre>
 <h4 id="internet-protocol-version-4-ipv4">Internet Protocol version 4 (IPv4)</h4>
 <p>type of IP addresses that are represented using the familiar four numbers with three decimals separating the numbers.</p>
-<pre><code>IPv4: 127.169.0.1
+<pre><code><span class="hljs-attribute">IPv4</span>: <span class="hljs-number">127.169.0.1</span>
 </code></pre>
 <p>IPv4 allows for 2^32 addresses.</p>
 <p>See <a href="#internet-protocol-version-6-ipv6">IPv6</a>.</p>
 <h4 id="internet-protocol-version-6-ipv6">Internet Protocol version 6 (IPv6)</h4>
 <p>current standard for representing internet IP addresses, which is eight groups of four hexadecimal digits.</p>
-<pre><code>IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+<pre><code><span class="hljs-attribute">IPv6</span>: <span class="hljs-number">2001</span>:<span class="hljs-number">0</span>db8:<span class="hljs-number">85</span>a3:<span class="hljs-number">0000</span>:<span class="hljs-number">0000</span>:<span class="hljs-number">8</span>a2e:<span class="hljs-number">0370</span>:<span class="hljs-number">7334</span>
 </code></pre>
 <p>IPv6 solves the problem of IPv4 address exhaustion.</p>
 <p>See <a href="#internet-protocol-version-4-ipv4">IPv4</a>.</p>
@@ -1561,10 +1561,10 @@
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;another-site.php&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<pre><code class="hljs language-php"><span class="hljs-comment">// another-site.php</span>
-<span class="hljs-comment">// when the script in client receives this string it will execute</span>
-<span class="hljs-comment">// `getData(data)` with the returned data as an argument</span>
-<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;getData(&#x27;data&#x27;)&quot;</span>;
+<pre><code class="hljs language-php">// another-site.php
+// when the script in client receives this string it will<span class="hljs-built_in"> execute
+</span>// `getData(data)` with the returned data as an argument
+echo <span class="hljs-string">&quot;getData(&#x27;data&#x27;)&quot;</span>;
 </code></pre>
 <h4 id="just-in-time-compilation-jit-dynamic-translation-run-time-compilation">Just In Time Compilation (JIT), Dynamic Translation, Run-Time Compilation</h4>
 <p>a technique where source code is compiled right before execution.</p>
@@ -1671,15 +1671,15 @@ objA.<span class="hljs-title function_">a</span>().<span class="hljs-title funct
 <h4 id="lenses">Lenses</h4>
 <p>pure getter and setter functions that can retrieve or update data within an object.</p>
 <p>They are used to abstract the process of interacting with complex data objects. Typically, lenses arise in functional programming paradigms.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> person = { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Jake&quot;</span>, <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;human&quot;</span> };
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> person = { name: <span class="hljs-string">&quot;Jake&quot;</span>, type: <span class="hljs-string">&quot;human&quot;</span> };
 
-<span class="hljs-keyword">const</span> <span class="hljs-title function_">lens</span> = (<span class="hljs-params">getter, setter</span>) =&gt; { <span class="hljs-attr">get</span>: getter, <span class="hljs-attr">set</span>: setter };
-<span class="hljs-keyword">const</span> <span class="hljs-title function_">getName</span> = (<span class="hljs-params">obj</span>) =&gt; obj.<span class="hljs-property">name</span>;
-<span class="hljs-keyword">const</span> <span class="hljs-title function_">setName</span> = (<span class="hljs-params">obj</span>) =&gt; <span class="hljs-function">(<span class="hljs-params">part</span>) =&gt;</span> ({...obj, <span class="hljs-attr">name</span>: part});
-<span class="hljs-keyword">const</span> nameLens = <span class="hljs-title function_">lens</span>(getName, setName);
+<span class="hljs-keyword">const</span> lens = (getter, setter) =&gt; { <span class="hljs-keyword">get</span>: getter, <span class="hljs-keyword">set</span>: setter };
+<span class="hljs-keyword">const</span> getName = (obj) =&gt; obj.name;
+<span class="hljs-keyword">const</span> setName = (obj) =&gt; (<span class="hljs-keyword">part</span>) =&gt; ({...obj, name: <span class="hljs-keyword">part</span>});
+<span class="hljs-keyword">const</span> nameLens = lens(getName, setName);
 
-nameLens.<span class="hljs-title function_">get</span>(user)); <span class="hljs-comment">// Jake</span>
-nameLens.<span class="hljs-title function_">set</span>(user)(<span class="hljs-string">&quot;Jacque&quot;</span>)); <span class="hljs-comment">// { name: &quot;Jacque&quot;, type: &quot;human&quot; }</span>
+nameLens.<span class="hljs-keyword">get</span>(user)); <span class="hljs-comment">// Jake</span>
+nameLens.<span class="hljs-keyword">set</span>(user)(<span class="hljs-string">&quot;Jacque&quot;</span>)); <span class="hljs-comment">// { name: &quot;Jacque&quot;, type: &quot;human&quot; }</span>
 </code></pre>
 <h4 id="lepus3">LePUS3</h4>
 <p>a software modeling language.</p>
@@ -1809,9 +1809,9 @@ nameLens.<span class="hljs-title function_">set</span>(user)(<span class="hljs-s
 <p>Monads are notoriously difficult to describe to persons without the requisite background.</p>
 <h4 id="monkey-patching-duck-punching-shaking-the-bag">Monkey Patching, Duck Punching, Shaking The Bag</h4>
 <p>a technique to extend or change the behavior of code at runtime without changing the source code and only affecting the running instance of the program.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> patchedFunc = func;
-patchedFunc = <span class="hljs-keyword">function</span> (<span class="hljs-params">x</span>) {
-  <span class="hljs-title function_">func</span>(x + <span class="hljs-number">1</span>);
+<pre><code class="hljs language-javascript">let patchedFunc = func;
+patchedFunc = <span class="hljs-keyword">function</span> <span class="hljs-title"></span>(x) {
+  func(x + 1);
 };
 </code></pre>
 <h4 id="monkey-testing">Monkey Testing</h4>
@@ -1865,7 +1865,7 @@ patchedFunc = <span class="hljs-keyword">function</span> (<span class="hljs-para
 <h4 id="noop-nop-no-op">Noop, NOP, no-op</h4>
 <p>a computer instruction that does nothing; short for &quot;no operation.&quot;</p>
 <p>Noop is pronounced &quot;no op&quot; (two syllables).</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">noop</span>(<span class="hljs-params"></span>) {}
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">noop</span><span class="hljs-params">()</span> {}
 </code></pre>
 <h4 id="nopping">Nopping</h4>
 <p>zoning out.</p>
@@ -1969,9 +1969,9 @@ patchedFunc = <span class="hljs-keyword">function</span> (<span class="hljs-para
 <h4 id="parameters">Parameters</h4>
 <p>the variables listed as part of a function definition.</p>
 <p>Do not confuse parameters with arguments, which are data passed to the function when the function is invoked.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span>(<span class="hljs-params">x, y</span>) {} <span class="hljs-comment">// parameters x and y</span>
+<pre><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">x, y</span>) </span>{} <span class="hljs-comment">// parameters x and y</span>
 
-<span class="hljs-title function_">fn</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// fn called with arguments 1 and 2</span>
+<span class="hljs-function"><span class="hljs-keyword">fn</span>(<span class="hljs-params"><span class="hljs-number">1</span>, <span class="hljs-number">2</span></span>)</span>; <span class="hljs-comment">// fn called with arguments 1 and 2</span>
 </code></pre>
 <h4 id="pareto-principle">Pareto Principle</h4>
 <p>when 20% of the causes are responsible for 80% of the effects.</p>
@@ -1982,17 +1982,17 @@ patchedFunc = <span class="hljs-keyword">function</span> (<span class="hljs-para
 <p>the process of taking a function that accepts more than one argument, binding values to some of the arguments, and returning a new function that only accepts the remaining, un-bound arguments.</p>
 <p>In JavaScript, the <em>Function.prototype.bind</em> method is a partial application function. Currying is a type of partial application.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">x</span>(<span class="hljs-params">a, b, c</span>) {
-  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">arguments</span>);
+  <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(arguments);
 }
 
 <span class="hljs-comment">// x has been partially applied</span>
-<span class="hljs-keyword">let</span> <span class="hljs-title function_">partialX</span> = (<span class="hljs-params">c</span>) =&gt; <span class="hljs-title function_">x</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, c);
+let partialX = <span class="hljs-function">(<span class="hljs-params">c</span>) =&gt;</span> x(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, c);
 
-<span class="hljs-title function_">partialX</span>(<span class="hljs-number">3</span>);
+partialX(<span class="hljs-number">3</span>);
 
 <span class="hljs-comment">// could also use .bind</span>
-partialX = x.<span class="hljs-title function_">bind</span>(<span class="hljs-literal">undefined</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
-<span class="hljs-title function_">partialX</span>(<span class="hljs-number">3</span>);
+partialX = x.bind(<span class="hljs-literal">undefined</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+partialX(<span class="hljs-number">3</span>);
 </code></pre>
 <h4 id="pattern-trap">Pattern Trap</h4>
 <p>a claim that inexperienced developers overuse design patterns.</p>
@@ -2018,10 +2018,10 @@ partialX = x.<span class="hljs-title function_">bind</span>(<span class="hljs-li
 <p>Instead, the focus in point-free style is on using lots of little functions and composing functions.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// not point free because the parameter `point` has been explicitly named in</span>
 <span class="hljs-comment">// the definition of an anonymous function</span>
-<span class="hljs-keyword">let</span> notPointFree = list.<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">point</span>) =&gt;</span> <span class="hljs-title function_">isTrue</span>(point));
+let notPointFree = list.<span class="hljs-built_in">filter</span>(<span class="hljs-function">(<span class="hljs-params"><span class="hljs-built_in">point</span></span>) =&gt;</span> isTrue(<span class="hljs-built_in">point</span>));
 
 <span class="hljs-comment">// point free because no parameter has been named in a function definition</span>
-<span class="hljs-keyword">let</span> pointFree = list.<span class="hljs-title function_">filter</span>(isTrue);
+let pointFree = list.<span class="hljs-built_in">filter</span>(isTrue);
 </code></pre>
 <h4 id="pointed-functor">Pointed Functor</h4>
 <p>a functor that implements the pointed interface; a functor with an <code>of</code> (also known as <code>unit</code>) method that lifts the passed value into the functor&#39;s context.</p>
@@ -2047,9 +2047,9 @@ partialX = x.<span class="hljs-title function_">bind</span>(<span class="hljs-li
 <p>typical pattern for form submission to prevent resubmission when the back button is activated.</p>
 <h4 id="postfix-notation-reverse-polish-notation">Postfix Notation, Reverse Polish Notation</h4>
 <p>when using an operator that increments or decrements a value, and the expression returns the <em>original</em> value. For example, <code>i--; i++;</code></p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> i = <span class="hljs-number">10</span>;
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(i++); <span class="hljs-comment">// 10</span>
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(i); <span class="hljs-comment">// 11</span>
+<pre><code class="hljs language-javascript">let i = <span class="hljs-number">10</span>;
+<span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(i++); <span class="hljs-comment">// 10</span>
+<span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(i); <span class="hljs-comment">// 11</span>
 </code></pre>
 <h4 id="predicate-function">Predicate Function</h4>
 <p>a function that determines if something is true or false.</p>
@@ -2057,9 +2057,9 @@ partialX = x.<span class="hljs-title function_">bind</span>(<span class="hljs-li
 <h4 id="prefix-notation-polish-notation">Prefix Notation, Polish Notation</h4>
 <p>when using an operator that increments or decrements a value, and the expression returns the new value.</p>
 <p>For example, <code>--i; ++i;</code></p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> i = <span class="hljs-number">10</span>;
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(--i); <span class="hljs-comment">// 9</span>
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(i); <span class="hljs-comment">// 9</span>
+<pre><code class="hljs language-javascript">let i = <span class="hljs-number">10</span>;
+<span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(--i); <span class="hljs-comment">// 9</span>
+<span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(i); <span class="hljs-comment">// 9</span>
 </code></pre>
 <h4 id="premature-optimization">Premature Optimization</h4>
 <p>&quot;Premature optimization is the root of all evil (or at least most of it) in programming,&quot; said Donald Knuth.</p>
@@ -2132,24 +2132,24 @@ partialX = x.<span class="hljs-title function_">bind</span>(<span class="hljs-li
 <p>a function that returns a value that is only determined by its input values and has no observable side effects.</p>
 <p>A pure function <em>maps</em> input values to output values.</p>
 <p>Most definitions also require that a pure function can not use mutable data outside of the scope of the function, even if it is not mutating it.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">pure</span>(<span class="hljs-params">a, b</span>) {
-  <span class="hljs-keyword">return</span> a + b;
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title">pure</span>(a, b) {
+  <span class="hljs-keyword">return</span> <span class="hljs-type">a</span> + b;
 }
 
-<span class="hljs-keyword">let</span> c = <span class="hljs-number">10</span>;
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">notPure</span>(<span class="hljs-params"></span>) {
-  <span class="hljs-keyword">return</span> c + <span class="hljs-number">10</span>; <span class="hljs-comment">// depending on free variable</span>
+let c = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">function</span> <span class="hljs-title">notPure</span>() {
+  <span class="hljs-keyword">return</span> <span class="hljs-type">c</span> + <span class="hljs-number">10</span>; // depending on free variable
 }
 
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">notPure2</span>(<span class="hljs-params"></span>) {
-  io.<span class="hljs-title function_">write</span>(buffer); <span class="hljs-comment">// side-effect</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title">notPure2</span>() {
+  io.write(buffer); // side-effect
 }
 
-<span class="hljs-comment">// i have seen some debate on whether the function below is pure; it depends on</span>
-<span class="hljs-comment">// data outside functional scope, but the data is immutable; no clear answer</span>
-<span class="hljs-keyword">const</span> d = <span class="hljs-number">20</span>;
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">maybePure</span>(<span class="hljs-params"></span>) {
-  <span class="hljs-keyword">return</span> d + <span class="hljs-number">10</span>;
+// i have seen <span class="hljs-keyword">some</span> debate on whether the <span class="hljs-keyword">function</span> <span class="hljs-title">below</span> <span class="hljs-keyword">is</span> pure; it depends on
+// data outside functional scope, but the data <span class="hljs-keyword">is</span> immutable; no clear answer
+const d = <span class="hljs-number">20</span>;
+<span class="hljs-keyword">function</span> <span class="hljs-title">maybePure</span>() {
+  <span class="hljs-keyword">return</span> <span class="hljs-type">d</span> + <span class="hljs-number">10</span>;
 }
 </code></pre>
 <h4 id="pushstate-ajax-pjax">PushState Ajax (PJAX)</h4>
@@ -2197,8 +2197,8 @@ partialX = x.<span class="hljs-title function_">bind</span>(<span class="hljs-li
 <p>Reduce typically takes two arguments: (1) the reducer function and (2) the initial value. The reducer function&#39;s return value is assigned to the accumulator on each iteration and ultimately is the final returned value.</p>
 <p>Reduce is sometimes described as <em>folding</em> multiple values together into one value.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// example for arrays</span>
-<span class="hljs-keyword">const</span> initialValue = <span class="hljs-number">0</span>;
-<span class="hljs-keyword">const</span> sum = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].<span class="hljs-title function_">reduce</span>(
+const initialValue = <span class="hljs-number">0</span>;
+const <span class="hljs-built_in">sum</span> = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].<span class="hljs-built_in">reduce</span>(
   <span class="hljs-function">(<span class="hljs-params">accumulator, currentValue</span>) =&gt;</span> accumulator + currentValue,
   initialValue
 ); <span class="hljs-comment">// 6</span>
@@ -2211,7 +2211,7 @@ partialX = x.<span class="hljs-title function_">bind</span>(<span class="hljs-li
   <span class="hljs-keyword">return</span> accumulator + currentValue;
 }
 
-<span class="hljs-keyword">const</span> sum = <span class="hljs-title function_">reduce</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// 3</span>
+const <span class="hljs-built_in">sum</span> = <span class="hljs-built_in">reduce</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// 3</span>
 </code></pre>
 <h4 id="refactoring">Refactoring</h4>
 <p>changing existing source code to improve its design/structure without changing its functionality.</p>
@@ -2252,11 +2252,11 @@ partialX = x.<span class="hljs-title function_">bind</span>(<span class="hljs-li
 <h4 id="rest-parameters">Rest parameters</h4>
 <p>the rest parameter syntax in JavaScript allows for representing an indefinite number of arguments as an array.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// ...args is the rest parameter</span>
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span>(<span class="hljs-params">a, b, ...args</span>) {
-  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(args);
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span><span class="hljs-params">(a, b, <span class="hljs-rest_arg">...args</span>)</span> {
+  console.log(args);
 }
 
-<span class="hljs-title function_">fn</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>);
+fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>);
 
 <span class="hljs-comment">// logs [3, 4, 5]</span>
 </code></pre>
@@ -2376,7 +2376,7 @@ partialX = x.<span class="hljs-title function_">bind</span>(<span class="hljs-li
 <h4 id="sparse-arrays">Sparse Arrays</h4>
 <p>arrays with holes and no values.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> arr = [, ,];
-arr.<span class="hljs-property">length</span> == <span class="hljs-number">3</span>;
+arr.length == <span class="hljs-number">3</span>;
 arr[<span class="hljs-number">0</span>] == <span class="hljs-literal">undefined</span>;
 </code></pre>
 <h4 id="spooler">Spooler</h4>
@@ -2384,15 +2384,15 @@ arr[<span class="hljs-number">0</span>] == <span class="hljs-literal">undefined<
 <h4 id="spread-syntax-spread-operator">Spread Syntax, Spread Operator</h4>
 <p>in JavaScript, it allows iterables like arrays, strings, etc., to be expanded in places where zero or more arguments or elements are expected.</p>
 <p>Also, the spread operator can spread the properties of one object to a different object.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
-<span class="hljs-keyword">let</span> newArr = [...arr, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]; <span class="hljs-comment">// spread iterables</span>
+<pre><code class="hljs language-javascript">let arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+let <span class="hljs-keyword">new</span><span class="hljs-type">Arr</span> = [...arr, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]; <span class="hljs-comment">// spread iterables</span>
 
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(newArr.<span class="hljs-property">length</span>); <span class="hljs-comment">// 6</span>
+console.log(<span class="hljs-keyword">new</span><span class="hljs-type">Arr</span>.length); <span class="hljs-comment">// 6</span>
 
-<span class="hljs-keyword">let</span> obj = { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-number">3</span> };
-<span class="hljs-keyword">let</span> newObj = { ...obj, <span class="hljs-attr">d</span>: <span class="hljs-number">4</span> }; <span class="hljs-comment">// spread properties</span>
+let obj = { a: <span class="hljs-type">1</span>, b: <span class="hljs-type">2</span>, c: <span class="hljs-type">3 </span>};
+let <span class="hljs-keyword">new</span><span class="hljs-type">Obj</span> = { ...obj, d: <span class="hljs-type">4 </span>}; <span class="hljs-comment">// spread properties</span>
 
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(newObj); <span class="hljs-comment">// { a: 1, b: 2, c: 3, d: 4 }</span>
+console.log(<span class="hljs-keyword">new</span><span class="hljs-type">Obj</span>); <span class="hljs-comment">// { a: 1, b: 2, c: 3, d: 4 }</span>
 </code></pre>
 <h4 id="stack">Stack</h4>
 <p>a <em>last in, first out</em> abstract data type that is characterized by push/pop.</p>
@@ -2459,13 +2459,13 @@ arr[<span class="hljs-number">0</span>] == <span class="hljs-literal">undefined<
 <p>knowledge that is difficult to transfer to another person.</p>
 <h4 id="tail-call-tail-recursion">Tail Call, Tail Recursion</h4>
 <p>when a function returns a functional call.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params"></span>) {
-  <span class="hljs-keyword">return</span> <span class="hljs-number">10</span>;
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>() {
+  <span class="hljs-keyword">return</span> <span class="hljs-type">10</span>;
 }
 
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">bar</span>(<span class="hljs-params"></span>) {
-  <span class="hljs-comment">// foo() is the tail call</span>
-  <span class="hljs-keyword">return</span> <span class="hljs-title function_">foo</span>();
+<span class="hljs-keyword">function</span> <span class="hljs-title">bar</span>() {
+  // foo() <span class="hljs-keyword">is</span> the tail call
+  <span class="hljs-keyword">return</span> foo();
 }
 </code></pre>
 <h4 id="tail-call-optimization-tco">Tail Call Optimization (TCO)</h4>
@@ -2524,13 +2524,13 @@ arr[<span class="hljs-number">0</span>] == <span class="hljs-literal">undefined<
 <h4 id="thunk">Thunk</h4>
 <p>an argumentless function that performs an action when called.</p>
 <p>Often, thunks are created via a return from a partially applied function.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">setupUIWrite</span>(<span class="hljs-params">data</span>) {
-  <span class="hljs-keyword">return</span> <span class="hljs-function">() =&gt;</span> io.<span class="hljs-title function_">write</span>(data);
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> setup<span class="hljs-constructor">UIWrite(<span class="hljs-params">data</span>)</span> {
+  return<span class="hljs-function"> <span class="hljs-params">()</span> =&gt;</span> io.write(data);
 }
 
-<span class="hljs-keyword">let</span> thunk = <span class="hljs-title function_">setupUIWrite</span>(<span class="hljs-string">&quot;new data&quot;</span>);
+<span class="hljs-keyword">let</span> thunk = setup<span class="hljs-constructor">UIWrite(<span class="hljs-string">&quot;new data&quot;</span>)</span>;
 
-<span class="hljs-title function_">thunk</span>();
+thunk<span class="hljs-literal">()</span>;
 </code></pre>
 <h4 id="tier">Tier</h4>
 <p>a real, physical computing resource where abstract layers are deployed.</p>
@@ -2564,7 +2564,7 @@ arr[<span class="hljs-number">0</span>] == <span class="hljs-literal">undefined<
 <h4 id="transducer-function-transducer">Transducer Function, Transducer</h4>
 <p>a pattern that involves functions that accept a reducer as input and return a different reducer.</p>
 <p>Unlike reducers, which cannot be composed because they have an arity of &gt; 1, transducers can be composed because they have an arity of one. The composition of transducers can be useful to only iterate over an iterable once instead of creating intermediate step iterables when, for example, performing multiple mappings or reduce operations.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> transducer =&gt; <span class="hljs-function"><span class="hljs-params">reducer</span> =&gt;</span> {
+<pre><code class="hljs language-javascript">const transducer =&gt; <span class="hljs-function"><span class="hljs-params">reducer</span> =&gt;</span> {
   <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">accumulator, value</span>) =&gt;</span> {
 
   }
@@ -2710,11 +2710,11 @@ arr[<span class="hljs-number">0</span>] == <span class="hljs-literal">undefined<
 <p>Also, yak shaving is used to denote finishing a simple task.</p>
 <h4 id="yoda-conditions">Yoda Conditions</h4>
 <p>flipping the typical order of the operands in a comparison.</p>
-<pre><code class="hljs language-javascript"><span class="hljs-comment">// Normal person: &quot;A Jedi does not crave these things&quot;</span>
+<pre><code class="hljs language-javascript"><span class="hljs-regexp">//</span> Normal person: <span class="hljs-string">&quot;A Jedi does not crave these things&quot;</span>
 <span class="hljs-keyword">if</span> (foo === <span class="hljs-number">10</span>) {
 }
 
-<span class="hljs-comment">// Yoda: &quot;A Jedi craves not these things&quot;</span>
+<span class="hljs-regexp">//</span> Yoda: <span class="hljs-string">&quot;A Jedi craves not these things&quot;</span>
 <span class="hljs-keyword">if</span> (<span class="hljs-number">10</span> === foo) {
 }
 </code></pre>
