@@ -320,6 +320,10 @@ the process by which JavaScript adds semicolons to the end of code lines when th
 
 As a general rule, newlines trigger ASI.
 
+#### Availability
+
+the percentage of time a computer system is operational.
+
 **[⬆ back to index](#index)**
 
 ## B
@@ -638,6 +642,14 @@ code that explicitly tells the compiler that a value is of a certain type.
 branch of mathematics that is used extensively in the functional programming (FP) paradigm.
 
 The terms category, functor, monoid, monad, and many others that appear in FP originally come from category theory.
+
+#### Content Delivery Network (CDN)
+
+a system of geographically distributed servers designed to quickly satisfy internet requests.
+
+CDNs use both origin and edge servers.
+
+See [Origin Server](#origin-server) and [Edge Server](#edge-server).
 
 #### Charity Code Jam
 
@@ -1474,6 +1486,12 @@ ActionScript (_wipes tear_), good times man, good times...
 an architectural approach that brings computation and storage closer to requests to reduce latency.
 
 Imagine the source of truth server replicating itself to many edge servers across the world. Next, user requests can be routed to the closest edge server to reduce latency.
+
+#### Edge Server
+
+Edge servers are the servers on a CDN that store cached/replicated versions of content and deliver content to users based on geographical proximity.
+
+See [Origin Server](#origin-server).
 
 #### Eiffel
 
@@ -3090,6 +3108,12 @@ the degree to which changes to code in one place triggers changes in other place
 
 Higher orthogonality means changes are more isolated and trigger fewer changes elsewhere — basically, the degree of coupling in your code. In general, higher orthogonality is preferred.
 
+#### Origin Server
+
+Origin servers are the servers on a CDN that store the original version of the content.
+
+See [Edge Server](#edge-server).
+
 #### Overflow
 
 the result when a numerical result is so large that it cannot be presented in numerical format.
@@ -3386,6 +3410,14 @@ Pseudo threading is a way to allow the UI to refresh during a large computation 
 
 the ease with which one can differentiate two items.
 
+#### Pull CDN
+
+a CDN where the CDN will pull assets from the origin server when not available in the CDN cache.
+
+Using a Pull CDN means the site owner does not explicitly push content to the CDN. However, the first request will require a trip to the origin server.
+
+See [Push CDN](#push-cdn).
+
 #### Pull Request
 
 asking a repository author to incorporate changes you have made to a forked version of their repository.
@@ -3419,6 +3451,12 @@ function maybePure() {
   return d + 10;
 }
 ```
+
+#### Push CDN
+
+a CDN where the site owner pushes the content to the CDN, and CDN content is not automatically updated when content changes on the origin server.
+
+See [Pull CDN](#pull-cdn).
 
 #### PushState Ajax (PJAX)
 
@@ -4074,6 +4112,12 @@ a collection of test cases used to analyze the behavior of a program.
 #### Tethering
 
 connecting electronic devices.
+
+#### The Nine's of Availability
+
+a measure of availability expressed as how many nines are present in the uptime percentage.
+
+For example, two nines are 99.0%, three nines are 99.9%, and so on.
 
 #### Thin Client
 

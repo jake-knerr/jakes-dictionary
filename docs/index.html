@@ -423,6 +423,8 @@
 <h4 id="automatic-semicolon-insertion-asi">Automatic Semicolon Insertion (ASI)</h4>
 <p>the process by which JavaScript adds semicolons to the end of code lines when the semicolon is omitted.</p>
 <p>As a general rule, newlines trigger ASI.</p>
+<h4 id="availability">Availability</h4>
+<p>the percentage of time a computer system is operational.</p>
 <p><strong><a href="#index">⬆ back to index</a></strong></p>
 <h2 id="b">B</h2>
 <h4 id="b-tree">B-Tree</h4>
@@ -589,6 +591,10 @@ let CamelCaseVar<span class="hljs-comment">;</span>
 <h4 id="category-theory">Category Theory</h4>
 <p>branch of mathematics that is used extensively in the functional programming (FP) paradigm.</p>
 <p>The terms category, functor, monoid, monad, and many others that appear in FP originally come from category theory.</p>
+<h4 id="content-delivery-network-cdn">Content Delivery Network (CDN)</h4>
+<p>a system of geographically distributed servers designed to quickly satisfy internet requests.</p>
+<p>CDNs use both origin and edge servers.</p>
+<p>See <a href="#origin-server">Origin Server</a> and <a href="#edge-server">Edge Server</a>.</p>
 <h4 id="charity-code-jam">Charity Code Jam</h4>
 <p>events where developers produce an app for charity in a quick time frame.</p>
 <h4 id="checked-exceptions">Checked Exceptions</h4>
@@ -1058,6 +1064,9 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
 <h4 id="edge-computing">Edge Computing</h4>
 <p>an architectural approach that brings computation and storage closer to requests to reduce latency.</p>
 <p>Imagine the source of truth server replicating itself to many edge servers across the world. Next, user requests can be routed to the closest edge server to reduce latency.</p>
+<h4 id="edge-server">Edge Server</h4>
+<p>Edge servers are the servers on a CDN that store cached/replicated versions of content and deliver content to users based on geographical proximity.</p>
+<p>See <a href="#origin-server">Origin Server</a>.</p>
 <h4 id="eiffel">Eiffel</h4>
 <p>a compiled, object-oriented language created to increase the reliability of commercial software development.</p>
 <p>Eiffel was designed in 1985 by Betrand Meyer.</p>
@@ -1956,6 +1965,9 @@ patchedFunc = <span class="hljs-keyword">function</span> <span class="hljs-title
 <h4 id="orthogonality">Orthogonality</h4>
 <p>the degree to which changes to code in one place triggers changes in other places.</p>
 <p>Higher orthogonality means changes are more isolated and trigger fewer changes elsewhere — basically, the degree of coupling in your code. In general, higher orthogonality is preferred.</p>
+<h4 id="origin-server">Origin Server</h4>
+<p>Origin servers are the servers on a CDN that store the original version of the content.</p>
+<p>See <a href="#edge-server">Edge Server</a>.</p>
 <h4 id="overflow">Overflow</h4>
 <p>the result when a numerical result is so large that it cannot be presented in numerical format.</p>
 <p><strong><a href="#index">⬆ back to index</a></strong></p>
@@ -2130,6 +2142,10 @@ let pointFree = list.<span class="hljs-built_in">filter</span>(isTrue);
 <p>Pseudo threading is a way to allow the UI to refresh during a large computation without proper threading.</p>
 <h4 id="psychological-distance">Psychological Distance</h4>
 <p>the ease with which one can differentiate two items.</p>
+<h4 id="pull-cdn">Pull CDN</h4>
+<p>a CDN where the CDN will pull assets from the origin server when not available in the CDN cache.</p>
+<p>Using a Pull CDN means the site owner does not explicitly push content to the CDN. However, the first request will require a trip to the origin server.</p>
+<p>See <a href="#push-cdn">Push CDN</a>.</p>
 <h4 id="pull-request">Pull Request</h4>
 <p>asking a repository author to incorporate changes you have made to a forked version of their repository.</p>
 <h4 id="pure-function">Pure Function</h4>
@@ -2156,6 +2172,9 @@ const d = <span class="hljs-number">20</span>;
   <span class="hljs-keyword">return</span> <span class="hljs-type">d</span> + <span class="hljs-number">10</span>;
 }
 </code></pre>
+<h4 id="push-cdn">Push CDN</h4>
+<p>a CDN where the site owner pushes the content to the CDN, and CDN content is not automatically updated when content changes on the origin server.</p>
+<p>See <a href="#pull-cdn">Pull CDN</a>.</p>
 <h4 id="pushstate-ajax-pjax">PushState Ajax (PJAX)</h4>
 <p>web technique that uses AJAX requests to retrieve the HTML to update a web page.</p>
 <p>AJAX avoids a hard web page refresh.</p>
@@ -2507,6 +2526,9 @@ console.log(<span class="hljs-keyword">new</span><span class="hljs-type">Obj</sp
 <p>a collection of test cases used to analyze the behavior of a program.</p>
 <h4 id="tethering">Tethering</h4>
 <p>connecting electronic devices.</p>
+<h4 id="the-nines-of-availability">The Nine&#39;s of Availability</h4>
+<p>a measure of availability expressed as how many nines are present in the uptime percentage.</p>
+<p>For example, two nines are 99.0%, three nines are 99.9%, and so on.</p>
 <h4 id="thin-client">Thin Client</h4>
 <p>a computer that connects to another computer and depends heavily on the other computer to function.</p>
 <p>The classic client-server model.</p>
