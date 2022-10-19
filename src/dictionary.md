@@ -4,16 +4,6 @@
 
 ---
 
-#### DNS Zones
-
-#### Reverse DNS
-
-#### DNS Lookup
-
-#### Load Balancing
-
-#### - computer cluster, clustering - Ideally, a cluster functions as if it were a single system. A user accessing the cluster should not need to know whether the system is a cluster or an individual machine. Furthermore, a cluster should be designed to minimize latency and prevent bottlenecks in node-to-node communication. not load balancers cuz all aware of eachother
-
 ---
 
 ## A
@@ -793,6 +783,10 @@ typically the term is referring to either (1) functional composition or (2) obje
 
 software tools that automate the development of software.
 
+#### Computer Cluster, Clustering
+
+a set of computers working together such that they can be viewed as a single system by an end-user.
+
 #### Computer Vision
 
 the study and pursuit of how computers can understand digital images and videos.
@@ -1317,6 +1311,16 @@ Also known as dispatch resolution.
 a type of algorithm that takes a larger problem and breaks it into similar sub-problem, solves the sub-problems recursively, and then combines the results.
 
 A typical example of divide and conquer is sorting an array by dividing it in half and sorting each half and then combining the result.
+
+#### DNS Lookup
+
+the process of retrieving the IP address associated with a given domain name.
+
+See [Reverse DNS Lookup](#reverse-dns-lookup-reverse-dns-resolution-rdns).
+
+#### DNS Zones
+
+part of the domain namespace delegated to entities responsible for maintenance and providing additional control of DNS components like authoritative name servers.
 
 #### Do Not Repeat Yourself (DRY)
 
@@ -2628,6 +2632,12 @@ For example, `let data = 12; let data = { a:1 };`
 
 a concurrent application's ability to execute on time is known as its _liveness_.
 
+#### Load Balancing
+
+the process of distributing computing tasks over a set of computers to make overall processing more efficient.
+
+For example, load balancing could distribute incoming network traffic across multiple servers to improve responsiveness.
+
 #### Loch Ness Monster Bug, Bugfoot, Nessiebug
 
 a bug that has only been seen by a single person.
@@ -3586,6 +3596,14 @@ fn(1, 2, 3, 4, 5);
 
 // logs [3, 4, 5]
 ```
+
+#### Reverse DNS Lookup, Reverse DNS Resolution (rDNS)
+
+querying the Domain Name System (DNS) to determine the domain name associated with an IP address.
+
+Reverse DNS is the reverse of "forward" DNS, which determines the IP addresses mapped to a domain name.
+
+See [DNS Lookup](#dns-lookup).
 
 #### Reverse Proxy
 

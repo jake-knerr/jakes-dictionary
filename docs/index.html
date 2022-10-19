@@ -259,11 +259,6 @@
         <div class="primary"><h2 id="index">Index</h2>
 <p><a href="#a">A</a> <a href="#b">B</a> <a href="#c">C</a> <a href="#d">D</a> <a href="#e">E</a> <a href="#f">F</a> <a href="#g">G</a> <a href="#h">H</a> <a href="#i">I</a> <a href="#j">J</a> <a href="#k">K</a> <a href="#l">L</a> <a href="#m">M</a> <a href="#n">N</a> <a href="#o">O</a> <a href="#p">P</a> <a href="#q">Q</a> <a href="#r">R</a> <a href="#s">S</a> <a href="#t">T</a> <a href="#u">U</a> <a href="#v">V</a> <a href="#w">W</a> <a href="#x">X</a> <a href="#y">Y</a> <a href="#z">Z</a></p>
 <hr>
-<h4 id="dns-zones">DNS Zones</h4>
-<h4 id="reverse-dns">Reverse DNS</h4>
-<h4 id="dns-lookup">DNS Lookup</h4>
-<h4 id="load-balancing">Load Balancing</h4>
-<h4 id="--computer-cluster-clustering---ideally-a-cluster-functions-as-if-it-were-a-single-system-a-user-accessing-the-cluster-should-not-need-to-know-whether-the-system-is-a-cluster-or-an-individual-machine-furthermore-a-cluster-should-be-designed-to-minimize-latency-and-prevent-bottlenecks-in-node-to-node-communication-not-load-balancers-cuz-all-aware-of-eachother">- computer cluster, clustering - Ideally, a cluster functions as if it were a single system. A user accessing the cluster should not need to know whether the system is a cluster or an individual machine. Furthermore, a cluster should be designed to minimize latency and prevent bottlenecks in node-to-node communication. not load balancers cuz all aware of eachother</h4>
 <hr>
 <h2 id="a">A</h2>
 <h4 id="a-duck">A Duck</h4>
@@ -687,6 +682,8 @@ foo();
 <p>typically the term is referring to either (1) functional composition or (2) object composition.</p>
 <h4 id="computer-aided-software-engineering-case">Computer-Aided Software Engineering (CASE)</h4>
 <p>software tools that automate the development of software.</p>
+<h4 id="computer-cluster-clustering">Computer Cluster, Clustering</h4>
+<p>a set of computers working together such that they can be viewed as a single system by an end-user.</p>
 <h4 id="computer-vision">Computer Vision</h4>
 <p>the study and pursuit of how computers can understand digital images and videos.</p>
 <h4 id="concatenate">Concatenate</h4>
@@ -988,6 +985,11 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
 <h4 id="divide-and-conquer">Divide and Conquer</h4>
 <p>a type of algorithm that takes a larger problem and breaks it into similar sub-problem, solves the sub-problems recursively, and then combines the results.</p>
 <p>A typical example of divide and conquer is sorting an array by dividing it in half and sorting each half and then combining the result.</p>
+<h4 id="dns-lookup">DNS Lookup</h4>
+<p>the process of retrieving the IP address associated with a given domain name.</p>
+<p>See <a href="#reverse-dns-lookup-reverse-dns-resolution-rdns">Reverse DNS Lookup</a>.</p>
+<h4 id="dns-zones">DNS Zones</h4>
+<p>part of the domain namespace delegated to entities responsible for maintenance and providing additional control of DNS components like authoritative name servers.</p>
 <h4 id="do-not-repeat-yourself-dry">Do Not Repeat Yourself (DRY)</h4>
 <p>do not repeat code in your application that serves the same purpose.</p>
 <p>DRY is a principle of software development that aims to reduce code repetition.</p>
@@ -1717,6 +1719,9 @@ nameLens.<span class="hljs-keyword">set</span>(user)(<span class="hljs-string">&
 <p>For example, <code>let data = 12; let data = { a:1 };</code></p>
 <h4 id="liveness">Liveness</h4>
 <p>a concurrent application&#39;s ability to execute on time is known as its <em>liveness</em>.</p>
+<h4 id="load-balancing">Load Balancing</h4>
+<p>the process of distributing computing tasks over a set of computers to make overall processing more efficient.</p>
+<p>For example, load balancing could distribute incoming network traffic across multiple servers to improve responsiveness.</p>
 <h4 id="loch-ness-monster-bug-bugfoot-nessiebug">Loch Ness Monster Bug, Bugfoot, Nessiebug</h4>
 <p>a bug that has only been seen by a single person.</p>
 <h4 id="locks">Locks</h4>
@@ -2260,6 +2265,10 @@ fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
 
 <span class="hljs-comment">// logs [3, 4, 5]</span>
 </code></pre>
+<h4 id="reverse-dns-lookup-reverse-dns-resolution-rdns">Reverse DNS Lookup, Reverse DNS Resolution (rDNS)</h4>
+<p>querying the Domain Name System (DNS) to determine the domain name associated with an IP address.</p>
+<p>Reverse DNS is the reverse of &quot;forward&quot; DNS, which determines the IP addresses mapped to a domain name.</p>
+<p>See <a href="#dns-lookup">DNS Lookup</a>.</p>
 <h4 id="reverse-proxy">Reverse Proxy</h4>
 <p>a server that grabs data from other servers on a private network and forwards the data to the client.</p>
 <p>See <a href="#forward-proxy">forward proxy</a>.</p>
