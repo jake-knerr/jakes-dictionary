@@ -8,7 +8,7 @@
 
 #### Reverse DNS
 
-#### DNS Loookup
+#### DNS Lookup
 
 #### Load Balancing
 

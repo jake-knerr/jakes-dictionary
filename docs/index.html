@@ -173,18 +173,20 @@
     </style>
     <script type="module">
       const main = document.querySelector(".primary");
-      const cloned = main.cloneNode(true);
+      const nodes = main.querySelectorAll(":scope > *");
+      const rawHTML = main.innerHTML;
+
       const parseNode = document.createElement("div");
       const search = document.getElementById("search-field");
 
       search.oninput = () => {
         const searchValue = search.value;
-        if (!searchValue) return (main.innerHTML = cloned.innerHTML);
+        if (!searchValue) return (main.innerHTML = rawHTML);
 
         let innerHTML = "";
         let include = false;
 
-        for (const $ of cloned.querySelectorAll(":scope > *")) {
+        for (const $ of nodes) {
           if ($.tagName === "H4") {
             if (
               $.innerText.toLowerCase().indexOf(searchValue.toLowerCase()) > -1
@@ -259,7 +261,7 @@
 <hr>
 <h4 id="dns-zones">DNS Zones</h4>
 <h4 id="reverse-dns">Reverse DNS</h4>
-<h4 id="dns-loookup">DNS Loookup</h4>
+<h4 id="dns-lookup">DNS Lookup</h4>
 <h4 id="load-balancing">Load Balancing</h4>
 <h4 id="--computer-cluster-clustering---ideally-a-cluster-functions-as-if-it-were-a-single-system-a-user-accessing-the-cluster-should-not-need-to-know-whether-the-system-is-a-cluster-or-an-individual-machine-furthermore-a-cluster-should-be-designed-to-minimize-latency-and-prevent-bottlenecks-in-node-to-node-communication-not-load-balancers-cuz-all-aware-of-eachother">- computer cluster, clustering - Ideally, a cluster functions as if it were a single system. A user accessing the cluster should not need to know whether the system is a cluster or an individual machine. Furthermore, a cluster should be designed to minimize latency and prevent bottlenecks in node-to-node communication. not load balancers cuz all aware of eachother</h4>
 <hr>

@@ -173,18 +173,20 @@
     </style>
     <script type="module">
       const main = document.querySelector(".primary");
-      const cloned = main.cloneNode(true);
+      const nodes = main.querySelectorAll(":scope > *");
+      const rawHTML = main.innerHTML;
+
       const parseNode = document.createElement("div");
       const search = document.getElementById("search-field");
 
       search.oninput = () => {
         const searchValue = search.value;
-        if (!searchValue) return (main.innerHTML = cloned.innerHTML);
+        if (!searchValue) return (main.innerHTML = rawHTML);
 
         let innerHTML = "";
         let include = false;
 
-        for (const $ of cloned.querySelectorAll(":scope > *")) {
+        for (const $ of nodes) {
           if ($.tagName === "H4") {
             if (
               $.innerText.toLowerCase().indexOf(searchValue.toLowerCase()) > -1
