@@ -449,6 +449,12 @@ Think of a detective case board where different detectives add evidence and conc
 
 a collection of statements treated as a single statement for purposes of control flow.
 
+#### Block storage, Block-Level Storage
+
+storage technique that divides data into blocks and stores each block with a unique identifier for retrieval.
+
+Block storage is commonly used by cloud storage providers.
+
 #### Bootstrapping
 
 i have seen two definitions:
@@ -1969,6 +1975,10 @@ writing code to make sure that the input data is the expected type or to more ge
 
 ## H
 
+#### Hadoop Distributed File System (HDFS)
+
+a distributed file system designed to run on inexpensive hardware.
+
 #### Handler
 
 a function designed to handle asynchronous events.
@@ -2721,6 +2731,12 @@ a lightweight markup language used to convert text to HTML.
 #### Masked Bugs
 
 when two bugs cancel each other out and the software performs correctly.
+
+#### Materialized View
+
+a pre-computed data set that contains the results of a database query stored for later use.
+
+Using materialized views can improve the query performance of a database.
 
 #### Megamoth
 
@@ -3546,6 +3562,10 @@ function reducer(accumulator, currentValue) {
 const sum = reduce(1, 2); // 3
 ```
 
+#### Redundant Array of Independent Disks (RAID)
+
+storing redundant data on multiple hard disks or solid-state drives to improve performance and data backup.
+
 #### Refactoring
 
 changing existing source code to improve its design/structure without changing its functionality.
@@ -3694,6 +3714,12 @@ two URLs have the "same origin" if they have the same protocol, domain and port.
 #### Scaffolding
 
 code used during program development that is not part of the final program.
+
+#### Scalability
+
+the measure of the effectiveness of adding resources to a system to handle increased workloads.
+
+See [Vertical Scaling](#vertical-scaling) and [Horizontal Scaling](#horizontal-scaling).
 
 #### Scalar Data
 
@@ -4034,7 +4060,7 @@ function bar() {
 
 #### Tail Call Optimization (TCO)
 
-javaScript can optimize code that uses a proper tail call to limit the growth of the call stack.
+JavaScript can optimize code that uses a proper tail call to limit the growth of the call stack.
 
 See [proper tail call](#proper-tail-calls-ptc).
 
