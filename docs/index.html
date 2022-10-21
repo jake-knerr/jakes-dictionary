@@ -184,6 +184,10 @@
       const parseNode = document.createElement("div");
       const search = document.getElementById("search-field");
 
+      document.querySelector("#index").innerHTML += ` (${String(
+        main.querySelectorAll(":scope > h4").length
+      )} Definitions)`;
+
       search.oninput = () => {
         const searchValue = search.value;
         if (!searchValue) return (main.innerHTML = rawHTML);
