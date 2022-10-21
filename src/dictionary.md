@@ -1937,6 +1937,12 @@ Also, she retired as an Admiral in the United States Navy.
 
 refers to objects that are defined at a low level of abstraction in your program.
 
+#### Graph Database (GDB)
+
+a NoSQL database that stores data in nodes with edges (graphs) expressing the relationship between nodes.
+
+Since data is stored without a pre-defined model, storage and usage of the data are very flexible.
+
 #### Graphs
 
 a data structure consisting of nodes (also known as vertices) and edges (also known as lines or arcs).
@@ -2242,6 +2248,12 @@ See [encapsulation](#encapsulation).
 a program that enables users to enter characters and symbols not found on their input devices.
 
 Typically, IMEs convert keystrokes to characters in another language.
+
+#### Input/output operations per second (IOPS)
+
+a performance measurement for storage devices.
+
+Pronounced `eye-ops`.
 
 #### Instance
 
@@ -2882,6 +2894,10 @@ Note that type A is not the monoid. The monoid is the type, the operation over t
 
 a computational algorithm that relies on repeated random sampling to compute the results.
 
+#### Multi-model database
+
+a database that combines multiple database types into a single backend system.
+
 #### Mutable Data
 
 data that can be modified after creation.
@@ -2899,6 +2915,12 @@ when multiple functions recursively call each other.
 **[⬆ back to index](#index)**
 
 ## N
+
+#### N+1 Query Problem, N+1 Selects Problem
+
+a performance anti-pattern for data retrieval (database or otherwise) that refers to retrieving a set of data and then needing to run a query for each result of the previous query.
+
+Thus, N+1 total queries are necessary.
 
 #### Namespaces
 
@@ -4479,6 +4501,12 @@ complaint leveled at programmers when they are working on non-programming tasks.
 a problem that is difficult to solve because of incomplete, contradictory, and changing requirements that are often difficult to recognize.
 
 Solving one aspect of a wicked problem may create other problems.
+
+#### Wide Column Databases, Wide Column Stores
+
+a database that uses tables, rows, and columns but the names and format of the columns can vary from row to row in the same table.
+
+This schema-agnostic approach allows for data to be spread across multiple servers.
 
 #### WISDOM
 
