@@ -325,6 +325,12 @@ default Unix shell for many versions of Linux and OSX.
 
 Bash is a command processor.
 
+#### Basic Availability, Soft State, Eventual Consistency (BASE)
+
+refers to database design where the database is usually available (basic availability), and different stores are not necessarily consistent (soft state) but will be eventually.
+
+BASE principles allow databases to be scaled faster, cheaper, and across multiple servers.
+
 #### Bean, Java Bean
 
 without getting too specific, a simplified type of class in the Java language.
@@ -613,6 +619,10 @@ See [LowerCamelCase](#camelcase-lowercamelcase-dromedary-case).
 let BigVar;
 let CamelCaseVar;
 ```
+
+#### CAP Theorem
+
+the idea that a distributed system can only possess two of three of these characteristics: consistency, availability, and partition tolerance.
 
 #### Casting
 
@@ -1175,9 +1185,23 @@ a character used to signify a boundary between separate terms in plain text.
 
 For example, the comma is the delimiter in this string "john,muhammad,sally,fernando,juan,xiao,bill".
 
+#### Denormalization
+
+process of adding redundant data to tables to reduce the need for costly JOIN operations and increase read performance.
+
+However, the redundant data will decrease write performance.
+
 #### Dense Array
 
 an array without holes.
+
+#### Dense Index
+
+regarding databases when an index record is created for each search-key value.
+
+This type of index is fast but consumes a lot of storage.
+
+See [Sparse Index](#sparse-index).
 
 #### Dependency
 
@@ -2744,6 +2768,12 @@ a lightweight markup language used to convert text to HTML.
 
 when two bugs cancel each other out and the software performs correctly.
 
+#### Master-Slave Replication
+
+a data storage technique where a master data source replicates data to slaves.
+
+If the master goes offline, the slaves can provide data reads or be promoted to a master data source.
+
 #### Materialized View
 
 a pre-computed data set that contains the results of a database query stored for later use.
@@ -3134,6 +3164,12 @@ the result when a numerical result is so large that it cannot be presented in nu
 **[⬆ back to index](#index)**
 
 ## P
+
+#### PACELC Theorem
+
+a refinement of the CAP theorem; for a distributed system that uses network partitioning, the system can have either availability or consistency.
+
+See [CAP Theorem](#cap-theorem).
 
 #### Paging
 
@@ -3916,6 +3952,14 @@ const arr = [, ,];
 arr.length == 3;
 arr[0] == undefined;
 ```
+
+#### Sparse Index
+
+regarding databases when an index record is not created for each search-key value.
+
+This type of index consumes less storage than a dense index but is slower.
+
+See [Dense Index](#dense-index).
 
 #### Spooler
 

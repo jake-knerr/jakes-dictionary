@@ -447,6 +447,9 @@
 <h4 id="bash">Bash</h4>
 <p>default Unix shell for many versions of Linux and OSX.</p>
 <p>Bash is a command processor.</p>
+<h4 id="basic-availability-soft-state-eventual-consistency-base">Basic Availability, Soft State, Eventual Consistency (BASE)</h4>
+<p>refers to database design where the database is usually available (basic availability), and different stores are not necessarily consistent (soft state) but will be eventually.</p>
+<p>BASE principles allow databases to be scaled faster, cheaper, and across multiple servers.</p>
 <h4 id="bean-java-bean">Bean, Java Bean</h4>
 <p>without getting too specific, a simplified type of class in the Java language.</p>
 <h4 id="behavior-driven-development-bdd">Behavior Driven Development (BDD)</h4>
@@ -598,6 +601,8 @@ let camelCaseVar<span class="hljs-comment">;</span>
 <pre><code class="hljs language-javascript">let BigVar<span class="hljs-comment">;</span>
 let CamelCaseVar<span class="hljs-comment">;</span>
 </code></pre>
+<h4 id="cap-theorem">CAP Theorem</h4>
+<p>the idea that a distributed system can only possess two of three of these characteristics: consistency, availability, and partition tolerance.</p>
 <h4 id="casting">Casting</h4>
 <p>code that explicitly tells the compiler that a value is of a certain type.</p>
 <h4 id="category-theory">Category Theory</h4>
@@ -916,8 +921,15 @@ foo();
 <h4 id="delimiter-delimited">Delimiter, Delimited</h4>
 <p>a character used to signify a boundary between separate terms in plain text.</p>
 <p>For example, the comma is the delimiter in this string &quot;john,muhammad,sally,fernando,juan,xiao,bill&quot;.</p>
+<h4 id="denormalization">Denormalization</h4>
+<p>process of adding redundant data to tables to reduce the need for costly JOIN operations and increase read performance.</p>
+<p>However, the redundant data will decrease write performance.</p>
 <h4 id="dense-array">Dense Array</h4>
 <p>an array without holes.</p>
+<h4 id="dense-index">Dense Index</h4>
+<p>regarding databases when an index record is created for each search-key value.</p>
+<p>This type of index is fast but consumes a lot of storage.</p>
+<p>See <a href="#sparse-index">Sparse Index</a>.</p>
 <h4 id="dependency">Dependency</h4>
 <p>when an object (A) <em>depends</em> on another object (B), and both objects exist independently.</p>
 <h4 id="dependency-diagram-dependency-graph">Dependency Diagram, Dependency Graph</h4>
@@ -1784,6 +1796,9 @@ nameLens.<span class="hljs-keyword">set</span>(user)(<span class="hljs-string">&
 <p>a lightweight markup language used to convert text to HTML.</p>
 <h4 id="masked-bugs">Masked Bugs</h4>
 <p>when two bugs cancel each other out and the software performs correctly.</p>
+<h4 id="master-slave-replication">Master-Slave Replication</h4>
+<p>a data storage technique where a master data source replicates data to slaves.</p>
+<p>If the master goes offline, the slaves can provide data reads or be promoted to a master data source.</p>
 <h4 id="materialized-view">Materialized View</h4>
 <p>a pre-computed data set that contains the results of a database query stored for later use.</p>
 <p>Using materialized views can improve the query performance of a database.</p>
@@ -2000,6 +2015,9 @@ patchedFunc = <span class="hljs-keyword">function</span> <span class="hljs-title
 <p>the result when a numerical result is so large that it cannot be presented in numerical format.</p>
 <p><strong><a href="#index">⬆ back to index</a></strong></p>
 <h2 id="p">P</h2>
+<h4 id="pacelc-theorem">PACELC Theorem</h4>
+<p>a refinement of the CAP theorem; for a distributed system that uses network partitioning, the system can have either availability or consistency.</p>
+<p>See <a href="#cap-theorem">CAP Theorem</a>.</p>
 <h4 id="paging">Paging</h4>
 <p>when a computer exchanges data in memory for data retrieved from a secondary source, typically a hard drive.</p>
 <p>See <a href="#thrash-thrashing">thrashing</a>.</p>
@@ -2439,6 +2457,10 @@ fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
 arr.length == <span class="hljs-number">3</span>;
 arr[<span class="hljs-number">0</span>] == <span class="hljs-literal">undefined</span>;
 </code></pre>
+<h4 id="sparse-index">Sparse Index</h4>
+<p>regarding databases when an index record is not created for each search-key value.</p>
+<p>This type of index consumes less storage than a dense index but is slower.</p>
+<p>See <a href="#dense-index">Dense Index</a>.</p>
 <h4 id="spooler">Spooler</h4>
 <p>the part of the operating system that keeps track of pages as they are waiting to be printed and sends them to the printer when the printer is available.</p>
 <h4 id="spread-syntax-spread-operator">Spread Syntax, Spread Operator</h4>
