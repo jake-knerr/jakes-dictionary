@@ -1427,6 +1427,11 @@ const power = <span class="hljs-function"><span class="hljs-params">(num)</span>
 <h4 id="hooker-code">Hooker Code</h4>
 <p>code that is problematic and causes application instability.</p>
 <p>Hooker code causes applications to <em>go down</em>.</p>
+<h4 id="horizontal-partitioning">Horizontal Partitioning</h4>
+<p>the process of splitting up data in a database table across multiple tables.</p>
+<p>For example, instead of having a table of all employee names, the data is split into two tables with names from A-K (table 1) and L-Z (table 2).</p>
+<p>Horizontal partitioning is a way to reduce the size of tables and split the server workload across multiple instances.</p>
+<p>See <a href="#shard-sharding">Shard</a>.</p>
 <h4 id="horizontal-scaling">Horizontal Scaling</h4>
 <p>dividing a system over multiple servers, with each server handling a subset of the overall workload.</p>
 <p>Horizontal scaling is capable of delivering unlimited performance, but the trade off is increased complexity.</p>
@@ -1766,6 +1771,8 @@ nameLens.<span class="hljs-keyword">set</span>(user)(<span class="hljs-string">&
 <p>a bug that has only been seen by a single person.</p>
 <h4 id="locks">Locks</h4>
 <p>enforcing limits on access to a resource to prevent deadlock and racing.</p>
+<h4 id="long-running-transactions-saga-interaction-pattern-sagas">Long-Running Transactions, Saga Interaction Pattern, Sagas</h4>
+<p>a sequence of database transactions where the completion of a transaction triggers the next transaction to run, and when a transaction fails the saga will execute steps to undo any changes made by earlier transactions in the sequence.</p>
 <h4 id="loose-currying">Loose Currying</h4>
 <p>type of currying where more than one argument may be passed per function call.</p>
 <p>Loose currying is loose because strict currying only allows one argument per call.</p>
@@ -2402,6 +2409,10 @@ fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
 <p>copy an object, but do not copy any embedded objects, only copy references to the embedded objects.</p>
 <h4 id="shallow-equality">Shallow Equality</h4>
 <p>when two variables or objects are pointing to the same thing in memory.</p>
+<h4 id="shard-sharding">Shard, Sharding</h4>
+<p>a distinct database server instance that holds a horizontal partition of data in a database.</p>
+<p>Shards are typically used to spread the workload of a database system.</p>
+<p>See <a href="#horizontal-partitioning">Horizontal Partitioning</a>.</p>
 <h4 id="shim">Shim</h4>
 <p>a small library that transparently intercepts API calls and changes the arguments passed, handles the operation itself, or redirects the operation elsewhere.</p>
 <p>Shims are frequently used to handle browser deficiencies.</p>

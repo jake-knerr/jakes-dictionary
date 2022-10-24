@@ -2115,6 +2115,16 @@ code that is problematic and causes application instability.
 
 Hooker code causes applications to _go down_.
 
+#### Horizontal Partitioning
+
+the process of splitting up data in a database table across multiple tables.
+
+For example, instead of having a table of all employee names, the data is split into two tables with names from A-K (table 1) and L-Z (table 2).
+
+Horizontal partitioning is a way to reduce the size of tables and split the server workload across multiple instances.
+
+See [Shard](#shard-sharding).
+
 #### Horizontal Scaling
 
 dividing a system over multiple servers, with each server handling a subset of the overall workload.
@@ -2707,6 +2717,10 @@ a bug that has only been seen by a single person.
 #### Locks
 
 enforcing limits on access to a resource to prevent deadlock and racing.
+
+#### Long-Running Transactions, Saga Interaction Pattern, Sagas
+
+a sequence of database transactions where the completion of a transaction triggers the next transaction to run, and when a transaction fails the saga will execute steps to undo any changes made by earlier transactions in the sequence.
 
 #### Loose Currying
 
@@ -3852,6 +3866,14 @@ copy an object, but do not copy any embedded objects, only copy references to th
 #### Shallow Equality
 
 when two variables or objects are pointing to the same thing in memory.
+
+#### Shard, Sharding
+
+a distinct database server instance that holds a horizontal partition of data in a database.
+
+Shards are typically used to spread the workload of a database system.
+
+See [Horizontal Partitioning](#horizontal-partitioning).
 
 #### Shim
 
