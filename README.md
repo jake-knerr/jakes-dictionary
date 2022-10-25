@@ -872,6 +872,12 @@ See [parallelism](#parallelism).
 
 a design pattern designed to deal with multithreading issues.
 
+#### Consistent Hashing
+
+a distributed hashing scheme that is independent of the number of servers in the system, which makes it easier for a backend system to scale.
+
+See [Virtual Nodes](#virtual-nodes-vnode).
+
 #### Constructor
 
 functions that create objects when invoked.
@@ -1097,6 +1103,10 @@ the implementation of an abstract data type.
 #### Data Transfer Object (DTO)
 
 an object that carries data between processes and has no behavior.
+
+#### Database Federation, Functional Partitioning, Virtual Database, Federated Database
+
+a system where multiple databases are combined and presented transparently as a single database to the end user.
 
 #### Database Management System (DBMS)
 
@@ -4532,6 +4542,12 @@ a function or method whose behavior is intended to be redefined in derived class
 #### Virtual Machine
 
 software that emulates a computer environment.
+
+#### Virtual Nodes, VNode
+
+breaking up a physical node from a consistent hashing scheme into several additional nodes.
+
+See [Consistent Hasing](#consistent-hashing);
 
 #### Void, Void Type
 
