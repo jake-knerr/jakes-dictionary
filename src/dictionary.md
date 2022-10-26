@@ -2976,6 +2976,12 @@ a performance anti-pattern for data retrieval (database or otherwise) that refer
 
 Thus, N+1 total queries are necessary.
 
+#### N-Tier Architecture, Multitier Architecture
+
+divides an application into logical layers and physical tiers, with each layer possessing a different responsibility.
+
+See [3-Tier Architecture](#3-tier-architecture) and [2-Tier Architecture](#2-tier-architecture).
+
 #### Namespaces
 
 a scope used to group related names.
@@ -4240,6 +4246,16 @@ Thrashing slows down a computer's operation.
 
 the smallest unit of processing that can be scheduled by the operating system.
 
+#### 3-Tier Architecture
+
+the most common n-tier architecture:
+
+- Presentation Tier/Layer: the topmost layer that users interact with.
+- Application/Business Tier/Layer: processes data per application business rules.
+- Data Tier/Layer: exposes data and persistence mechanisms.
+
+See [2-Tier Architecture](#2-tier-architecture).
+
 #### Third Party Cookie, 3rd Party Cookie
 
 when a site that is not the currently visited site adds a browser cookie.
@@ -4375,6 +4391,12 @@ a document processing system that has been supplanted by LaTeX.
 an ordered sequence of elements.
 
 A tuple is similar to an array with ordered indices. In Python, they are also immutable. JavaScript does not have tuples.
+
+#### 2-Tier Architecture
+
+an n-tier architecture with only a presentation layer and a data layer.
+
+See [3-Tier Architecture](#3-tier-architecture).
 
 #### TypeError
 

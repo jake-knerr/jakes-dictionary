@@ -1913,6 +1913,9 @@ patchedFunc = <span class="hljs-keyword">function</span> <span class="hljs-title
 <h4 id="n1-query-problem-n1-selects-problem">N+1 Query Problem, N+1 Selects Problem</h4>
 <p>a performance anti-pattern for data retrieval (database or otherwise) that refers to retrieving a set of data and then needing to run a query for each result of the previous query.</p>
 <p>Thus, N+1 total queries are necessary.</p>
+<h4 id="n-tier-architecture-multitier-architecture">N-Tier Architecture, Multitier Architecture</h4>
+<p>divides an application into logical layers and physical tiers, with each layer possessing a different responsibility.</p>
+<p>See <a href="#3-tier-architecture">3-Tier Architecture</a> and <a href="#2-tier-architecture">2-Tier Architecture</a>.</p>
 <h4 id="namespaces">Namespaces</h4>
 <p>a scope used to group related names.</p>
 <h4 id="native-objects-built-in-objects">Native Objects, Built-In Objects</h4>
@@ -2611,6 +2614,14 @@ console.log(<span class="hljs-keyword">new</span><span class="hljs-type">Obj</sp
 <p>Thrashing slows down a computer&#39;s operation.</p>
 <h4 id="thread">Thread</h4>
 <p>the smallest unit of processing that can be scheduled by the operating system.</p>
+<h4 id="3-tier-architecture">3-Tier Architecture</h4>
+<p>the most common n-tier architecture:</p>
+<ul>
+<li>Presentation Tier/Layer: the topmost layer that users interact with.</li>
+<li>Application/Business Tier/Layer: processes data per application business rules.</li>
+<li>Data Tier/Layer: exposes data and persistence mechanisms.</li>
+</ul>
+<p>See <a href="#2-tier-architecture">2-Tier Architecture</a>.</p>
 <h4 id="third-party-cookie-3rd-party-cookie">Third Party Cookie, 3rd Party Cookie</h4>
 <p>when a site that is not the currently visited site adds a browser cookie.</p>
 <p>Third-party cookies are never set by a script included on the page.</p>
@@ -2684,6 +2695,9 @@ thunk<span class="hljs-literal">()</span>;
 <h4 id="tuple-tuple-data-type">Tuple, Tuple Data Type</h4>
 <p>an ordered sequence of elements.</p>
 <p>A tuple is similar to an array with ordered indices. In Python, they are also immutable. JavaScript does not have tuples.</p>
+<h4 id="2-tier-architecture">2-Tier Architecture</h4>
+<p>an n-tier architecture with only a presentation layer and a data layer.</p>
+<p>See <a href="#3-tier-architecture">3-Tier Architecture</a>.</p>
 <h4 id="typeerror">TypeError</h4>
 <p>in JavaScript, the TypeError object represents an error when an operation could not be performed.</p>
 <p>Usually, a TypeError is thrown because a value was not of the expected type.</p>
