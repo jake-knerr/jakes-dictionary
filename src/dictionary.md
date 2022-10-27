@@ -309,6 +309,12 @@ similar to a binary search tree, but nodes can have more than two children.
 
 Databases and file systems typically use B-trees. The meaning of _B_ is unclear.
 
+#### Backpressure, Backpressure routing
+
+a technique to help direct traffic in a message queue to limit the queue size and improve performance.
+
+See [Message Queues](#message-queues-mailboxes).
+
 #### Baklava Code
 
 code with too many layers.
@@ -2823,6 +2829,18 @@ saving previously calculated problems for lookup later, rather than recalculatio
 an algorithm used to sort a collection.
 
 Roughly described, a merge sort is splitting an array until it consists of many arrays with lengths of one. Next, merge these sub-arrays back together incrementally, moving the smallest number to the far left and the largest to the far right.
+
+#### Message Brokers, Integration Broker, Interface Engine
+
+a program that translates messages from a sender's messaging protocol to the messaging protocol of the receiver, thus enabling communication between software that would otherwise not be able to communicate.
+
+#### Message Queues, Mailboxes
+
+software that facilitates asynchronous communication between different software components.
+
+Message queues are similar to the pub/sub pattern and are designed to help manage requests in large distributed systems.
+
+See [Backpressure](#backpressure-backpressure-routing).
 
 #### Metaprogramming
 
