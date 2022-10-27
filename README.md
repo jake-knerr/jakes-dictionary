@@ -29,6 +29,32 @@ The first sentence of the definition is the _summary_. The summary has an implie
 
 ---
 
+#### Publish-Subscribe Pattern, Pub/Sub
+
+a messaging pattern where publishers dispatch messages to subscribers.
+
+This pattern facilitates asynchronous messaging.
+
+#### Enterprise Service Bus (ESB)
+
+a service architecture where a centralized program manages the high-level communications between applications.
+
+ESB implies a more complex distributed system.
+
+#### Monolith Application
+
+a self-contained and single-tiered application where a single program resides on a single platform.
+
+#### Modular Monolith
+
+a monolithic application built with some modules and modularity.
+
+This approach facilitates the reuse and swapping of implementations of the modules.
+
+#### Microservices
+
+an architecture that focuses on small, self-contained programs that provide a discrete service to the application.
+
 ## A
 
 #### A Duck
