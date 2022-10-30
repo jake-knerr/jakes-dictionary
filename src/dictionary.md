@@ -4,32 +4,6 @@
 
 ---
 
-#### Publish-Subscribe Pattern, Pub/Sub
-
-a messaging pattern where publishers dispatch messages to subscribers.
-
-This pattern facilitates asynchronous messaging.
-
-#### Enterprise Service Bus (ESB)
-
-a service architecture where a centralized program manages the high-level communications between applications.
-
-ESB implies a more complex distributed system.
-
-#### Monolith Application
-
-a self-contained and single-tiered application where a single program resides on a single platform.
-
-#### Modular Monolith
-
-a monolithic application built with some modules and modularity.
-
-This approach facilitates the reuse and swapping of implementations of the modules.
-
-#### Microservices
-
-an architecture that focuses on small, self-contained programs that provide a discrete service to the application.
-
 ## A
 
 #### A Duck
@@ -131,6 +105,10 @@ See [Ada Lovelace](#ada-lovelace).
 considered by many to be the world's first software programmer.
 
 Born 1815 in London, Ada was the daughter of the famous poet Lord Byron.
+
+#### API Gateway
+
+a program that functions as the entry point into a collection of backend services, often providing authentication, security, and request routing services.
 
 #### Agile Software Development
 
@@ -690,6 +668,12 @@ an algorithm for performing encryption or decryption.
 
 an encrypted form of data.
 
+#### Circuit Breaker Design Pattern
+
+a pattern where a program detects failures and prevents the application from trying to perform doomed operations.
+
+Generally, the circuit breaker pattern detects when an external service is down, like a database. In such a scenario, the circuit breaker prevents the application from calling the code to connect to the external service over and over.
+
 #### clang-format
 
 an auto-code formatter developed by Google.
@@ -802,6 +786,10 @@ Typically, cohesion is inversely proportional to _coupling_.
 stores the color information for one of the primary color components of a particular color model.
 
 For example, the RGB color model has three separate color channels: one for red, one for green, and one for blue.
+
+#### Command and Query Responsibility Segregation (CQRS)
+
+a pattern that uses commands as instructions to perform a task and queries to perform read-only operations that do not affect state or cause side effects.
 
 #### Common Law Feature
 
@@ -1388,6 +1376,12 @@ The decision of what function to call may be made lexically (static dispatch) or
 
 Also known as dispatch resolution.
 
+#### Distributed Monolith
+
+an anti-pattern where a microservices architecture becomes so tightly coupled that it more closely resembles a monolithic application.
+
+See [Monolith Application](#monolith-application) and [Microservices](#microservices).
+
 #### Divide and Conquer
 
 a type of algorithm that takes a larger problem and breaks it into similar sub-problem, solves the sub-problems recursively, and then combines the results.
@@ -1586,6 +1580,12 @@ the sequential order used to interpret bytes as words in computer memory.
 
 The big-endian format is when the most significant byte is stored first, and the following bytes are stored in order of decreasing significance. The little-endian format flips the order.
 
+#### Enterprise Service Bus (ESB)
+
+a service architecture where a centralized program manages the high-level communications between applications.
+
+ESB implies a more complex distributed system.
+
 #### Enum Types, Enumerated Types
 
 a data type that is a set of named constants.
@@ -1613,6 +1613,14 @@ reasoning that involves equations.
 
 Equational reasoning is typically is used in functional programming contexts to refer to how code can be replaced by other code in any context and not change the result of an expression.
 
+#### Event-Driven Architecture (EDA)
+
+a pattern that prioritizes events for service communication.
+
+EDA is a way to more loosely couple services.
+
+See [Publish-Subscribe](#publish-subscribe-pattern-pubsub).
+
 #### Event Loop, Message Loop
 
 an abstraction that puts functions from the message queue onto the call stack.
@@ -1621,11 +1629,11 @@ The event loop continuously checks if the call stack is empty, and if the call s
 
 Event Table -> Message Queue -> Event Loop -> Call Stack
 
-#### Message Queue, Queue
+#### Event Sourcing
 
-stores the order of the functions that are waiting to be placed on the call stack by the event loop.
+a pattern that stores state as a series of atomic events.
 
-JavaScript has two message queues: the macrotask queue and the microtask queue.
+Recreating state is accomplished by replaying the events in sequence.
 
 #### Event Table
 
@@ -1979,6 +1987,12 @@ function ducky<T>(arg: T): T {
 }
 ```
 
+#### Geohashing
+
+a technique to encode latitude and longitude as a hash.
+
+For example, Timbuktu's geohash is efvz7sm87q8pp.
+
 #### Global Gary
 
 a lousy programmer who uses the global namespace.
@@ -2193,9 +2207,19 @@ An element includes the tags and the element's content.
 
 #### HTTP Methods, HTTP Verbs
 
-a technique of telling the server what to do with regard to a particular resource.
+request methods defined by HTTP that serve different purposes:
 
-_GET_ is a typical example.
+- GET: Request a resource.
+- HEAD: GET request without the response body.
+- POST: Submitting a data payload to the targeted resource.
+- PUT: Replace the target resource with the request payload.
+- DELETE: Delete the targeted resource.
+- CONNECT: Start a two-way communication with the targeted resource.
+- OPTIONS: Request communication options for the targeted resource.
+- TRACE: Sends back the exact request for debugging purposes.
+- PATCH: Partially modify the targeted resource with the request.
+
+Some are actually nouns. Thus, I think the authors must be using "verb" to refer to the concept of performing an action rather than the grammatical concept of a verb.
 
 #### Hungarian Notation
 
@@ -2760,6 +2784,14 @@ a bug that has only been seen by a single person.
 
 enforcing limits on access to a resource to prevent deadlock and racing.
 
+#### Long polling
+
+when a server receives a client request and keeps the connection open until the server needs to send the client a new message or until the connection time outs.
+
+Long polling is useful when clients and servers cannot establish a persistent connection like WebSockets.
+
+See [WebSockets](#websockets).
+
 #### Long-Running Transactions, Saga Interaction Pattern, Sagas
 
 a sequence of database transactions where the completion of a transaction triggers the next transaction to run, and when a transaction fails the saga will execute steps to undo any changes made by earlier transactions in the sequence.
@@ -2868,6 +2900,12 @@ Message queues are similar to the pub/sub pattern and are designed to help manag
 
 See [Backpressure](#backpressure-backpressure-routing).
 
+#### Message Queue, Queue
+
+stores the order of the functions that are waiting to be placed on the call stack by the event loop.
+
+JavaScript has two message queues: the macrotask queue and the microtask queue.
+
 #### Metaprogramming
 
 programs that write or manipulate other programs, including themselves.
@@ -2893,6 +2931,10 @@ Microdata can be used by search engines or any machine processing programs.
 simple conventions for embedding semantics in HTML to enable automated processing.
 
 Typically, a microformat describes data on a web page so it can be processed by a script and exposed via an API.
+
+#### Microservices
+
+an architecture that focuses on small, self-contained programs that provide a tightly-defined, discrete service to the application.
 
 #### Microtasks Queue
 
@@ -2946,6 +2988,14 @@ functions that modify their arguments and can cause side effects.
 
 See [pure function](#pure-function).
 
+#### Modular Monolith
+
+a monolithic application built with some modules and modularity.
+
+This approach facilitates the reuse and swapping of implementations of the modules.
+
+See [Monolith Application](#monolith-application).
+
 #### Modules
 
 a collection of related functions.
@@ -2987,6 +3037,10 @@ testing that generates random user input: clicks, swipes, keystrokes, with the s
   - e.g. `concat("x", "") === "x";`
 
 Note that type A is not the monoid. The monoid is the type, the operation over the type satisfying associativity, and the existence of an identity element for the operation.
+
+#### Monolith Application
+
+a self-contained and single-tiered application where a single program resides on a single platform.
 
 #### Monte Carlo Method
 
@@ -3533,6 +3587,14 @@ Pseudo threading is a way to allow the UI to refresh during a large computation 
 
 the ease with which one can differentiate two items.
 
+#### Publish-Subscribe Pattern, Pub/Sub
+
+a messaging pattern where publishers dispatch messages to subscribers.
+
+Publishers are unaware of who the subscribers are, and subscribers are unaware of each other. This pattern facilitates asynchronous messaging.
+
+See [Event-Driven Architecture](#event-driven-architecture-eda).
+
 #### Pull CDN
 
 a CDN where the CDN will pull assets from the origin server when not available in the CDN cache.
@@ -3640,6 +3702,10 @@ The seed can be a key that creates the same random number each time. Seeds are u
 #### Rasterization
 
 converting non-bitmap images to bitmap (raster) images.
+
+#### Rate Limiting
+
+when a server limits access to a resource or API to prevent resource unavailability due to malicious or unintended overuse.
 
 #### Reactive Programming
 
@@ -3758,11 +3824,20 @@ A web service can be a form of RPC.
 
 a central store of data that clients can connect to and share data.
 
-#### Representational State Transfer (REST)
+#### Representational State Transfer (REST), RESTful API
 
-an architectural design for creating web services.
+a set of architectural design constraints for creating stateless communication between physically separated computers (distributed systems).
 
-Requires adherence to a number of invariants. In the interest of simplicity, RESTful systems are often web services that use POST, GET, PUT, DELETE (and other) verbs combined with HTTP based URLs to create a web API.
+REST defines four constraints:
+
+1. Identification of resources.
+1. Manipulation of resources.
+1. Self-descriptive messages, and
+1. Hypermedia as the engine of application state.
+
+REST is primarily used to create stateless web APIs using a client-server architecture. In the interest of simplicity, RESTful systems are often web services that use POST, GET, PUT, DELETE (and other) verbs combined with HTTP-based URLs to create a web API.
+
+See [HTTP Verbs](#http-verbs).
 
 #### ReScript, Reason, or BuckleScript
 
@@ -3908,6 +3983,16 @@ Often, serializing data means to encode it as a string for transmission over the
 #### Server Affinity
 
 the ability of a load balancer or router to send a user's request to the same server where their session was initiated.
+
+#### Server-Sent Events (SSEs)
+
+a technique where servers can stream data to clients without the client initiating the request, which is unlike the traditional client-server model.
+
+SSE flips the traditional "pull" web model into a "push" model.
+
+#### Service-Oriented Architecture (SOA)
+
+an architectural style that focuses on tightly-defined, discrete services rather than monolithic design.
 
 #### Set
 
@@ -4631,6 +4716,12 @@ WebAssembly is intended to be fast.
 a server to server event notification that is typically accomplished via HTTP POST.
 
 For example, server B asks server A to send a message to `http://serverB.com` whenever Jake posts content. Jake posts content. Server A sends a message to server B. Server B now knows Jake posted content.
+
+#### WebSockets
+
+a full-duplex TCP persistent connection between a client and server.
+
+WebSockets allows the server and client to send data to each other at any time.
 
 #### White Box Testing
 

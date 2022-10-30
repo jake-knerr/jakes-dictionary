@@ -268,19 +268,6 @@
         <div class="primary"><h2 id="index">Index</h2>
 <p><a href="#a">A</a> <a href="#b">B</a> <a href="#c">C</a> <a href="#d">D</a> <a href="#e">E</a> <a href="#f">F</a> <a href="#g">G</a> <a href="#h">H</a> <a href="#i">I</a> <a href="#j">J</a> <a href="#k">K</a> <a href="#l">L</a> <a href="#m">M</a> <a href="#n">N</a> <a href="#o">O</a> <a href="#p">P</a> <a href="#q">Q</a> <a href="#r">R</a> <a href="#s">S</a> <a href="#t">T</a> <a href="#u">U</a> <a href="#v">V</a> <a href="#w">W</a> <a href="#x">X</a> <a href="#y">Y</a> <a href="#z">Z</a></p>
 <hr>
-<h4 id="publish-subscribe-pattern-pubsub">Publish-Subscribe Pattern, Pub/Sub</h4>
-<p>a messaging pattern where publishers dispatch messages to subscribers.</p>
-<p>This pattern facilitates asynchronous messaging.</p>
-<h4 id="enterprise-service-bus-esb">Enterprise Service Bus (ESB)</h4>
-<p>a service architecture where a centralized program manages the high-level communications between applications.</p>
-<p>ESB implies a more complex distributed system.</p>
-<h4 id="monolith-application">Monolith Application</h4>
-<p>a self-contained and single-tiered application where a single program resides on a single platform.</p>
-<h4 id="modular-monolith">Modular Monolith</h4>
-<p>a monolithic application built with some modules and modularity.</p>
-<p>This approach facilitates the reuse and swapping of implementations of the modules.</p>
-<h4 id="microservices">Microservices</h4>
-<p>an architecture that focuses on small, self-contained programs that provide a discrete service to the application.</p>
 <h2 id="a">A</h2>
 <h4 id="a-duck">A Duck</h4>
 <p>a software feature added merely to draw attention, be noticed by management, and ultimately be removed.</p>
@@ -332,6 +319,8 @@
 <h4 id="ada-lovelace">Ada Lovelace</h4>
 <p>considered by many to be the world&#39;s first software programmer.</p>
 <p>Born 1815 in London, Ada was the daughter of the famous poet Lord Byron.</p>
+<h4 id="api-gateway">API Gateway</h4>
+<p>a program that functions as the entry point into a collection of backend services, often providing authentication, security, and request routing services.</p>
 <h4 id="agile-software-development">Agile Software Development</h4>
 <p>very generally, an iterative approach to software delivery that builds software incrementally from the start of the project instead of trying to deliver it all at once near the end.</p>
 <p>The &quot;Agile Manifesto&quot; introduced the term in 2001 after a conference of 17 developers. Scrum &amp; Extreme Programming are two typical examples.</p>
@@ -636,6 +625,9 @@ let CamelCaseVar<span class="hljs-comment">;</span>
 <p>an algorithm for performing encryption or decryption.</p>
 <h4 id="ciphertext">Ciphertext</h4>
 <p>an encrypted form of data.</p>
+<h4 id="circuit-breaker-design-pattern">Circuit Breaker Design Pattern</h4>
+<p>a pattern where a program detects failures and prevents the application from trying to perform doomed operations.</p>
+<p>Generally, the circuit breaker pattern detects when an external service is down, like a database. In such a scenario, the circuit breaker prevents the application from calling the code to connect to the external service over and over.</p>
 <h4 id="clang-format">clang-format</h4>
 <p>an auto-code formatter developed by Google.</p>
 <h4 id="class">Class</h4>
@@ -701,6 +693,8 @@ foo();
 <h4 id="color-channel">Color Channel</h4>
 <p>stores the color information for one of the primary color components of a particular color model.</p>
 <p>For example, the RGB color model has three separate color channels: one for red, one for green, and one for blue.</p>
+<h4 id="command-and-query-responsibility-segregation-cqrs">Command and Query Responsibility Segregation (CQRS)</h4>
+<p>a pattern that uses commands as instructions to perform a task and queries to perform read-only operations that do not affect state or cause side effects.</p>
 <h4 id="common-law-feature">Common Law Feature</h4>
 <p>a bug that has existed long enough that it has become part of the expected functionality.</p>
 <h4 id="communicating-sequential-processes-csp">Communicating Sequential Processes (CSP)</h4>
@@ -1032,6 +1026,9 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
 <p>generally speaking, dispatch refers to the process by which the engine consumes a function invocation in code, resolves what function should be called, handles any other tasks like setting up default arguments, and then executes the call.</p>
 <p>The decision of what function to call may be made lexically (static dispatch) or dynamically (dynamic dispatch).</p>
 <p>Also known as dispatch resolution.</p>
+<h4 id="distributed-monolith">Distributed Monolith</h4>
+<p>an anti-pattern where a microservices architecture becomes so tightly coupled that it more closely resembles a monolithic application.</p>
+<p>See <a href="#monolith-application">Monolith Application</a> and <a href="#microservices">Microservices</a>.</p>
 <h4 id="divide-and-conquer">Divide and Conquer</h4>
 <p>a type of algorithm that takes a larger problem and breaks it into similar sub-problem, solves the sub-problems recursively, and then combines the results.</p>
 <p>A typical example of divide and conquer is sorting an array by dividing it in half and sorting each half and then combining the result.</p>
@@ -1136,6 +1133,9 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
 <h4 id="endianess">Endianess</h4>
 <p>the sequential order used to interpret bytes as words in computer memory.</p>
 <p>The big-endian format is when the most significant byte is stored first, and the following bytes are stored in order of decreasing significance. The little-endian format flips the order.</p>
+<h4 id="enterprise-service-bus-esb">Enterprise Service Bus (ESB)</h4>
+<p>a service architecture where a centralized program manages the high-level communications between applications.</p>
+<p>ESB implies a more complex distributed system.</p>
 <h4 id="enum-types-enumerated-types">Enum Types, Enumerated Types</h4>
 <p>a data type that is a set of named constants.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-comment">// pseudo enum; not an actual enum but has the spirit of an enum</span>
@@ -1154,13 +1154,17 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
 <h4 id="equational-reasoning">Equational Reasoning</h4>
 <p>reasoning that involves equations.</p>
 <p>Equational reasoning is typically is used in functional programming contexts to refer to how code can be replaced by other code in any context and not change the result of an expression.</p>
+<h4 id="event-driven-architecture-eda">Event-Driven Architecture (EDA)</h4>
+<p>a pattern that prioritizes events for service communication.</p>
+<p>EDA is a way to more loosely couple services.</p>
+<p>See <a href="#publish-subscribe-pattern-pubsub">Publish-Subscribe</a>.</p>
 <h4 id="event-loop-message-loop">Event Loop, Message Loop</h4>
 <p>an abstraction that puts functions from the message queue onto the call stack.</p>
 <p>The event loop continuously checks if the call stack is empty, and if the call stack is empty, the event loop passes in queued functions from the message queue for execution.</p>
 <p>Event Table -&gt; Message Queue -&gt; Event Loop -&gt; Call Stack</p>
-<h4 id="message-queue-queue">Message Queue, Queue</h4>
-<p>stores the order of the functions that are waiting to be placed on the call stack by the event loop.</p>
-<p>JavaScript has two message queues: the macrotask queue and the microtask queue.</p>
+<h4 id="event-sourcing">Event Sourcing</h4>
+<p>a pattern that stores state as a series of atomic events.</p>
+<p>Recreating state is accomplished by replaying the events in sequence.</p>
 <h4 id="event-table">Event Table</h4>
 <p>an abstraction that sends functions to the message queue after certain events fire.</p>
 <p>Event Table -&gt; Message Queue -&gt; Event Loop -&gt; Call Stack</p>
@@ -1356,6 +1360,9 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
   <span class="hljs-built_in">return</span> arg;
 <span class="hljs-punctuation">}</span>
 </code></pre>
+<h4 id="geohashing">Geohashing</h4>
+<p>a technique to encode latitude and longitude as a hash.</p>
+<p>For example, Timbuktu&#39;s geohash is efvz7sm87q8pp.</p>
 <h4 id="global-gary">Global Gary</h4>
 <p>a lousy programmer who uses the global namespace.</p>
 <h4 id="gloc">GLOC</h4>
@@ -1467,8 +1474,19 @@ const power = <span class="hljs-function"><span class="hljs-params">(num)</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Content<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <h4 id="http-methods-http-verbs">HTTP Methods, HTTP Verbs</h4>
-<p>a technique of telling the server what to do with regard to a particular resource.</p>
-<p><em>GET</em> is a typical example.</p>
+<p>request methods defined by HTTP that serve different purposes:</p>
+<ul>
+<li>GET: Request a resource.</li>
+<li>HEAD: GET request without the response body.</li>
+<li>POST: Submitting a data payload to the targeted resource.</li>
+<li>PUT: Replace the target resource with the request payload.</li>
+<li>DELETE: Delete the targeted resource.</li>
+<li>CONNECT: Start a two-way communication with the targeted resource.</li>
+<li>OPTIONS: Request communication options for the targeted resource.</li>
+<li>TRACE: Sends back the exact request for debugging purposes.</li>
+<li>PATCH: Partially modify the targeted resource with the request.</li>
+</ul>
+<p>Some are actually nouns. Thus, I think the authors must be using &quot;verb&quot; to refer to the concept of performing an action rather than the grammatical concept of a verb.</p>
 <h4 id="hungarian-notation">Hungarian Notation</h4>
 <p>a naming convention where the prefix for a variable is the value&#39;s type.</p>
 <p>For example, <code>let longAddress = &quot;4657 Decatur...&quot;</code> would be <code>let stringLongAddress = &quot;4657 Decatur...&quot;</code> in Hungarian notation.</p>
@@ -1792,6 +1810,10 @@ nameLens.<span class="hljs-keyword">set</span>(user)(<span class="hljs-string">&
 <p>a bug that has only been seen by a single person.</p>
 <h4 id="locks">Locks</h4>
 <p>enforcing limits on access to a resource to prevent deadlock and racing.</p>
+<h4 id="long-polling">Long polling</h4>
+<p>when a server receives a client request and keeps the connection open until the server needs to send the client a new message or until the connection time outs.</p>
+<p>Long polling is useful when clients and servers cannot establish a persistent connection like WebSockets.</p>
+<p>See <a href="#websockets">WebSockets</a>.</p>
 <h4 id="long-running-transactions-saga-interaction-pattern-sagas">Long-Running Transactions, Saga Interaction Pattern, Sagas</h4>
 <p>a sequence of database transactions where the completion of a transaction triggers the next transaction to run, and when a transaction fails the saga will execute steps to undo any changes made by earlier transactions in the sequence.</p>
 <h4 id="loose-currying">Loose Currying</h4>
@@ -1846,6 +1868,9 @@ nameLens.<span class="hljs-keyword">set</span>(user)(<span class="hljs-string">&
 <p>software that facilitates asynchronous communication between different software components.</p>
 <p>Message queues are similar to the pub/sub pattern and are designed to help manage requests in large distributed systems.</p>
 <p>See <a href="#backpressure-backpressure-routing">Backpressure</a>.</p>
+<h4 id="message-queue-queue">Message Queue, Queue</h4>
+<p>stores the order of the functions that are waiting to be placed on the call stack by the event loop.</p>
+<p>JavaScript has two message queues: the macrotask queue and the microtask queue.</p>
 <h4 id="metaprogramming">Metaprogramming</h4>
 <p>programs that write or manipulate other programs, including themselves.</p>
 <h4 id="method">Method</h4>
@@ -1859,6 +1884,8 @@ nameLens.<span class="hljs-keyword">set</span>(user)(<span class="hljs-string">&
 <h4 id="microformat">Microformat</h4>
 <p>simple conventions for embedding semantics in HTML to enable automated processing.</p>
 <p>Typically, a microformat describes data on a web page so it can be processed by a script and exposed via an API.</p>
+<h4 id="microservices">Microservices</h4>
+<p>an architecture that focuses on small, self-contained programs that provide a tightly-defined, discrete service to the application.</p>
 <h4 id="microtasks-queue">Microtasks Queue</h4>
 <p>in JavaScript, a stack of queued functions that are executed before the event loop executes the next function on the macrotasks queue.</p>
 <p>Promises in JavaScript use this stack.</p>
@@ -1885,6 +1912,10 @@ nameLens.<span class="hljs-keyword">set</span>(user)(<span class="hljs-string">&
 <h4 id="modifier-functions">Modifier Functions</h4>
 <p>functions that modify their arguments and can cause side effects.</p>
 <p>See <a href="#pure-function">pure function</a>.</p>
+<h4 id="modular-monolith">Modular Monolith</h4>
+<p>a monolithic application built with some modules and modularity.</p>
+<p>This approach facilitates the reuse and swapping of implementations of the modules.</p>
+<p>See <a href="#monolith-application">Monolith Application</a>.</p>
 <h4 id="modules">Modules</h4>
 <p>a collection of related functions.</p>
 <h4 id="monad">Monad</h4>
@@ -1919,6 +1950,8 @@ patchedFunc = <span class="hljs-keyword">function</span> <span class="hljs-title
 </li>
 </ul>
 <p>Note that type A is not the monoid. The monoid is the type, the operation over the type satisfying associativity, and the existence of an identity element for the operation.</p>
+<h4 id="monolith-application">Monolith Application</h4>
+<p>a self-contained and single-tiered application where a single program resides on a single platform.</p>
 <h4 id="monte-carlo-method">Monte Carlo Method</h4>
 <p>a computational algorithm that relies on repeated random sampling to compute the results.</p>
 <h4 id="multi-model-database">Multi-model database</h4>
@@ -2225,6 +2258,10 @@ let pointFree = list.<span class="hljs-built_in">filter</span>(isTrue);
 <p>Pseudo threading is a way to allow the UI to refresh during a large computation without proper threading.</p>
 <h4 id="psychological-distance">Psychological Distance</h4>
 <p>the ease with which one can differentiate two items.</p>
+<h4 id="publish-subscribe-pattern-pubsub">Publish-Subscribe Pattern, Pub/Sub</h4>
+<p>a messaging pattern where publishers dispatch messages to subscribers.</p>
+<p>Publishers are unaware of who the subscribers are, and subscribers are unaware of each other. This pattern facilitates asynchronous messaging.</p>
+<p>See <a href="#event-driven-architecture-eda">Event-Driven Architecture</a>.</p>
 <h4 id="pull-cdn">Pull CDN</h4>
 <p>a CDN where the CDN will pull assets from the origin server when not available in the CDN cache.</p>
 <p>Using a Pull CDN means the site owner does not explicitly push content to the CDN. However, the first request will require a trip to the origin server.</p>
@@ -2288,6 +2325,8 @@ const d = <span class="hljs-number">20</span>;
 <p>The seed can be a key that creates the same random number each time. Seeds are useful in cryptography.</p>
 <h4 id="rasterization">Rasterization</h4>
 <p>converting non-bitmap images to bitmap (raster) images.</p>
+<h4 id="rate-limiting">Rate Limiting</h4>
+<p>when a server limits access to a resource or API to prevent resource unavailability due to malicious or unintended overuse.</p>
 <h4 id="reactive-programming">Reactive Programming</h4>
 <p>a paradigm where when data changes, other changes occur automatically.</p>
 <p>Typically, in reactive programming, changes in the data model propagate to the view automatically. Data-binding is a specific form of Reactive Programming.</p>
@@ -2351,9 +2390,17 @@ const <span class="hljs-built_in">sum</span> = <span class="hljs-built_in">reduc
 <p>A web service can be a form of RPC.</p>
 <h4 id="repositories-repository">Repositories, Repository</h4>
 <p>a central store of data that clients can connect to and share data.</p>
-<h4 id="representational-state-transfer-rest">Representational State Transfer (REST)</h4>
-<p>an architectural design for creating web services.</p>
-<p>Requires adherence to a number of invariants. In the interest of simplicity, RESTful systems are often web services that use POST, GET, PUT, DELETE (and other) verbs combined with HTTP based URLs to create a web API.</p>
+<h4 id="representational-state-transfer-rest-restful-api">Representational State Transfer (REST), RESTful API</h4>
+<p>a set of architectural design constraints for creating stateless communication between physically separated computers (distributed systems).</p>
+<p>REST defines four constraints:</p>
+<ol>
+<li>Identification of resources.</li>
+<li>Manipulation of resources.</li>
+<li>Self-descriptive messages, and</li>
+<li>Hypermedia as the engine of application state.</li>
+</ol>
+<p>REST is primarily used to create stateless web APIs using a client-server architecture. In the interest of simplicity, RESTful systems are often web services that use POST, GET, PUT, DELETE (and other) verbs combined with HTTP-based URLs to create a web API.</p>
+<p>See <a href="#http-verbs">HTTP Verbs</a>.</p>
 <h4 id="rescript-reason-or-bucklescript">ReScript, Reason, or BuckleScript</h4>
 <p>a typed language that compiles to human-readable JavaScript.</p>
 <p>Bucklescript was renamed to Reason, which was again renamed to ReScript. ReScript started as a fork of OCaml.</p>
@@ -2430,6 +2477,11 @@ fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
 <p>Often, serializing data means to encode it as a string for transmission over the internet to a web server.</p>
 <h4 id="server-affinity">Server Affinity</h4>
 <p>the ability of a load balancer or router to send a user&#39;s request to the same server where their session was initiated.</p>
+<h4 id="server-sent-events-sses">Server-Sent Events (SSEs)</h4>
+<p>a technique where servers can stream data to clients without the client initiating the request, which is unlike the traditional client-server model.</p>
+<p>SSE flips the traditional &quot;pull&quot; web model into a &quot;push&quot; model.</p>
+<h4 id="service-oriented-architecture-soa">Service-Oriented Architecture (SOA)</h4>
+<p>an architectural style that focuses on tightly-defined, discrete services rather than monolithic design.</p>
 <h4 id="set">Set</h4>
 <p>generally, a collection of values with no particular order.</p>
 <h4 id="shadowing-variable-shadowing">Shadowing, Variable Shadowing</h4>
@@ -2815,6 +2867,9 @@ thunk<span class="hljs-literal">()</span>;
 <h4 id="webhook-web-callback-http-push-api-reverse-apis">Webhook, Web Callback, HTTP Push API, Reverse APIs</h4>
 <p>a server to server event notification that is typically accomplished via HTTP POST.</p>
 <p>For example, server B asks server A to send a message to <code>http://serverB.com</code> whenever Jake posts content. Jake posts content. Server A sends a message to server B. Server B now knows Jake posted content.</p>
+<h4 id="websockets">WebSockets</h4>
+<p>a full-duplex TCP persistent connection between a client and server.</p>
+<p>WebSockets allows the server and client to send data to each other at any time.</p>
 <h4 id="white-box-testing">White Box Testing</h4>
 <p>testing both the implementation and functionality of software.</p>
 <p>White box testing is considered bad form because the test and implementation are coupled and will need to change together.</p>
