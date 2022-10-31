@@ -2670,6 +2670,10 @@ expressions that are not evaluated immediately.
 
 when details, which should be suppressed, _leak_ and become visible to a user of the abstraction.
 
+#### Leaky Bucket
+
+an algorithm that implements rate limiting via the same concept as a bucket; requests are appended to a queue, and if the queue is already full, they are discarded (leaked).
+
 #### LeBlanc's Law
 
 later equals never.
@@ -3989,6 +3993,34 @@ the ability of a load balancer or router to send a user's request to the same se
 a technique where servers can stream data to clients without the client initiating the request, which is unlike the traditional client-server model.
 
 SSE flips the traditional "pull" web model into a "push" model.
+
+#### Service Discovery Protocol (SDP)
+
+a networking standard for automatically detecting devices and services on a computer network.
+
+#### Service Level Agreement (SLA)
+
+an agreement between a service provider and a client that specifies required service metrics, such as quality, availability, and responsibilities.
+
+#### Service Level Indicator (SLI), SLA Metric.
+
+the measured value of the objective defined in an SLO.
+
+For example, an SLI could be that availability has been 89% for the last 30 days.
+
+See [SLO](#service-level-objective-slo).
+
+#### Service Level Objective (SLO)
+
+a specific metric for a service that is a part of the greater SLA.
+
+SLOs are a means to measure compliance with the SLA. For example, availability of greater than 99% each month would be an SLO.
+
+See [SLA](#service-level-agreement-sla).
+
+#### Service Registry
+
+a database with the network locations of available services.
 
 #### Service-Oriented Architecture (SOA)
 
