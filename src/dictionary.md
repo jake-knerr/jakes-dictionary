@@ -885,6 +885,12 @@ Java and other languages support creating multiple constructors with different s
 
 a C++ concept, they are similar to collections.
 
+#### Containerization, Containers
+
+a type of software that includes the code, dependencies, and operating system necessary to run an application and allows for portability between different computing environments.
+
+Containers are similar to traditional virtual machines. The difference is that containers virtualize at the operating system level rather than down to the hardware layer.
+
 #### Containment
 
 a type of object composition that stores several instances of the composited data type.
@@ -930,6 +936,10 @@ function calc(x, y, callback) {
   callback(x + y);
 }
 ```
+
+#### Continuous Integration (CI)
+
+the practice of merging developers' code into a shared repository regularly.
 
 #### Control Flow
 
@@ -2245,6 +2255,10 @@ an extension of the term hypertext, a non-linear medium of information , which i
 
 The web is hypermedia.
 
+#### Hypervisor, Virtual Machine Monitor (VMM), Virtualizer
+
+software, firmware, or hardware that creates and operates virtual machines.
+
 **[⬆ back to index](#index)**
 
 ## I
@@ -2770,6 +2784,10 @@ creating data directly in code.
 
 For example, `let data = 12; let data = { a:1 };`
 
+#### Literal Types
+
+in JavaScript, an exact value for a string, number, or boolean.
+
 #### Liveness
 
 a concurrent application's ability to execute on time is known as its _liveness_.
@@ -3149,6 +3167,12 @@ A famous bug in JavaScript is `typeof null == "object"`
 **[⬆ back to index](#index)**
 
 ## O
+
+#### OAuth 2.0, Open Authorization 2.0
+
+an authorization protocol used to grant user access to resources.
+
+OAuth 2.0 is not an authentication protocol.
 
 #### Object
 
@@ -3884,6 +3908,14 @@ refers to the right-hand side of an assignment.
 
 For example, `let a = 10`. The RHS is `10`.
 
+#### Richardson Maturity Model
+
+a grade for how well an API conforms to the constraints of REST.
+
+The better the conformity, the higher the score from 0-3. A score of 3 is for a truly RESTful API.
+
+See [REST](#representational-state-transfer-rest-restful-api).
+
 #### Robbing An Intellectual Bank
 
 taking good ideas from a source that is not you.
@@ -3955,6 +3987,14 @@ scrum is a flavor of Agile software development.
 #### Sealed Class
 
 classes that cannot be inherited from or have members added to them.
+
+#### Secure Sockets Layer (SSL)
+
+a protocol for encrypting internet data streams.
+
+SSL has been deprecated in favor of TLS.
+
+See [TLS](#transport-layer-security-tls).
 
 #### Sentinel Value, Flag Value
 
@@ -4537,6 +4577,10 @@ TCP is one of the primary protocols of the internet. SSL/TLS runs on top of TCP.
 
 See [UDP](#user-datagram-protocol-udp).
 
+#### Transport Layer Security (TLS)
+
+the standard protocol for encrypting internet data streams.
+
 #### Tree
 
 a tree is a type of graph data structure that is hierarchical and unidirectional.
@@ -4570,6 +4614,12 @@ Usually, a TypeError is thrown because a value was not of the expected type.
 when multiple characters combine into a single character.
 
 The ampersand "&" character developed from a Latin ligature in which e and t were combined.
+
+#### Typescript
+
+a programming language that is a superset of JavaScript that adds static typing and compiles to JavaScript.
+
+Typescript was developed and is maintained by Microsoft.
 
 **[⬆ back to index](#index)**
 
@@ -4697,7 +4747,7 @@ Visual Basic first appeared in 1991 and was designed by Microsoft.
 
 a function or method whose behavior is intended to be redefined in derived classes.
 
-#### Virtual Machine
+#### Virtual Machine (VM)
 
 software that emulates a computer environment.
 
