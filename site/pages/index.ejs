@@ -228,10 +228,6 @@
           capture: true,
         }
       )
-
-      addEventListener("click", (event) => {
-        if (event.target === "a") search.value = "";
-      }, true)
     );
 
     document.onkeydown = (event) => {
@@ -240,6 +236,11 @@
         search.focus();
       }
     };
+
+    addEventListener("click", (event) => {
+      console.log(event)
+      if (event.target === "a") search.value = "";
+    }, true)
   </script>
 </head>
 
