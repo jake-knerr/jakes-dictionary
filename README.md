@@ -2487,7 +2487,7 @@ the ability of different systems to share data.
 There are two primary types of interop:
 
 1. Syntactic interoperability refers to the underlying data format and transmission protocols to process and understand the data. Data formats like XML, JSON, and SQL are all examples of data formatting, and HTTP is an example of a transmission protocol. Think of Syntactic Interoperability as the packaging of the data.
-1. Semantic interoperability refers to how different systems have a shared understanding of how to use and understand the exchanged data. Syntactic interoperability is required for semantic interoperability.
+1. Semantic interoperability refers to how different systems have a shared understanding of how to use exchanged data. If systems both know that exchanged numbers represent kilograms then this is semantic interoperability. Semantic interoperability requires syntactic interoperability.
 
 #### Interpolate, Interpolation, Lerp
 
