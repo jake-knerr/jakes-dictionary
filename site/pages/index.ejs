@@ -178,7 +178,9 @@
         main.querySelectorAll(":scope > h4").length
       )} Definitions)`;
 
-    search.oninput = () => {
+    search.oninput = filter;
+
+    function filter() {
       const searchValue = search.value;
       if (!searchValue) return (main.innerHTML = rawHTML);
 
@@ -210,7 +212,7 @@
       if (!innerHTML) innerHTML = "No results found...";
 
       main.innerHTML = innerHTML;
-    };
+    }
 
     const topBtn = document.querySelector(".scroll-top-btn");
     topBtn.onclick = () =>
@@ -238,8 +240,13 @@
     };
 
     addEventListener("click", (event) => {
-      console.log(event)
-      if (event.target === "a") search.value = "";
+      if (event.target.tagName.toUpperCase() === "A") {
+        search.value = "";
+
+        filter();
+
+        console.log(search.value)
+      }
     }, true)
   </script>
 </head>

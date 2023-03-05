@@ -238,8 +238,8 @@
     };
 
     addEventListener("click", (event) => {
-      console.log(event)
-      if (event.target === "a") search.value = "";
+      console.log(event.target.tagName)
+      if (event.target.tagName.toUpperCase() === "A") search.value = "";
     }, true)
   </script>
 </head>
