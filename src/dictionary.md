@@ -2,8 +2,6 @@
 
 [A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
 
-interop, Telemetry,
-
 ---
 
 ## A
@@ -4159,6 +4157,12 @@ every module or class encapsulates and has responsibility over a single aspect o
 
 See [SOLID](#solid-solid).
 
+#### Sloppy Mode
+
+the default operation mode of JavaScript as opposed to strict mode.
+
+Sloppy mode is an official designation.
+
 #### Smalltalk
 
 a compiled, object-oriented, dynamically typed, reflective programming language.
@@ -4395,6 +4399,10 @@ See [proper tail call](#proper-tail-calls-ptc).
 choosing an easy solution now that will cost reworking time later.
 
 If technical debt is not paid, it can accumulate interest, meaning even more work in the future to fix.
+
+#### Telemetry
+
+the gathering and transmission of application performance data to remote servers for analysis.
 
 #### Temporal Dead Zone, TDZ
 

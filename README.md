@@ -23,7 +23,6 @@ The first sentence of the definition is the _summary_. The summary has an implie
 - See the [The Jargon File](http://www.catb.org/~esr/jargon/html/go01.html) for definitions of many terms in hacker culture.
 
 ---
-
 ## Index
 
 [A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
@@ -1777,6 +1776,14 @@ First class objects are typically referenced with regard to functions.
 
 functions that are not higher-order functions.
 
+#### Fizz Buzz, FizzBuzz
+
+a common interviewing question used to gauge coding habits instead of difficulty since the algorithm is simple.
+
+Fizz Buzz is a counting game for children. Counting from 1, numbers divisible by 3 become Fizz, numbers divisible by 5 become Buzz, and numbers divisible by 3 and 5 become Fizz Buzz. For example, a game would progress as follows:
+
+1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz
+
 #### Flyweight
 
 a object that minimizes memory use by sharing as much data as possible with other similar objects.
@@ -2472,6 +2479,15 @@ IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
 IPv6 solves the problem of IPv4 address exhaustion.
 
 See [IPv4](#internet-protocol-version-4-ipv4).
+
+#### Interop, Syntactic Interoperability, Semantic Interoperability
+
+the ability of different systems to share data.
+
+There are two primary types of interop:
+
+1. Syntactic interoperability refers to the underlying data format and transmission protocols to process and understand the data. Data formats like XML, JSON, and SQL are all examples of data formatting, and HTTP is an example of a transmission protocol. Think of Syntactic Interoperability as the packaging of the data.
+1. Semantic interoperability refers to how different systems have a shared understanding of how to use and understand the exchanged data. Syntactic interoperability is required for semantic interoperability.
 
 #### Interpolate, Interpolation, Lerp
 
@@ -4166,6 +4182,12 @@ every module or class encapsulates and has responsibility over a single aspect o
 
 See [SOLID](#solid-solid).
 
+#### Sloppy Mode
+
+the default operation mode of JavaScript as opposed to strict mode.
+
+Sloppy mode is an official designation.
+
 #### Smalltalk
 
 a compiled, object-oriented, dynamically typed, reflective programming language.
@@ -4402,6 +4424,10 @@ See [proper tail call](#proper-tail-calls-ptc).
 choosing an easy solution now that will cost reworking time later.
 
 If technical debt is not paid, it can accumulate interest, meaning even more work in the future to fix.
+
+#### Telemetry
+
+the gathering and transmission of application performance data to remote servers for analysis.
 
 #### Temporal Dead Zone, TDZ
 
