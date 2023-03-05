@@ -1,271 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Dictionary</title>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2"
-    />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#fff" />
-    <link
-      rel="preload"
-      href="./assets/fonts/Inter.var.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin=""
-    />
-    <link
-      rel="stylesheet"
-      href="./css/vendor/highlightjs/stackoverflow-light.css"
-    />
-    <style>
-      @font-face {
-        font-family: Inter var;
-        font-style: normal;
-        font-weight: 100 900;
-        font-display: swap;
-        src: url("./assets/fonts/Inter.var.woff2") format("woff2");
-        font-named-instance: Regular;
-      }
-      @font-face {
-        font-family: Inter var;
-        font-style: italic;
-        font-weight: 100 900;
-        font-display: swap;
-        src: url("./assets/fonts/Inter-italic.var.woff2") format("woff2");
-        font-named-instance: Italic;
-      }
 
-      html,
-      body {
-        background: #fff;
-        font-family: Inter var, Lato, ui-sans-serif, system-ui, -apple-system,
-          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-          "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-          "Segoe UI Symbol", "Noto Color Emoji";
-        font-size: 1rem;
-        margin: 0;
-        scrollbar-gutter: stable;
-        touch-action: manipulation;
-      }
+<head>
+  <title>Dictionary</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#fff" />
+  <link rel="preload" href="./assets/fonts/Inter.var.woff2" as="font" type="font/woff2" crossorigin="" />
+  <link rel="stylesheet" href="./css/vendor/highlightjs/stackoverflow-light.css" />
+  <style>
+    @font-face {
+      font-family: Inter var;
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("./assets/fonts/Inter.var.woff2") format("woff2");
+      font-named-instance: Regular;
+    }
 
-      p {
-        text-overflow: ellipsis;
-        overflow-x: hidden;
-      }
+    @font-face {
+      font-family: Inter var;
+      font-style: italic;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("./assets/fonts/Inter-italic.var.woff2") format("woff2");
+      font-named-instance: Italic;
+    }
 
-      h1 {
-        margin: 40px 0;
-      }
+    html,
+    body {
+      background: #fff;
+      font-family: Inter var, Lato, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+        "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 1rem;
+      margin: 0;
+      scrollbar-gutter: stable;
+      touch-action: manipulation;
+    }
 
-      h2 {
-        border-bottom: 1px solid #000;
-        padding-bottom: 16px;
-      }
+    p {
+      text-overflow: ellipsis;
+      overflow-x: hidden;
+    }
 
-      hr {
-        border-width: 1px 0 0;
-        border-top: 1px solid #000;
-      }
+    h1 {
+      margin: 40px 0;
+    }
 
-      pre code {
-        display: block;
-        overflow-x: auto;
-      }
+    h2 {
+      border-bottom: 1px solid #000;
+      padding-bottom: 16px;
+    }
 
-      a:link,
-      a:visited {
-        color: blue;
-      }
+    hr {
+      border-width: 1px 0 0;
+      border-top: 1px solid #000;
+    }
 
-      a:active {
-        color: red;
-      }
+    pre code {
+      display: block;
+      overflow-x: auto;
+    }
 
-      .header {
-        background: #fff;
-        height: 56px;
-        border-bottom: 1px solid #000;
-        position: sticky;
-        top: 0;
-      }
+    a:link,
+    a:visited {
+      color: blue;
+    }
 
-      .header > div {
-        margin: 0 auto;
-        max-width: 1024px;
-        padding: 0 16px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-      }
+    a:active {
+      color: red;
+    }
 
-      .header input {
-        border: 1px solid #000;
-        font-size: 1rem;
-        height: 32px;
-        padding: 4px 8px;
-        width: 250px;
-      }
+    .header {
+      background: #fff;
+      height: 56px;
+      border-bottom: 1px solid #000;
+      position: sticky;
+      top: 0;
+    }
 
-      .content {
-        margin: 0 auto;
-        max-width: 1024px;
-        padding: 0 16px;
-      }
+    .header>div {
+      margin: 0 auto;
+      max-width: 1024px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
 
-      .primary > p:first-of-type {
-        display: flex;
-        justify-content: space-between;
-      }
+    .header input {
+      border: 1px solid #000;
+      font-size: 1rem;
+      height: 32px;
+      padding: 4px 8px;
+      width: 250px;
+    }
 
-      .scroll-top-btn {
-        background: #fff;
-        border: 1px solid #000;
-        color: blue;
-        padding: 8px;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        max-width: 120px;
-        margin: auto;
-        opacity: 0;
-        transform: translateY(-40px);
-        transition: transform 300ms, opacity 300ms;
-        cursor: pointer;
-      }
+    .content {
+      margin: 0 auto;
+      max-width: 1024px;
+      padding: 0 16px;
+    }
 
-      .scroll-top-btn--show {
-        transform: translateY(0px);
-        opacity: 1;
-      }
+    .primary>p:first-of-type {
+      display: flex;
+      justify-content: space-between;
+    }
 
-      :target {
-        animation-duration: 1000ms;
-        animation-name: fade;
-      }
+    .scroll-top-btn {
+      background: #fff;
+      border: 1px solid #000;
+      color: blue;
+      padding: 8px;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      max-width: 120px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(-40px);
+      transition: transform 300ms, opacity 300ms;
+      cursor: pointer;
+    }
 
-      @keyframes fade {
-        from {
-          background: rgba(255, 0, 0, 0.25);
-        }
+    .scroll-top-btn--show {
+      transform: translateY(0px);
+      opacity: 1;
+    }
 
-        to {
-          background: #fff;
-        }
-      }
+    :target {
+      animation-duration: 1000ms;
+      animation-name: fade;
+    }
 
-      h2,
-      h4,
-      a {
-        scroll-margin-top: 120px;
-      }
-
-      .highlight {
+    @keyframes fade {
+      from {
         background: rgba(255, 0, 0, 0.25);
-        border-radius: 2px;
-        padding: 2px;
       }
 
-      @media (min-width: 768px) {
-        .content {
-          padding: 0 32px;
-        }
+      to {
+        background: #fff;
       }
-    </style>
-    <script type="module">
-      const main = document.querySelector(".primary");
-      const nodes = main.querySelectorAll(":scope > *");
-      const rawHTML = main.innerHTML;
+    }
 
-      const parseNode = document.createElement("div");
-      const search = document.getElementById("search-field");
+    h2,
+    h4,
+    a {
+      scroll-margin-top: 120px;
+    }
 
-      document.querySelector("#index").innerHTML += ` (${String(
+    .highlight {
+      background: rgba(255, 0, 0, 0.25);
+      border-radius: 2px;
+      padding: 2px;
+    }
+
+    @media (min-width: 768px) {
+      .content {
+        padding: 0 32px;
+      }
+    }
+  </style>
+  <script type="module">
+    const main = document.querySelector(".primary");
+    const nodes = main.querySelectorAll(":scope > *");
+    const rawHTML = main.innerHTML;
+
+    const parseNode = document.createElement("div");
+    const search = document.getElementById("search-field");
+
+    document.querySelector("#index").innerHTML += ` (${String(
         main.querySelectorAll(":scope > h4").length
       )} Definitions)`;
 
-      search.oninput = () => {
-        const searchValue = search.value;
-        if (!searchValue) return (main.innerHTML = rawHTML);
+    search.oninput = () => {
+      const searchValue = search.value;
+      if (!searchValue) return (main.innerHTML = rawHTML);
 
-        let innerHTML = "";
-        let include = false;
+      let innerHTML = "";
+      let include = false;
 
-        for (const $ of nodes) {
-          if ($.tagName === "H4") {
-            if (
-              $.innerText.toLowerCase().indexOf(searchValue.toLowerCase()) > -1
-            ) {
-              parseNode.innerHTML = $.outerHTML;
-              parseNode.firstChild.innerHTML =
-                parseNode.firstChild.innerHTML.replace(
-                  new RegExp(`(${search.value})`, "gi"),
-                  `<span class="highlight">$1</span>`
-                );
+      for (const $ of nodes) {
+        if ($.tagName === "H4") {
+          if (
+            $.innerText.toLowerCase().indexOf(searchValue.toLowerCase()) > -1
+          ) {
+            parseNode.innerHTML = $.outerHTML;
+            parseNode.firstChild.innerHTML =
+              parseNode.firstChild.innerHTML.replace(
+                new RegExp(`(${search.value})`, "gi"),
+                `<span class="highlight">$1</span>`
+              );
 
-              innerHTML += parseNode.innerHTML;
-              include = true;
-            } else {
-              include = false;
-            }
-          } else if ($.tagName !== "H2" && include) {
-            innerHTML += $.outerHTML;
+            innerHTML += parseNode.innerHTML;
+            include = true;
+          } else {
+            include = false;
           }
+        } else if ($.tagName !== "H2" && include) {
+          innerHTML += $.outerHTML;
         }
+      }
 
-        if (!innerHTML) innerHTML = "No results found...";
+      if (!innerHTML) innerHTML = "No results found...";
 
-        main.innerHTML = innerHTML;
-      };
+      main.innerHTML = innerHTML;
+    };
 
-      const topBtn = document.querySelector(".scroll-top-btn");
-      topBtn.onclick = () =>
-        document.scrollingElement.scrollTo({ top: 0, behavior: "smooth" });
-      document.addEventListener(
-        "scroll",
-        (event) => (
-          topBtn.classList[
-            document.scrollingElement.scrollTop > 500 ? "add" : "remove"
-          ]("scroll-top-btn--show"),
-          {
-            passive: true,
-            capture: true,
-          }
-        )
-      );
-
-      document.onkeydown = (event) => {
-        if (event.key === "/" && document.activeElement !== search) {
-          event.preventDefault();
-          search.focus();
+    const topBtn = document.querySelector(".scroll-top-btn");
+    topBtn.onclick = () =>
+      document.scrollingElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    document.addEventListener(
+      "scroll",
+      (event) => (
+        topBtn.classList[
+          document.scrollingElement.scrollTop > 500 ? "add" : "remove"
+        ]("scroll-top-btn--show"), {
+          passive: true,
+          capture: true,
         }
-      };
-    </script>
-  </head>
-  <body>
-    <div>
-      <header class="header">
-        <div>
-          <input
-            id="search-field"
-            autocomplete="off"
-            autocorrect="off"
-            autofocus
-            placeholder='Search (Press "/" to focus)'
-            spellcheck="false"
-            type="search"
-          />
-          <a href="https://github.com/jake-knerr/jakes-dictionary">Github</a>
-        </div>
-      </header>
+      )
 
-      <main class="content">
-        <div><h1>Jake's Dictionary</h1></div>
-        <div class="primary"><h2 id="index">Index</h2>
+      addEventListener("click", (event) => {
+        if (event.target === "a") search.value = "";
+      }, true)
+    );
+
+    document.onkeydown = (event) => {
+      if (event.key === "/" && document.activeElement !== search) {
+        event.preventDefault();
+        search.focus();
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <div>
+    <header class="header">
+      <div>
+        <input id="search-field" autocomplete="off" autocorrect="off" autofocus placeholder='Search (Press "/" to focus)' spellcheck="false" type="search" />
+        <a href="https://github.com/jake-knerr/jakes-dictionary">Github</a>
+      </div>
+    </header>
+
+    <main class="content">
+      <div>
+        <h1>Jake's Dictionary</h1>
+      </div>
+      <div class="primary"><h2 id="index">Index</h2>
 <p><a href="#a">A</a> <a href="#b">B</a> <a href="#c">C</a> <a href="#d">D</a> <a href="#e">E</a> <a href="#f">F</a> <a href="#g">G</a> <a href="#h">H</a> <a href="#i">I</a> <a href="#j">J</a> <a href="#k">K</a> <a href="#l">L</a> <a href="#m">M</a> <a href="#n">N</a> <a href="#o">O</a> <a href="#p">P</a> <a href="#q">Q</a> <a href="#r">R</a> <a href="#s">S</a> <a href="#t">T</a> <a href="#u">U</a> <a href="#v">V</a> <a href="#w">W</a> <a href="#x">X</a> <a href="#y">Y</a> <a href="#z">Z</a></p>
 <hr>
 <h2 id="a">A</h2>
@@ -2978,8 +2969,9 @@ thunk<span class="hljs-literal">()</span>;
 <h2 id="z">Z</h2>
 <p><strong><a href="#index">⬆ back to index</a></strong></p>
 </div>
-      </main>
-      <button class="scroll-top-btn">Return to Top</button>
-    </div>
-  </body>
+    </main>
+    <button class="scroll-top-btn">Return to Top</button>
+  </div>
+</body>
+
 </html>
