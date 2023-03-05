@@ -169,7 +169,6 @@
   <script type="module">
     const main = document.querySelector(".primary");
     const nodes = main.querySelectorAll(":scope > *");
-    const rawHTML = main.innerHTML;
 
     const parseNode = document.createElement("div");
     const search = document.getElementById("search-field");
@@ -177,6 +176,8 @@
     document.querySelector("#index").innerHTML += ` (${String(
         main.querySelectorAll(":scope > h4").length
       )} Definitions)`;
+
+    const rawHTML = main.innerHTML;
 
     search.oninput = filter;
 
@@ -240,10 +241,11 @@
     };
 
     addEventListener("click", (event) => {
-      if (event.target.tagName.toUpperCase() === "A") {
+      if (event.target.tagName.toUpperCase() === "A" && search.value) {
         search.value = "";
 
         filter();
+
       }
     }, true)
   </script>
