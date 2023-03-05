@@ -23,6 +23,7 @@ The first sentence of the definition is the _summary_. The summary has an implie
 - See the [The Jargon File](http://www.catb.org/~esr/jargon/html/go01.html) for definitions of many terms in hacker culture.
 
 ---
+
 ## Index
 
 [A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
@@ -2956,6 +2957,8 @@ JavaScript has two message queues: the macrotask queue and the microtask queue.
 #### Metaprogramming
 
 programs that write or manipulate other programs, including themselves.
+
+[Decorators](#decorator-function-decorators) are a common type of metaprogramming.
 
 #### Method
 
