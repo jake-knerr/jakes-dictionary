@@ -234,7 +234,7 @@
     );
 
     document.onkeydown = (event) => {
-      if (event.key === "/" && document.activeElement !== search) {
+      if (event.key === "/") {
         event.preventDefault();
         search.focus();
       }
