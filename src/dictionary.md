@@ -4247,6 +4247,10 @@ let newObj = { ...obj, d: 4 }; // spread properties
 console.log(newObj); // { a: 1, b: 2, c: 3, d: 4 }
 ```
 
+#### Speech Synthesis Markup Language (SSML)
+
+an XML markup language for text to speech creation.
+
 #### Stack
 
 a _last in, first out_ abstract data type that is characterized by push/pop.
