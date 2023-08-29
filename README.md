@@ -892,6 +892,12 @@ See [parallelism](#parallelism).
 
 a design pattern designed to deal with multithreading issues.
 
+#### Consistency Patterns, Strong Consistency, Weak Consistency, Eventual Consistency
+
+patterns that help ensure that data is consistent across distributed systems (nodes).
+
+Strong consistency ensures all nodes see the same data at the same time. Weak consistency allows for a lag between nodes seeing the same data. Eventual consistency allows for a lag between nodes seeing the same data, but eventually, all nodes will see the same data.
+
 #### Consistent Hashing
 
 a distributed hashing scheme that is independent of the number of servers in the system, which makes it easier for a backend system to scale.
@@ -988,6 +994,8 @@ a problem that occurs outside of normal operation.
 
 a CORS request that checks to see if the CORS protocol is understood.
 
+See [CORS](#cross-origin-resource-sharing-cors).
+
 #### Coupling
 
 the degree of interdependence between software modules.
@@ -1042,7 +1050,15 @@ See [aspects](#aspects)
 
 #### Cross-Origin Resource Sharing (CORS)
 
-a system using transmitted HTTP headers that determine whether to block or fulfill requests for resources from an external location.
+in the context of web browsers, CORS is a security mechanism that allows a web page from one domain to access a resource from a different domain (cross-origin). CORS is a W3C standard.
+
+Simple CORS requests are GET or POST requests that only allow modification of a handful of specific headers, notably the only allowed `content-types` values are `plain`, `application/x-www-form-urlencoded`, or `multipart/form-data`. Simple CORS requests do not require a preflight request. All other CORS requests require a preflight request that asks the server if it will accept the request. If the server responds with the correct headers, the client will make the request. If the server does not respond with the correct headers, the client will not make the request. Non-simple CORS requests require two requests to the server, a preflight request and the actual request.
+
+Requests made to different subdomains of the same domain are considered cross-origin and require CORS.
+
+Note, `slack.com` makes all API requests to `api.slack.com` using `content-type: multipart/form-data` to keep the CORS requests simple. Responses can be of any content type.
+
+See [Preflight Request](#cross-origin-resource-sharing-cors-preflight-request), [Same Site](#same-site-same-site-cross-site-cross-site), and [Same Origin](#same-origin-same-origin-cross-origin-cross-origin).
 
 #### CSS Combinators
 
@@ -1443,6 +1459,10 @@ DRY is a principle of software development that aims to reduce code repetition.
 
 when web developers add a doctype declaration to a web page but then do not write valid and semantic markup.
 
+#### Document Object Model (DOM)
+
+the DOM is the data representation of a web document and also provides an interface to interact with the document.
+
 #### Dog and Pony Shows
 
 demonstrating software to customers or clients.
@@ -1453,9 +1473,15 @@ a software development approach where the structure and language of the code mat
 
 In other words, the names and structure of the code match the language of the purpose of the application. e.g., for a driving simulator, a class could be `DriveAtNight` etc.
 
-#### Document Object Model (DOM)
+### Domain Name Structure, Generic Top-Level Domain (gTLD), Country Code Top-Level Domain (ccTLD), Effective TLDs (eTLDs), Second-Level Domain (SLD), Third-Level Domain, Subdomain
 
-the DOM is the data representation of a web document and also provides an interface to interact with the document.
+a domain name is a human-readable name that is used to identify a website. Domain names are organized in a hierarchy, with the right-most label representing the top-level domain (TLD). The TLD is followed by the second-level domain (SLD) and then any further domain names. For example, `www.example.com` has a gTLD of `com`, an SLD of `example`, and a third-level domain of `www`. `www.example.co.uk` has a ccTLD of `uk`, an SLD of `co`, a third-level domain of `example`, and a fourth-level domain of `www`.
+
+Effective TLDs are used to identify the actual top-level domain in a given domain name, taking into account country code top-level domains (ccTLDs) and generic top-level domains (gTLDs). For example, `www.example.co.uk` has an eTLD of `co.uk` and `youtube.com` has a eTLD of `com`. eTLDs are useful to get the actual "site" address.
+
+The actual "site" name is the label that follows the eTLD. Any further labels are subdomains.
+
+See [Same-Site](#same-site-same-site-cross-site-cross-site) and [Same-Origin](#same-origin-same-origin-cross-origin-cross-origin).
 
 #### Domain Name System (DNS)
 
@@ -1472,6 +1498,12 @@ Domain logic is specific to the _domain_ of the application.
 an object used as a container for domain data and behavior.
 
 Domain objects make up the domain model.
+
+#### Domain Sharding
+
+splitting up a website's assets across multiple domains to circumvent the limit of how many connections can be opened per domain, thus improving page load times.
+
+The downside is that it increases the number of DNS lookups, which lowers load performance.
 
 #### Domain Specific Language (DSL)
 
@@ -2036,6 +2068,12 @@ a technique to encode latitude and longitude as a hash.
 
 For example, Timbuktu's geohash is efvz7sm87q8pp.
 
+#### Glob Patterns
+
+a pattern system used to match filenames.
+
+Glob patterns resemble regular expressions. For example, `*.js` matches all files ending in `.js`.
+
 #### Global Gary
 
 a lousy programmer who uses the global namespace.
@@ -2287,6 +2325,10 @@ Hydra code derives from the hydra that grew two heads for each head cut off.
 an extension of the term hypertext, a non-linear medium of information , which includes graphics, audio, video, plain text, and hyperlinks.
 
 The web is hypermedia.
+
+#### Hyperthreading (HT), Hyper-Threading
+
+a proprietary type of multi-threading owned by Intel that allows a single CPU core to execute multiple threads simultaneously.
 
 #### Hypervisor, Virtual Machine Monitor (VMM), Virtualizer
 
@@ -2628,6 +2670,10 @@ alternative spelling of nerd.
 
 Originates from slang referring to college students who pursued interests that are the opposite of getting "drunk", which spelled backwards is knurd.
 
+#### Kubernetes, K8S, Kube
+
+open-source software that helps manage container deployments.
+
 **[⬆ back to index](#index)**
 
 ## L
@@ -2664,6 +2710,14 @@ a function that is not bound to a pointer.
 #### Language Lawyer
 
 a software engineer familiar with many drawbacks and features of a particular programming language.
+
+#### Laravel
+
+an open source MVC framework for PHP.
+
+#### Large Language Model (LLM)
+
+a language model that is trained on a large corpus of text and works by taking an input text and repeatedly predicting the next token or word.
 
 #### Last In First Out (LIFO)
 
@@ -3612,6 +3666,20 @@ Languages can be multi-paradigm. Some common examples are:
   - Logic.
   - Mathematical.
 
+#### Prompts, AI Prompts, Mega-Prompts
+
+natural language that describes a task or question directed at an AI. The AI is typically a generative text AI.
+
+Mega prompts are prompts that are longer than 2048 tokens.
+
+For example, "Write a poem about a dog."
+
+#### Prompt Engineering
+
+the process of designing prompts that can be interpreted and understood effectively by a generative AI model.
+
+See [Prompts](#prompts-ai-prompts-mega-prompts).
+
 #### Proper Tail Calls (PTC)
 
 a tail call in JavaScript that satisfies the following requirements:
@@ -3620,6 +3688,12 @@ a tail call in JavaScript that satisfies the following requirements:
 - The calling function is either a normal function or an arrow function.
 - The calling function is not a generator function.
 - The calling function returns the return value of the called function.
+
+#### Protocol Buffers (Protobufs)
+
+a language and platform neutral technique to serialize structured data for transmission.
+
+Protobufs were designed by Google and are similar to XML and JSON but more efficient.
 
 #### Prototypal Inheritance
 
@@ -3645,15 +3719,19 @@ Proxy servers keep everything behind it hidden from the client.
 
 writing a natural language description of formal programming language code.
 
-#### Pseudocode Programming Process (PPP)
-
-practice that advocates large amounts of pseudocode before writing a function.
-
 #### Pseudo Threading
 
 dividing up large computations into small chunks that are then processed individually, which frees up the computer to run other tasks between chunks.
 
 Pseudo threading is a way to allow the UI to refresh during a large computation without proper threading.
+
+#### Pseudocode Programming Process (PPP)
+
+practice that advocates large amounts of pseudocode before writing a function.
+
+#### Pseudorandom Number Generator (PRNG)
+
+a deterministic algorithm that produces a sequence of numbers that approximates the properties of random numbers.
 
 #### Psychological Distance
 
@@ -3994,9 +4072,23 @@ JavaScript in a web browser is "safe."
 
 in cryptography, an additional piece of data used while hashing to make the digest more secure.
 
-#### Same Origin, Same-Origin
+#### Same Origin, Same-Origin, Cross Origin, Cross-Origin
 
 two URLs have the "same origin" if they have the same protocol, domain and port.
+
+Subdomains are not same-origin.
+
+For example, `http://www.example.com:8080` and `https://example.com:80` are not same-origin because they differ in protocol (https), subdomain (www) and port number (80).
+
+See [Same-Site](#same-site-same-site-cross-site-cross-site) and [CORS](#cross-origin-resource-sharing-cors).
+
+#### Same Site, Same-Site, Cross Site, Cross-Site
+
+a website is considered same-site if the portion of the domain name preceding the eTLD is the same. Unlike cross-origin, same-site does not consider the protocol, subdomain, or port number.
+
+For example, `http://www.example.com:8080` and `https://example.com:80` are same-site even though they differ in protocol (https), subdomain (www) and port number (80).
+
+See [Same-Origin](#same-origin-same-origin-cross-origin-cross-origin), [CORS](#cross-origin-resource-sharing-cors), and [Domain Names](#domain-name-structure-generic-top-level-domain-gtld-country-code-top-level-domain-cctld-effective-tlds-etlds-second-level-domain-sld-third-level-domain-subdomain).
 
 #### Scaffolding
 
@@ -4039,6 +4131,16 @@ a protocol for encrypting internet data streams.
 SSL has been deprecated in favor of TLS.
 
 See [TLS](#transport-layer-security-tls).
+
+#### Semantic Versioning (semver)
+
+a popular software versioning system used in most open-source projects.
+
+Broadly, the versioning system is `major.minor.patch`. `Major` changes are for incompatible API changes. `Minor` changes add functionality in a backwards-compatible manner. `Patch` changes are for backwards-compatible bug fixes.
+
+Versions can also inlcude an optional pre-release label following a `-` after the patch number and a build number following a `+` after the pre-release label. For example, `1.1.1-unstable+1` indicates that this is a pre-release buld labeled `unstable` with a build number of `1`.
+
+The Node.js implementation of semver also introduces shorthand ranges `~` and `^`. The `~` character defines a range of acceptable versions for patches. `~1.2.3` can be interpreted as `>=1.2.3 & <1.3.0`. The `^` character defines a range of acceptable versions for patches and minor versions. So `^1.2.3` can be interpreted as `>=1.2.3 & <2.0.0`.
 
 #### Sentinel Value, Flag Value
 
@@ -4356,9 +4458,15 @@ using an implementation that relies on strings when better options are available
 
 Stringly typed is a derogatory term.
 
-#### Structured Query Language (SQL)
+#### Structured Query Language (SQL), SQL Statements or Commands, SQL Clauses
 
 a standard language used to access and update data in table based databases.
+
+SQL is a declarative language, meaning that it describes what should be done, not how it should be done.
+
+A SQL statement is a primary command used to perform CRUD or authorization commands on the database. For example, "SELECT", "ALTER", "DROP" are all statements. Statements are sometimes referred to as commands.
+
+SQL clauses are instructions used to clarify how statements should behave. Instructions that filter, sort, group, join, or otherwise manipulate the data being retrieved, modified, or manipulated by the SQL statement are clauses. For example, "WHERE", "ORDER BY", "GROUP BY", "JOIN" are all clauses.
 
 Designed in 1974 by Donald D. Chamberlin and Raymond F. Boyce at IBM.
 
@@ -4786,6 +4894,12 @@ an operator or function that can take a variable number of arguments.
 #### Variadic Function
 
 a function that takes a variable number of arguments.
+
+#### Vector Database
+
+a type of database that stores data as vector embeddings (vectors), which is multi-dimensional data where each dimension represents some attribute of a data object.
+
+Vector databases are good at searching for vectors by similarity and are heavily used in machine learning applications.
 
 #### Vertical Scaling
 

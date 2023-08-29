@@ -732,6 +732,9 @@ foo();
 <p>See <a href="#parallelism">parallelism</a>.</p>
 <h4 id="concurrency-pattern">Concurrency Pattern</h4>
 <p>a design pattern designed to deal with multithreading issues.</p>
+<h4 id="consistency-patterns-strong-consistency-weak-consistency-eventual-consistency">Consistency Patterns, Strong Consistency, Weak Consistency, Eventual Consistency</h4>
+<p>patterns that help ensure that data is consistent across distributed systems (nodes).</p>
+<p>Strong consistency ensures all nodes see the same data at the same time. Weak consistency allows for a lag between nodes seeing the same data. Eventual consistency allows for a lag between nodes seeing the same data, but eventually, all nodes will see the same data.</p>
 <h4 id="consistent-hashing">Consistent Hashing</h4>
 <p>a distributed hashing scheme that is independent of the number of servers in the system, which makes it easier for a backend system to scale.</p>
 <p>See <a href="#virtual-nodes-vnode">Virtual Nodes</a>.</p>
@@ -783,6 +786,7 @@ foo();
 <p>a problem that occurs outside of normal operation.</p>
 <h4 id="cross-origin-resource-sharing-cors-preflight-request">Cross-Origin Resource Sharing (CORS) Preflight Request</h4>
 <p>a CORS request that checks to see if the CORS protocol is understood.</p>
+<p>See <a href="#cross-origin-resource-sharing-cors">CORS</a>.</p>
 <h4 id="coupling">Coupling</h4>
 <p>the degree of interdependence between software modules.</p>
 <p>In other words, coupling measures how closely connected two modules are.</p>
@@ -810,7 +814,11 @@ foo();
 <p>Cross-cutting concerns do not serve the primary role of the modules in which they exist, and they do not fit cleanly into object-oriented programming. Logging is a classic example.</p>
 <p>See <a href="#aspects">aspects</a></p>
 <h4 id="cross-origin-resource-sharing-cors">Cross-Origin Resource Sharing (CORS)</h4>
-<p>a system using transmitted HTTP headers that determine whether to block or fulfill requests for resources from an external location.</p>
+<p>in the context of web browsers, CORS is a security mechanism that allows a web page from one domain to access a resource from a different domain (cross-origin). CORS is a W3C standard.</p>
+<p>Simple CORS requests are GET or POST requests that only allow modification of a handful of specific headers, notably the only allowed <code>content-types</code> values are <code>plain</code>, <code>application/x-www-form-urlencoded</code>, or <code>multipart/form-data</code>. Simple CORS requests do not require a preflight request. All other CORS requests require a preflight request that asks the server if it will accept the request. If the server responds with the correct headers, the client will make the request. If the server does not respond with the correct headers, the client will not make the request. Non-simple CORS requests require two requests to the server, a preflight request and the actual request.</p>
+<p>Requests made to different subdomains of the same domain are considered cross-origin and require CORS.</p>
+<p>Note, <code>slack.com</code> makes all API requests to <code>api.slack.com</code> using <code>content-type: multipart/form-data</code> to keep the CORS requests simple. Responses can be of any content type.</p>
+<p>See <a href="#cross-origin-resource-sharing-cors-preflight-request">Preflight Request</a>, <a href="#same-site-same-site-cross-site-cross-site">Same Site</a>, and <a href="#same-origin-same-origin-cross-origin-cross-origin">Same Origin</a>.</p>
 <h4 id="css-combinators">CSS Combinators</h4>
 <p>the symbols that can go between simple selectors in a rule: <code> </code>, <code>&gt;</code>, and <code>+</code>.</p>
 <p>All the combinators match parent-child relationships.</p>
@@ -1046,13 +1054,18 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
 <p>DRY is a principle of software development that aims to reduce code repetition.</p>
 <h4 id="doctype-decoration">Doctype Decoration</h4>
 <p>when web developers add a doctype declaration to a web page but then do not write valid and semantic markup.</p>
+<h4 id="document-object-model-dom">Document Object Model (DOM)</h4>
+<p>the DOM is the data representation of a web document and also provides an interface to interact with the document.</p>
 <h4 id="dog-and-pony-shows">Dog and Pony Shows</h4>
 <p>demonstrating software to customers or clients.</p>
 <h4 id="domain-driven-design-domain-driven-design-ddd">Domain-Driven Design, Domain Driven Design (DDD)</h4>
 <p>a software development approach where the structure and language of the code matches the business domain.</p>
 <p>In other words, the names and structure of the code match the language of the purpose of the application. e.g., for a driving simulator, a class could be <code>DriveAtNight</code> etc.</p>
-<h4 id="document-object-model-dom">Document Object Model (DOM)</h4>
-<p>the DOM is the data representation of a web document and also provides an interface to interact with the document.</p>
+<h3 id="domain-name-structure-generic-top-level-domain-gtld-country-code-top-level-domain-cctld-effective-tlds-etlds-second-level-domain-sld-third-level-domain-subdomain">Domain Name Structure, Generic Top-Level Domain (gTLD), Country Code Top-Level Domain (ccTLD), Effective TLDs (eTLDs), Second-Level Domain (SLD), Third-Level Domain, Subdomain</h3>
+<p>a domain name is a human-readable name that is used to identify a website. Domain names are organized in a hierarchy, with the right-most label representing the top-level domain (TLD). The TLD is followed by the second-level domain (SLD) and then any further domain names. For example, <code>www.example.com</code> has a gTLD of <code>com</code>, an SLD of <code>example</code>, and a third-level domain of <code>www</code>. <code>www.example.co.uk</code> has a ccTLD of <code>uk</code>, an SLD of <code>co</code>, a third-level domain of <code>example</code>, and a fourth-level domain of <code>www</code>.</p>
+<p>Effective TLDs are used to identify the actual top-level domain in a given domain name, taking into account country code top-level domains (ccTLDs) and generic top-level domains (gTLDs). For example, <code>www.example.co.uk</code> has an eTLD of <code>co.uk</code> and <code>youtube.com</code> has a eTLD of <code>com</code>. eTLDs are useful to get the actual &quot;site&quot; address.</p>
+<p>The actual &quot;site&quot; name is the label that follows the eTLD. Any further labels are subdomains.</p>
+<p>See <a href="#same-site-same-site-cross-site-cross-site">Same-Site</a> and <a href="#same-origin-same-origin-cross-origin-cross-origin">Same-Origin</a>.</p>
 <h4 id="domain-name-system-dns">Domain Name System (DNS)</h4>
 <p>a hierarchical and decentralized naming system used to map domain names to other information, chiefly IP addresses.</p>
 <h4 id="domain-logic-business-logic">Domain Logic, Business Logic</h4>
@@ -1061,6 +1074,9 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
 <h4 id="domain-objects-business-objects">Domain Objects, Business Objects</h4>
 <p>an object used as a container for domain data and behavior.</p>
 <p>Domain objects make up the domain model.</p>
+<h4 id="domain-sharding">Domain Sharding</h4>
+<p>splitting up a website&#39;s assets across multiple domains to circumvent the limit of how many connections can be opened per domain, thus improving page load times.</p>
+<p>The downside is that it increases the number of DNS lookups, which lowers load performance.</p>
 <h4 id="domain-specific-language-dsl">Domain Specific Language (DSL)</h4>
 <p>a computer language specialized in a particular application domain.</p>
 <p>HTML and CSS are DSLs.</p>
@@ -1371,6 +1387,9 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
 <h4 id="geohashing">Geohashing</h4>
 <p>a technique to encode latitude and longitude as a hash.</p>
 <p>For example, Timbuktu&#39;s geohash is efvz7sm87q8pp.</p>
+<h4 id="glob-patterns">Glob Patterns</h4>
+<p>a pattern system used to match filenames.</p>
+<p>Glob patterns resemble regular expressions. For example, <code>*.js</code> matches all files ending in <code>.js</code>.</p>
 <h4 id="global-gary">Global Gary</h4>
 <p>a lousy programmer who uses the global namespace.</p>
 <h4 id="gloc">GLOC</h4>
@@ -1507,6 +1526,8 @@ const power = <span class="hljs-function"><span class="hljs-params">(num)</span>
 <h4 id="hypermedia">Hypermedia</h4>
 <p>an extension of the term hypertext, a non-linear medium of information , which includes graphics, audio, video, plain text, and hyperlinks.</p>
 <p>The web is hypermedia.</p>
+<h4 id="hyperthreading-ht-hyper-threading">Hyperthreading (HT), Hyper-Threading</h4>
+<p>a proprietary type of multi-threading owned by Intel that allows a single CPU core to execute multiple threads simultaneously.</p>
 <h4 id="hypervisor-virtual-machine-monitor-vmm-virtualizer">Hypervisor, Virtual Machine Monitor (VMM), Virtualizer</h4>
 <p>software, firmware, or hardware that creates and operates virtual machines.</p>
 <p><strong><a href="#index">⬆ back to index</a></strong></p>
@@ -1696,6 +1717,8 @@ echo <span class="hljs-string">&quot;getData(&#x27;data&#x27;)&quot;</span>;
 <h4 id="knurd">Knurd</h4>
 <p>alternative spelling of nerd.</p>
 <p>Originates from slang referring to college students who pursued interests that are the opposite of getting &quot;drunk&quot;, which spelled backwards is knurd.</p>
+<h4 id="kubernetes-k8s-kube">Kubernetes, K8S, Kube</h4>
+<p>open-source software that helps manage container deployments.</p>
 <p><strong><a href="#index">⬆ back to index</a></strong></p>
 <h2 id="l">L</h2>
 <h4 id="l10n">L10n</h4>
@@ -1720,6 +1743,10 @@ echo <span class="hljs-string">&quot;getData(&#x27;data&#x27;)&quot;</span>;
 <p>a function that is not bound to a pointer.</p>
 <h4 id="language-lawyer">Language Lawyer</h4>
 <p>a software engineer familiar with many drawbacks and features of a particular programming language.</p>
+<h4 id="laravel">Laravel</h4>
+<p>an open source MVC framework for PHP.</p>
+<h4 id="large-language-model-llm">Large Language Model (LLM)</h4>
+<p>a language model that is trained on a large corpus of text and works by taking an input text and repeatedly predicting the next token or word.</p>
 <h4 id="last-in-first-out-lifo">Last In First Out (LIFO)</h4>
 <p>See <a href="#stack">stack</a>.</p>
 <h4 id="last-responsible-moment">Last Responsible Moment</h4>
@@ -2256,6 +2283,13 @@ let pointFree = list.<span class="hljs-built_in">filter</span>(isTrue);
 </ul>
 </li>
 </ul>
+<h4 id="prompts-ai-prompts-mega-prompts">Prompts, AI Prompts, Mega-Prompts</h4>
+<p>natural language that describes a task or question directed at an AI. The AI is typically a generative text AI.</p>
+<p>Mega prompts are prompts that are longer than 2048 tokens.</p>
+<p>For example, &quot;Write a poem about a dog.&quot;</p>
+<h4 id="prompt-engineering">Prompt Engineering</h4>
+<p>the process of designing prompts that can be interpreted and understood effectively by a generative AI model.</p>
+<p>See <a href="#prompts-ai-prompts-mega-prompts">Prompts</a>.</p>
 <h4 id="proper-tail-calls-ptc">Proper Tail Calls (PTC)</h4>
 <p>a tail call in JavaScript that satisfies the following requirements:</p>
 <ul>
@@ -2264,6 +2298,9 @@ let pointFree = list.<span class="hljs-built_in">filter</span>(isTrue);
 <li>The calling function is not a generator function.</li>
 <li>The calling function returns the return value of the called function.</li>
 </ul>
+<h4 id="protocol-buffers-protobufs">Protocol Buffers (Protobufs)</h4>
+<p>a language and platform neutral technique to serialize structured data for transmission.</p>
+<p>Protobufs were designed by Google and are similar to XML and JSON but more efficient.</p>
 <h4 id="prototypal-inheritance">Prototypal Inheritance</h4>
 <p>inheritance via a prototype object.</p>
 <h4 id="prototype-chain">Prototype Chain</h4>
@@ -2276,11 +2313,13 @@ let pointFree = list.<span class="hljs-built_in">filter</span>(isTrue);
 <p>Proxy servers keep everything behind it hidden from the client.</p>
 <h4 id="pseudo-code-pseudocode">Pseudo Code, Pseudocode</h4>
 <p>writing a natural language description of formal programming language code.</p>
-<h4 id="pseudocode-programming-process-ppp">Pseudocode Programming Process (PPP)</h4>
-<p>practice that advocates large amounts of pseudocode before writing a function.</p>
 <h4 id="pseudo-threading">Pseudo Threading</h4>
 <p>dividing up large computations into small chunks that are then processed individually, which frees up the computer to run other tasks between chunks.</p>
 <p>Pseudo threading is a way to allow the UI to refresh during a large computation without proper threading.</p>
+<h4 id="pseudocode-programming-process-ppp">Pseudocode Programming Process (PPP)</h4>
+<p>practice that advocates large amounts of pseudocode before writing a function.</p>
+<h4 id="pseudorandom-number-generator-prng">Pseudorandom Number Generator (PRNG)</h4>
+<p>a deterministic algorithm that produces a sequence of numbers that approximates the properties of random numbers.</p>
 <h4 id="psychological-distance">Psychological Distance</h4>
 <p>the ease with which one can differentiate two items.</p>
 <h4 id="publish-subscribe-pattern-pubsub">Publish-Subscribe Pattern, Pub/Sub</h4>
@@ -2471,8 +2510,15 @@ fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
 <p>JavaScript in a web browser is &quot;safe.&quot;</p>
 <h4 id="salt">Salt</h4>
 <p>in cryptography, an additional piece of data used while hashing to make the digest more secure.</p>
-<h4 id="same-origin-same-origin">Same Origin, Same-Origin</h4>
+<h4 id="same-origin-same-origin-cross-origin-cross-origin">Same Origin, Same-Origin, Cross Origin, Cross-Origin</h4>
 <p>two URLs have the &quot;same origin&quot; if they have the same protocol, domain and port.</p>
+<p>Subdomains are not same-origin.</p>
+<p>For example, <code>http://www.example.com:8080</code> and <code>https://example.com:80</code> are not same-origin because they differ in protocol (https), subdomain (www) and port number (80).</p>
+<p>See <a href="#same-site-same-site-cross-site-cross-site">Same-Site</a> and <a href="#cross-origin-resource-sharing-cors">CORS</a>.</p>
+<h4 id="same-site-same-site-cross-site-cross-site">Same Site, Same-Site, Cross Site, Cross-Site</h4>
+<p>a website is considered same-site if the portion of the domain name preceding the eTLD is the same. Unlike cross-origin, same-site does not consider the protocol, subdomain, or port number.</p>
+<p>For example, <code>http://www.example.com:8080</code> and <code>https://example.com:80</code> are same-site even though they differ in protocol (https), subdomain (www) and port number (80).</p>
+<p>See <a href="#same-origin-same-origin-cross-origin-cross-origin">Same-Origin</a>, <a href="#cross-origin-resource-sharing-cors">CORS</a>, and <a href="#domain-name-structure-generic-top-level-domain-gtld-country-code-top-level-domain-cctld-effective-tlds-etlds-second-level-domain-sld-third-level-domain-subdomain">Domain Names</a>.</p>
 <h4 id="scaffolding">Scaffolding</h4>
 <p>code used during program development that is not part of the final program.</p>
 <h4 id="scalability">Scalability</h4>
@@ -2494,6 +2540,11 @@ fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
 <p>a protocol for encrypting internet data streams.</p>
 <p>SSL has been deprecated in favor of TLS.</p>
 <p>See <a href="#transport-layer-security-tls">TLS</a>.</p>
+<h4 id="semantic-versioning-semver">Semantic Versioning (semver)</h4>
+<p>a popular software versioning system used in most open-source projects.</p>
+<p>Broadly, the versioning system is <code>major.minor.patch</code>. <code>Major</code> changes are for incompatible API changes. <code>Minor</code> changes add functionality in a backwards-compatible manner. <code>Patch</code> changes are for backwards-compatible bug fixes.</p>
+<p>Versions can also inlcude an optional pre-release label following a <code>-</code> after the patch number and a build number following a <code>+</code> after the pre-release label. For example, <code>1.1.1-unstable+1</code> indicates that this is a pre-release buld labeled <code>unstable</code> with a build number of <code>1</code>.</p>
+<p>The Node.js implementation of semver also introduces shorthand ranges <code>~</code> and <code>^</code>. The <code>~</code> character defines a range of acceptable versions for patches. <code>~1.2.3</code> can be interpreted as <code>&gt;=1.2.3 &amp; &lt;1.3.0</code>. The <code>^</code> character defines a range of acceptable versions for patches and minor versions. So <code>^1.2.3</code> can be interpreted as <code>&gt;=1.2.3 &amp; &lt;2.0.0</code>.</p>
 <h4 id="sentinel-value-flag-value">Sentinel Value, Flag Value</h4>
 <p>a value that is a condition of termination for an algorithm.</p>
 <p>In JavaScript, an example is <code>-1</code> for <code>indexOf</code>.</p>
@@ -2661,8 +2712,11 @@ console.log(<span class="hljs-keyword">new</span><span class="hljs-type">Obj</sp
 <h4 id="stringly-typed">Stringly Typed</h4>
 <p>using an implementation that relies on strings when better options are available.</p>
 <p>Stringly typed is a derogatory term.</p>
-<h4 id="structured-query-language-sql">Structured Query Language (SQL)</h4>
+<h4 id="structured-query-language-sql-sql-statements-or-commands-sql-clauses">Structured Query Language (SQL), SQL Statements or Commands, SQL Clauses</h4>
 <p>a standard language used to access and update data in table based databases.</p>
+<p>SQL is a declarative language, meaning that it describes what should be done, not how it should be done.</p>
+<p>A SQL statement is a primary command used to perform CRUD or authorization commands on the database. For example, &quot;SELECT&quot;, &quot;ALTER&quot;, &quot;DROP&quot; are all statements. Statements are sometimes referred to as commands.</p>
+<p>SQL clauses are instructions used to clarify how statements should behave. Instructions that filter, sort, group, join, or otherwise manipulate the data being retrieved, modified, or manipulated by the SQL statement are clauses. For example, &quot;WHERE&quot;, &quot;ORDER BY&quot;, &quot;GROUP BY&quot;, &quot;JOIN&quot; are all clauses.</p>
 <p>Designed in 1974 by Donald D. Chamberlin and Raymond F. Boyce at IBM.</p>
 <h4 id="studlycaps">StUdLyCaPs</h4>
 <p>mixed case with no semantic significance with regards to capitalization.</p>
@@ -2891,6 +2945,9 @@ thunk<span class="hljs-literal">()</span>;
 <p>an operator or function that can take a variable number of arguments.</p>
 <h4 id="variadic-function">Variadic Function</h4>
 <p>a function that takes a variable number of arguments.</p>
+<h4 id="vector-database">Vector Database</h4>
+<p>a type of database that stores data as vector embeddings (vectors), which is multi-dimensional data where each dimension represents some attribute of a data object.</p>
+<p>Vector databases are good at searching for vectors by similarity and are heavily used in machine learning applications.</p>
 <h4 id="vertical-scaling">Vertical Scaling</h4>
 <p>increasing the capacity of a single server, such as using a more powerful CPU, adding more RAM, or increasing the amount of storage space.</p>
 <p>Since it is a single server that is vertically scaled, there is a practical maximum for vertical scaling.</p>
