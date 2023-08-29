@@ -867,6 +867,12 @@ See [parallelism](#parallelism).
 
 a design pattern designed to deal with multithreading issues.
 
+#### Consistency Patterns, Strong Consistency, Weak Consistency, Eventual Consistency
+
+patterns that help ensure that data is consistent across distributed systems (nodes).
+
+Strong consistency ensures all nodes see the same data at the same time. Weak consistency allows for a lag between nodes seeing the same data. Eventual consistency allows for a lag between nodes seeing the same data, but eventually, all nodes will see the same data.
+
 #### Consistent Hashing
 
 a distributed hashing scheme that is independent of the number of servers in the system, which makes it easier for a backend system to scale.
@@ -963,6 +969,8 @@ a problem that occurs outside of normal operation.
 
 a CORS request that checks to see if the CORS protocol is understood.
 
+See [CORS](#cross-origin-resource-sharing-cors).
+
 #### Coupling
 
 the degree of interdependence between software modules.
@@ -1017,7 +1025,23 @@ See [aspects](#aspects)
 
 #### Cross-Origin Resource Sharing (CORS)
 
-a system using transmitted HTTP headers that determine whether to block or fulfill requests for resources from an external location.
+in the context of web browsers, CORS is a security mechanism that allows a web page from one domain to access a resource from a different domain (cross-origin). CORS is a W3C standard.
+
+Simple CORS requests are GET or POST requests that only allow modification of a handful of specific headers, notably the only allowed `content-types` values are `plain`, `application/x-www-form-urlencoded`, or `multipart/form-data`. Simple CORS requests do not require a preflight request. All other CORS requests require a preflight request that asks the server if it will accept the request. If the server responds with the correct headers, the client will make the request. If the server does not respond with the correct headers, the client will not make the request. Non-simple CORS requests require two requests to the server, a preflight request and the actual request.
+
+Requests made to different subdomains of the same domain are considered cross-origin and require CORS.
+
+Note, `slack.com` makes all API requests to `api.slack.com` using `content-type: multipart/form-data` to keep the CORS requests simple. Responses can be of any content type.
+
+See [Preflight Request](#cross-origin-resource-sharing-cors-preflight-request), [Same Site](#same-site-same-site-cross-site-cross-site), and [Same Origin](#same-origin-same-origin-cross-origin-cross-origin).
+
+#### Same Site, Same-Site, Cross Site, Cross-Site
+
+a website is considered same-site if the portion of the domain name preceding the eTLD is the same. Unlike cross-origin, same-site does not consider the protocol, subdomain, or port number.
+
+For example, `http://www.example.com:8080` and `https://example.com:80` are same-site even though they differ in protocol (https), subdomain (www) and port number (80).
+
+See [Same-Origin](#same-origin-same-origin-cross-origin-cross-origin), [CORS](#cross-origin-resource-sharing-cors), and [Domain Names](#domain-name-structure-generic-top-level-domain-gtld-country-code-top-level-domain-cctld-effective-tlds-etlds-second-level-domain-sld-third-level-domain-subdomain).
 
 #### CSS Combinators
 
@@ -1432,13 +1456,15 @@ a software development approach where the structure and language of the code mat
 
 In other words, the names and structure of the code match the language of the purpose of the application. e.g., for a driving simulator, a class could be `DriveAtNight` etc.
 
-### Domain Name Structure, Generic Top-Level Domain (gTLD), Country Code Top-Level Domain (ccTLD), Second-Level Domain (SLD), Third-Level Domain, Subdomain
+### Domain Name Structure, Generic Top-Level Domain (gTLD), Country Code Top-Level Domain (ccTLD), Effective TLDs (eTLDs), Second-Level Domain (SLD), Third-Level Domain, Subdomain
 
-domain names must have either a generic TLD (gTLD) or a country code TLD (ccTLD) preceded by a second-level domain (SLD). Any further names are referred to by their level (third, fourth, fifth, etc.) and may also be referred to as subdomains. The best way to think of a subdomain is any part of the domain that is not registered when purchasing a domain name.
+a domain name is a human-readable name that is used to identify a website. Domain names are organized in a hierarchy, with the right-most label representing the top-level domain (TLD). The TLD is followed by the second-level domain (SLD) and then any further domain names. For example, `www.example.com` has a gTLD of `com`, an SLD of `example`, and a third-level domain of `www`. `www.example.co.uk` has a ccTLD of `uk`, an SLD of `co`, a third-level domain of `example`, and a fourth-level domain of `www`.
 
-`www.youtube.com` has a gTLD of `com`, an SLD of `youtube`, and a third-level domain or subdomain that is `www`. `www.telegraph.co.uk` has ccTLD of `uk`, an SLD of `co`, a third-domain of `telegraph`, and a fourth-level domain that is `www`.
+Effective TLDs are used to identify the actual top-level domain in a given domain name, taking into account country code top-level domains (ccTLDs) and generic top-level domains (gTLDs). For example, `www.example.co.uk` has an eTLD of `co.uk` and `youtube.com` has a eTLD of `com`. eTLDs are useful to get the actual "site" address.
 
-There is some ambiguity in the terminology, with some sources referring to `co.uk` as a TLD.
+The actual "site" portion of the name follows the eTLD. Any further labels are subdomains.
+
+See [Same-Site](#same-site-same-site-cross-site-cross-site) and [Same-Origin](#same-origin-same-origin-cross-origin-cross-origin).
 
 #### Domain Name System (DNS)
 
@@ -1458,7 +1484,9 @@ Domain objects make up the domain model.
 
 #### Domain Sharding
 
-browser must lookup all DNS for hosts on a page - but will cache after first lookup. reduce number of hosts to increase speed. so hosting images on another server is slower
+splitting up a website's assets across multiple domains to circumvent the limit of how many connections can be opened per domain, thus improving page load times.
+
+The downside is that it increases the number of DNS lookups, which lowers load performance.
 
 #### Domain Specific Language (DSL)
 
@@ -3638,6 +3666,12 @@ a tail call in JavaScript that satisfies the following requirements:
 - The calling function is not a generator function.
 - The calling function returns the return value of the called function.
 
+#### Protocol Buffers (Protobufs)
+
+a language and platform neutral technique to serialize structured data for transmission.
+
+Protobufs were designed by Google and are similar to XML and JSON but more efficient.
+
 #### Prototypal Inheritance
 
 inheritance via a prototype object.
@@ -4015,9 +4049,15 @@ JavaScript in a web browser is "safe."
 
 in cryptography, an additional piece of data used while hashing to make the digest more secure.
 
-#### Same Origin, Same-Origin
+#### Same Origin, Same-Origin, Cross Origin, Cross-Origin
 
 two URLs have the "same origin" if they have the same protocol, domain and port.
+
+Subdomains are not same-origin.
+
+For example, `http://www.example.com:8080` and `https://example.com:80` are not same-origin because they differ in protocol (https), subdomain (www) and port number (80).
+
+See [Same-Site](#same-site-same-site-cross-site-cross-site) and [CORS](#cross-origin-resource-sharing-cors).
 
 #### Scaffolding
 
