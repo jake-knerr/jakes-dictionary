@@ -1035,14 +1035,6 @@ Note, `slack.com` makes all API requests to `api.slack.com` using `content-type:
 
 See [Preflight Request](#cross-origin-resource-sharing-cors-preflight-request), [Same Site](#same-site-same-site-cross-site-cross-site), and [Same Origin](#same-origin-same-origin-cross-origin-cross-origin).
 
-#### Same Site, Same-Site, Cross Site, Cross-Site
-
-a website is considered same-site if the portion of the domain name preceding the eTLD is the same. Unlike cross-origin, same-site does not consider the protocol, subdomain, or port number.
-
-For example, `http://www.example.com:8080` and `https://example.com:80` are same-site even though they differ in protocol (https), subdomain (www) and port number (80).
-
-See [Same-Origin](#same-origin-same-origin-cross-origin-cross-origin), [CORS](#cross-origin-resource-sharing-cors), and [Domain Names](#domain-name-structure-generic-top-level-domain-gtld-country-code-top-level-domain-cctld-effective-tlds-etlds-second-level-domain-sld-third-level-domain-subdomain).
-
 #### CSS Combinators
 
 the symbols that can go between simple selectors in a rule: ` `, `>`, and `+`.
@@ -1462,7 +1454,7 @@ a domain name is a human-readable name that is used to identify a website. Domai
 
 Effective TLDs are used to identify the actual top-level domain in a given domain name, taking into account country code top-level domains (ccTLDs) and generic top-level domains (gTLDs). For example, `www.example.co.uk` has an eTLD of `co.uk` and `youtube.com` has a eTLD of `com`. eTLDs are useful to get the actual "site" address.
 
-The actual "site" portion of the name follows the eTLD. Any further labels are subdomains.
+The actual "site" name is the label that follows the eTLD. Any further labels are subdomains.
 
 See [Same-Site](#same-site-same-site-cross-site-cross-site) and [Same-Origin](#same-origin-same-origin-cross-origin-cross-origin).
 
@@ -2050,6 +2042,12 @@ function ducky<T>(arg: T): T {
 a technique to encode latitude and longitude as a hash.
 
 For example, Timbuktu's geohash is efvz7sm87q8pp.
+
+#### Glob Patterns
+
+a pattern system used to match filenames.
+
+Glob patterns resemble regular expressions. For example, `*.js` matches all files ending in `.js`.
 
 #### Global Gary
 
@@ -4059,6 +4057,14 @@ For example, `http://www.example.com:8080` and `https://example.com:80` are not 
 
 See [Same-Site](#same-site-same-site-cross-site-cross-site) and [CORS](#cross-origin-resource-sharing-cors).
 
+#### Same Site, Same-Site, Cross Site, Cross-Site
+
+a website is considered same-site if the portion of the domain name preceding the eTLD is the same. Unlike cross-origin, same-site does not consider the protocol, subdomain, or port number.
+
+For example, `http://www.example.com:8080` and `https://example.com:80` are same-site even though they differ in protocol (https), subdomain (www) and port number (80).
+
+See [Same-Origin](#same-origin-same-origin-cross-origin-cross-origin), [CORS](#cross-origin-resource-sharing-cors), and [Domain Names](#domain-name-structure-generic-top-level-domain-gtld-country-code-top-level-domain-cctld-effective-tlds-etlds-second-level-domain-sld-third-level-domain-subdomain).
+
 #### Scaffolding
 
 code used during program development that is not part of the final program.
@@ -4427,9 +4433,15 @@ using an implementation that relies on strings when better options are available
 
 Stringly typed is a derogatory term.
 
-#### Structured Query Language (SQL)
+#### Structured Query Language (SQL), SQL Statements or Commands, SQL Clauses
 
 a standard language used to access and update data in table based databases.
+
+SQL is a declarative language, meaning that it describes what should be done, not how it should be done.
+
+A SQL statement is a primary command used to perform CRUD or authorization commands on the database. For example, "SELECT", "ALTER", "DROP" are all statements. Statements are sometimes referred to as commands.
+
+SQL clauses are instructions used to clarify how statements should behave. Instructions that filter, sort, group, join, or otherwise manipulate the data being retrieved, modified, or manipulated by the SQL statement are clauses. For example, "WHERE", "ORDER BY", "GROUP BY", "JOIN" are all clauses.
 
 Designed in 1974 by Donald D. Chamberlin and Raymond F. Boyce at IBM.
 
