@@ -1448,7 +1448,7 @@ a software development approach where the structure and language of the code mat
 
 In other words, the names and structure of the code match the language of the purpose of the application. e.g., for a driving simulator, a class could be `DriveAtNight` etc.
 
-### Domain Name Structure, Generic Top-Level Domain (gTLD), Country Code Top-Level Domain (ccTLD), Effective TLDs (eTLDs), Second-Level Domain (SLD), Third-Level Domain, Subdomain
+#### Domain Name Structure, Generic Top-Level Domain (gTLD), Country Code Top-Level Domain (ccTLD), Effective TLDs (eTLDs), Second-Level Domain (SLD), Third-Level Domain, Subdomain
 
 a domain name is a human-readable name that is used to identify a website. Domain names are organized in a hierarchy, with the right-most label representing the top-level domain (TLD). The TLD is followed by the second-level domain (SLD) and then any further domain names. For example, `www.example.com` has a gTLD of `com`, an SLD of `example`, and a third-level domain of `www`. `www.example.co.uk` has a ccTLD of `uk`, an SLD of `co`, a third-level domain of `example`, and a fourth-level domain of `www`.
 
