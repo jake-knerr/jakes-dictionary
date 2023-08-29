@@ -1418,6 +1418,10 @@ DRY is a principle of software development that aims to reduce code repetition.
 
 when web developers add a doctype declaration to a web page but then do not write valid and semantic markup.
 
+#### Document Object Model (DOM)
+
+the DOM is the data representation of a web document and also provides an interface to interact with the document.
+
 #### Dog and Pony Shows
 
 demonstrating software to customers or clients.
@@ -1428,9 +1432,13 @@ a software development approach where the structure and language of the code mat
 
 In other words, the names and structure of the code match the language of the purpose of the application. e.g., for a driving simulator, a class could be `DriveAtNight` etc.
 
-#### Document Object Model (DOM)
+### Domain Name Structure, Generic Top-Level Domain (gTLD), Country Code Top-Level Domain (ccTLD), Second-Level Domain (SLD), Third-Level Domain, Subdomain
 
-the DOM is the data representation of a web document and also provides an interface to interact with the document.
+domain names must have either a generic TLD (gTLD) or a country code TLD (ccTLD) preceded by a second-level domain (SLD). Any further names are referred to by their level (third, fourth, fifth, etc.) and may also be referred to as subdomains. The best way to think of a subdomain is any part of the domain that is not registered when purchasing a domain name.
+
+`www.youtube.com` has a gTLD of `com`, an SLD of `youtube`, and a third-level domain or subdomain that is `www`. `www.telegraph.co.uk` has ccTLD of `uk`, an SLD of `co`, a third-domain of `telegraph`, and a fourth-level domain that is `www`.
+
+There is some ambiguity in the terminology, with some sources referring to `co.uk` as a TLD.
 
 #### Domain Name System (DNS)
 
@@ -1447,6 +1455,10 @@ Domain logic is specific to the _domain_ of the application.
 an object used as a container for domain data and behavior.
 
 Domain objects make up the domain model.
+
+#### Domain Sharding
+
+browser must lookup all DNS for hosts on a page - but will cache after first lookup. reduce number of hosts to increase speed. so hosting images on another server is slower
 
 #### Domain Specific Language (DSL)
 
@@ -2263,6 +2275,10 @@ an extension of the term hypertext, a non-linear medium of information , which i
 
 The web is hypermedia.
 
+#### Hyperthreading (HT), Hyper-Threading
+
+a proprietary type of multi-threading owned by Intel that allows a single CPU core to execute multiple threads simultaneously.
+
 #### Hypervisor, Virtual Machine Monitor (VMM), Virtualizer
 
 software, firmware, or hardware that creates and operates virtual machines.
@@ -2603,6 +2619,10 @@ alternative spelling of nerd.
 
 Originates from slang referring to college students who pursued interests that are the opposite of getting "drunk", which spelled backwards is knurd.
 
+#### Kubernetes, K8S, Kube
+
+open-source software that helps manage container deployments.
+
 **[⬆ back to index](#index)**
 
 ## L
@@ -2639,6 +2659,14 @@ a function that is not bound to a pointer.
 #### Language Lawyer
 
 a software engineer familiar with many drawbacks and features of a particular programming language.
+
+#### Laravel
+
+an open source MVC framework for PHP.
+
+#### Large Language Model (LLM)
+
+a language model that is trained on a large corpus of text and works by taking an input text and repeatedly predicting the next token or word.
 
 #### Last In First Out (LIFO)
 
@@ -3587,6 +3615,20 @@ Languages can be multi-paradigm. Some common examples are:
   - Logic.
   - Mathematical.
 
+#### Prompts, AI Prompts, Mega-Prompts
+
+natural language that describes a task or question directed at an AI. The AI is typically a generative text AI.
+
+Mega prompts are prompts that are longer than 2048 tokens.
+
+For example, "Write a poem about a dog."
+
+#### Prompt Engineering
+
+the process of designing prompts that can be interpreted and understood effectively by a generative AI model.
+
+See [Prompts](#prompts-ai-prompts-mega-prompts).
+
 #### Proper Tail Calls (PTC)
 
 a tail call in JavaScript that satisfies the following requirements:
@@ -3620,15 +3662,19 @@ Proxy servers keep everything behind it hidden from the client.
 
 writing a natural language description of formal programming language code.
 
-#### Pseudocode Programming Process (PPP)
-
-practice that advocates large amounts of pseudocode before writing a function.
-
 #### Pseudo Threading
 
 dividing up large computations into small chunks that are then processed individually, which frees up the computer to run other tasks between chunks.
 
 Pseudo threading is a way to allow the UI to refresh during a large computation without proper threading.
+
+#### Pseudocode Programming Process (PPP)
+
+practice that advocates large amounts of pseudocode before writing a function.
+
+#### Pseudorandom Number Generator (PRNG)
+
+a deterministic algorithm that produces a sequence of numbers that approximates the properties of random numbers.
 
 #### Psychological Distance
 
@@ -4014,6 +4060,16 @@ a protocol for encrypting internet data streams.
 SSL has been deprecated in favor of TLS.
 
 See [TLS](#transport-layer-security-tls).
+
+#### Semantic Versioning (semver)
+
+a popular software versioning system used in most open-source projects.
+
+Broadly, the versioning system is `major.minor.patch`. `Major` changes are for incompatible API changes. `Minor` changes add functionality in a backwards-compatible manner. `Patch` changes are for backwards-compatible bug fixes.
+
+Versions can also inlcude an optional pre-release label following a `-` after the patch number and a build number following a `+` after the pre-release label. For example, `1.1.1-unstable+1` indicates that this is a pre-release buld labeled `unstable` with a build number of `1`.
+
+The Node.js implementation of semver also introduces shorthand ranges `~` and `^`. The `~` character defines a range of acceptable versions for patches. `~1.2.3` can be interpreted as `>=1.2.3 & <1.3.0`. The `^` character defines a range of acceptable versions for patches and minor versions. So `^1.2.3` can be interpreted as `>=1.2.3 & <2.0.0`.
 
 #### Sentinel Value, Flag Value
 
@@ -4761,6 +4817,12 @@ an operator or function that can take a variable number of arguments.
 #### Variadic Function
 
 a function that takes a variable number of arguments.
+
+#### Vector Database
+
+a type of database that stores data as vector embeddings (vectors), which is multi-dimensional data where each dimension represents some attribute of a data object.
+
+Vector databases are good at searching for vectors by similarity and are heavily used in machine learning applications.
 
 #### Vertical Scaling
 
