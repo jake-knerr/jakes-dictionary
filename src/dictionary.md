@@ -1448,13 +1448,15 @@ a software development approach where the structure and language of the code mat
 
 In other words, the names and structure of the code match the language of the purpose of the application. e.g., for a driving simulator, a class could be `DriveAtNight` etc.
 
-#### Domain Name Structure, Generic Top-Level Domain (gTLD), Country Code Top-Level Domain (ccTLD), Effective TLDs (eTLDs), Second-Level Domain (SLD), Third-Level Domain, Subdomain
+#### Domain Name Structure, Generic Top-Level Domain (gTLD), Country Code Top-Level Domain (ccTLD), Effective TLDs (eTLDs), Second-Level Domain (SLD), Third-Level Domain, Subdomain, eTLD+1
 
 a domain name is a human-readable name that is used to identify a website. Domain names are organized in a hierarchy, with the right-most label representing the top-level domain (TLD). The TLD is followed by the second-level domain (SLD) and then any further domain names. For example, `www.example.com` has a gTLD of `com`, an SLD of `example`, and a third-level domain of `www`. `www.example.co.uk` has a ccTLD of `uk`, an SLD of `co`, a third-level domain of `example`, and a fourth-level domain of `www`.
 
 Effective TLDs are used to identify the actual top-level domain in a given domain name, taking into account country code top-level domains (ccTLDs) and generic top-level domains (gTLDs). For example, `www.example.co.uk` has an eTLD of `co.uk` and `youtube.com` has a eTLD of `com`. eTLDs are useful to get the actual "site" address.
 
-The actual "site" name is the label that follows the eTLD. Any further labels are subdomains.
+The actual "site" name is the label that follows the eTLD. Often, the eTLD plus the next label is known as the eTLD+1. The `eTLD+1` is the registerable domain name. Any further labels are subdomains.
+
+eTLD+1 examples: `nytimes.com`, `telegraph.co.uk`. These are what are registered by the owner of the domain.
 
 See [Same-Site](#same-site-same-site-cross-site-cross-site) and [Same-Origin](#same-origin-same-origin-cross-origin-cross-origin).
 
