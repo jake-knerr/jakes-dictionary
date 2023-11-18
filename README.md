@@ -348,6 +348,10 @@ See [Message Queues](#message-queues-mailboxes).
 
 code with too many layers.
 
+#### Barrel Files
+
+a file that exports many modules in a directory.
+
 #### base64
 
 a binary to text encoding scheme.
@@ -3682,6 +3686,12 @@ the process of designing prompts that can be interpreted and understood effectiv
 
 See [Prompts](#prompts-ai-prompts-mega-prompts).
 
+#### Prop Drilling
+
+the process of passing down props (data/state) through a component hierarchy.
+
+In other words, a parent component passes props (data) to its children and then from the children to their own children and so on.
+
 #### Proper Tail Calls (PTC)
 
 a tail call in JavaScript that satisfies the following requirements:
@@ -4327,6 +4337,10 @@ a famous mnemonic acronym for design principles intended to make better software
 #### Software Accretion
 
 incremental software development.
+
+#### SWE
+
+a software engineer.
 
 #### Software Rot, Code Rot
 
