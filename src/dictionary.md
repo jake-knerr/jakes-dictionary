@@ -4748,6 +4748,10 @@ Trees have a root value and subtrees of children and are represented as a series
 
 a document processing system that has been supplanted by LaTeX.
 
+#### Bus factor, Truck Factor, Bus Problem, Bus Number, Truck Number
+
+the number of developers that have to suddenly disappear (get hit by a truck/bus) before a project stalls due to a lack of competent people.
+
 #### Tuple, Tuple Data Type
 
 an ordered sequence of elements.
