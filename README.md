@@ -673,6 +673,12 @@ branch of mathematics that is used extensively in the functional programming (FP
 
 The terms category, functor, monoid, monad, and many others that appear in FP originally come from category theory.
 
+#### Child Process
+
+a process that is created by another process.
+
+See [Thread](#thread) and [Process](#process).
+
 #### Content Delivery Network (CDN)
 
 a system of geographically distributed servers designed to quickly satisfy internet requests.
@@ -1063,6 +1069,10 @@ Requests made to different subdomains of the same domain are considered cross-or
 Note, `slack.com` makes all API requests to `api.slack.com` using `content-type: multipart/form-data` to keep the CORS requests simple. Responses can be of any content type.
 
 See [Preflight Request](#cross-origin-resource-sharing-cors-preflight-request), [Same Site](#same-site-same-site-cross-site-cross-site), and [Same Origin](#same-origin-same-origin-cross-origin-cross-origin).
+
+#### Cryptographically Secure Pseudo-Random Number Generator (CSPRNG)
+
+a pseudo-random number generator that is suitable for use in cryptography.
 
 #### CSS Combinators
 
@@ -1470,6 +1480,12 @@ the DOM is the data representation of a web document and also provides an interf
 #### Dog and Pony Shows
 
 demonstrating software to customers or clients.
+
+#### Dogfooding, Eating Your Own Dog Food
+
+when a company uses its products internally.
+
+The origin is from an 1970s ad for Alpo dog food where an executive said he fed Alpo to his dogs.
 
 #### Domain-Driven Design, Domain Driven Design (DDD)
 
@@ -2925,6 +2941,12 @@ a sequence of database transactions where the completion of a transaction trigge
 type of currying where more than one argument may be passed per function call.
 
 Loose currying is loose because strict currying only allows one argument per call.
+
+#### Long-Term Support (LTS)
+
+software that is supported for an extended period.
+
+Typically this type of support is offered over standard support.
 
 **[⬆ back to index](#index)**
 
@@ -4749,6 +4771,12 @@ const transducer => reducer => {
 }
 ```
 
+#### Transferable objects
+
+objects that can be transferred from one context to another, but they are available to only a single context at any time.
+
+After transferring, the original object is no longer usable. Data transferred between threads commonly uses transferable objects.
+
 #### Transmission Control Protocol (TCP)
 
 a protocol for data transmission between connected clients and servers.
@@ -4772,6 +4800,10 @@ Trees have a root value and subtrees of children and are represented as a series
 #### Troff
 
 a document processing system that has been supplanted by LaTeX.
+
+#### Bus factor, Truck Factor, Bus Problem, Bus Number, Truck Number
+
+the number of developers that have to suddenly disappear (get hit by a truck/bus) before a project stalls due to a lack of competent people.
 
 #### Tuple, Tuple Data Type
 
@@ -5043,6 +5075,18 @@ an editor where users edit structured data rather than the visual presentation.
 **[⬆ back to index](#index)**
 
 ## Y
+
+#### YAML (YAML Ain't Markup Language)
+
+a human-readable data serialization language.
+
+It is similar to XML, but it uses a simpler syntax that is easier to read by humans.
+
+```yaml
+data: 12345
+names:
+  name: John Doe
+```
 
 #### You Aren't Gonna Need It (YAGNI)
 
