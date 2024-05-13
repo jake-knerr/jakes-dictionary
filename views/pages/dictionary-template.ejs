@@ -3,12 +3,15 @@
 
 <head>
   <title>Dictionary</title>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#fff" />
+  
   <link rel="preload" href="./assets/fonts/Inter.var.woff2" as="font" type="font/woff2" crossorigin="" />
   <link rel="stylesheet" href="./css/vendor/highlightjs/stackoverflow-light.css" />
+  
   <style>
     @font-face {
       font-family: Inter var;
@@ -60,18 +63,21 @@
       border-top: 1px solid #000;
     }
 
-    pre code {
-      display: block;
-      overflow-x: auto;
+    pre {
+      code {
+        display: block;
+        overflow-x: auto;
+      }
     }
 
-    a:link,
-    a:visited {
-      color: blue;
-    }
+    a {
+      &:link, &:visited {
+        color: blue;
+      }
 
-    a:active {
-      color: red;
+      &:active {
+        color: red;
+      }
     }
 
     .header {
@@ -80,24 +86,24 @@
       border-bottom: 1px solid #000;
       position: sticky;
       top: 0;
-    }
 
-    .header>div {
-      margin: 0 auto;
-      max-width: 1024px;
-      padding: 0 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 100%;
-    }
+      > div {
+        margin: 0 auto;
+        max-width: 1024px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+      }
 
-    .header input {
-      border: 1px solid #000;
-      font-size: 1rem;
-      height: 32px;
-      padding: 4px 8px;
-      width: 250px;
+      input {
+        border: 1px solid #000;
+        font-size: 1rem;
+        height: 32px;
+        padding: 4px 8px;
+        width: 250px;
+      }
     }
 
     .content {
@@ -106,9 +112,11 @@
       padding: 0 16px;
     }
 
-    .primary>p:first-of-type {
-      display: flex;
-      justify-content: space-between;
+    .primary  {
+      > p:first-of-type {
+        display: flex;
+        justify-content: space-between;
+      }
     }
 
     .scroll-top-btn {
@@ -126,11 +134,13 @@
       transform: translateY(-40px);
       transition: transform 300ms, opacity 300ms;
       cursor: pointer;
-    }
 
-    .scroll-top-btn--show {
-      transform: translateY(0px);
-      opacity: 1;
+      && {
+        &.show--scroll-top-btn {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
     }
 
     :target {
@@ -166,6 +176,7 @@
       }
     }
   </style>
+
   <script type="module">
     const main = document.querySelector(".primary");
     const nodes = main.querySelectorAll(":scope > *");
@@ -226,7 +237,7 @@
       (event) => (
         topBtn.classList[
           document.scrollingElement.scrollTop > 500 ? "add" : "remove"
-        ]("scroll-top-btn--show"), {
+        ]("show--scroll-top-btn"), {
           passive: true,
           capture: true,
         }

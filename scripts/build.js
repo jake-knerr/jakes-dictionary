@@ -23,7 +23,7 @@ fs.writeFileSync(
 );
 
 const html = getCompiledTemplate(
-  path.join(__dirname, "../site/pages/dictionary-template.ejs")
+  path.join(__dirname, "../views/pages/dictionary-template.ejs")
 )({
   data: marked.parse(
     fs.readFileSync(path.join(__dirname, "../src/dictionary.md"), {
