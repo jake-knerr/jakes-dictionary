@@ -54,8 +54,13 @@
     }
 
     h2 {
+      scroll-margin-top: 120px;
       border-bottom: 1px solid #000;
       padding-bottom: 16px;
+    }
+
+    h4 {
+      scroll-margin-top: 120px;
     }
 
     hr {
@@ -71,6 +76,8 @@
     }
 
     a {
+      scroll-margin-top: 120px;
+
       &:link, &:visited {
         color: blue;
       }
@@ -110,6 +117,12 @@
       margin: 0 auto;
       max-width: 1024px;
       padding: 0 16px;
+
+      @media (min-width: 768px) {
+        .content {
+          padding: 0 32px;
+        }
+      }
     }
 
     .primary  {
@@ -140,12 +153,12 @@
           transform: translateY(0px);
           opacity: 1;
         }
-      }
-    }
 
-    :target {
-      animation-duration: 1000ms;
-      animation-name: fade;
+        &:tar get {
+          animation-duration: 1000ms;
+          animation-name: fade;
+        }
+      }
     }
 
     @keyframes fade {
@@ -158,22 +171,10 @@
       }
     }
 
-    h2,
-    h4,
-    a {
-      scroll-margin-top: 120px;
-    }
-
     .highlight {
       background: rgba(255, 0, 0, 0.25);
       border-radius: 2px;
       padding: 2px;
-    }
-
-    @media (min-width: 768px) {
-      .content {
-        padding: 0 32px;
-      }
     }
   </style>
 
