@@ -338,6 +338,12 @@ similar to a binary search tree, but nodes can have more than two children.
 
 Databases and file systems typically use B-trees. The meaning of _B_ is unclear.
 
+#### Back of the Envelope
+
+making a quick, rough estimate.
+
+Originates from the idea of making a quick calculation on the back of an envelope due to not having ideal circumstances and time to do so.
+
 #### Backpressure, Backpressure routing
 
 a technique to help direct traffic in a message queue to limit the queue size and improve performance.
@@ -604,6 +610,12 @@ It was developed at Bell Labs starting in 1979.
 a compiled language developed by Microsoft that generally follows C/C++ syntax and is commonly known as a Java alternative.
 
 It is less verbose than Java.
+
+#### Cache Stampede, Dog-Piling, Dog Piling
+
+the result of multiple server instances rebooting and each hitting the central database simultaneously to rebuilt their cache.
+
+This can cause a severe slowdown in performance.
 
 #### Callback
 
@@ -1718,6 +1730,10 @@ The event loop continuously checks if the call stack is empty, and if the call s
 
 Event Table -> Message Queue -> Event Loop -> Call Stack
 
+### Event Loop Utilization (ELU)
+
+a metric that measures how much time a code runtime spends actively processing.
+
 #### Event Sourcing
 
 a pattern that stores state as a series of atomic events.
@@ -2225,6 +2241,10 @@ Also known as a rule of thumb, an educated guess, etc.
 a bug predicted to exist based on vague reports.
 
 Such bugs are difficult to reproduce, and their existence is debatable.
+
+#### High-cardinality Columns
+
+a column in a database that has many unique values. Common examples are user IDs.
 
 #### High Quality Henry
 
@@ -4044,6 +4064,10 @@ fn(1, 2, 3, 4, 5);
 // logs [3, 4, 5]
 ```
 
+#### Revenue Operations (RevOps)
+
+an organizational framework to combine revenue related activies together.
+
 #### Reverse DNS Lookup, Reverse DNS Resolution (rDNS)
 
 querying the Domain Name System (DNS) to determine the domain name associated with an IP address.
@@ -4329,6 +4353,12 @@ Sloppy mode is an official designation.
 a compiled, object-oriented, dynamically typed, reflective programming language.
 
 Smalltalk programs are usually compiled to bytecode. Smalltalk first appeared in 1972 and was designed at Xerox PARC.
+
+#### Smoke Testing, Confidence Testing, Sanity Testing, Build Verification Test (BVT), Build Acceptance Test
+
+preliminary software testing to uncover simple failures that can cause severe issues.
+
+Smoke tests typically test the most prominent parts of an application.
 
 #### Smug Report
 

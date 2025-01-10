@@ -452,6 +452,9 @@
 <h4 id="b-tree">B-Tree</h4>
 <p>similar to a binary search tree, but nodes can have more than two children.</p>
 <p>Databases and file systems typically use B-trees. The meaning of <em>B</em> is unclear.</p>
+<h4 id="back-of-the-envelope">Back of the Envelope</h4>
+<p>making a quick, rough estimate.</p>
+<p>Originates from the idea of making a quick calculation on the back of an envelope due to not having ideal circumstances and time to do so.</p>
 <h4 id="backpressure-backpressure-routing">Backpressure, Backpressure routing</h4>
 <p>a technique to help direct traffic in a message queue to limit the queue size and improve performance.</p>
 <p>See <a href="#message-queues-mailboxes">Message Queues</a>.</p>
@@ -589,6 +592,9 @@
 <h4 id="c-c-sharp">C#, C Sharp</h4>
 <p>a compiled language developed by Microsoft that generally follows C/C++ syntax and is commonly known as a Java alternative.</p>
 <p>It is less verbose than Java.</p>
+<h4 id="cache-stampede-dog-piling-dog-piling">Cache Stampede, Dog-Piling, Dog Piling</h4>
+<p>the result of multiple server instances rebooting and each hitting the central database simultaneously to rebuilt their cache.</p>
+<p>This can cause a severe slowdown in performance.</p>
 <h4 id="callback">Callback</h4>
 <p>a reference to a function passed as an argument to other functions.</p>
 <pre><code class="hljs language-javascript">add<span class="hljs-constructor">EventListener(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-params">callback</span>)</span>;
@@ -1205,6 +1211,8 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
 <p>an abstraction that puts functions from the message queue onto the call stack.</p>
 <p>The event loop continuously checks if the call stack is empty, and if the call stack is empty, the event loop passes in queued functions from the message queue for execution.</p>
 <p>Event Table -&gt; Message Queue -&gt; Event Loop -&gt; Call Stack</p>
+<h3 id="event-loop-utilization-elu">Event Loop Utilization (ELU)</h3>
+<p>a metric that measures how much time a code runtime spends actively processing.</p>
 <h4 id="event-sourcing">Event Sourcing</h4>
 <p>a pattern that stores state as a series of atomic events.</p>
 <p>Recreating state is accomplished by replaying the events in sequence.</p>
@@ -1478,6 +1486,8 @@ let car = <span class="hljs-keyword">new</span> <span class="hljs-type">Car</spa
 <h4 id="higgs-bugson">Higgs-Bugson</h4>
 <p>a bug predicted to exist based on vague reports.</p>
 <p>Such bugs are difficult to reproduce, and their existence is debatable.</p>
+<h4 id="high-cardinality-columns">High-cardinality Columns</h4>
+<p>a column in a database that has many unique values. Common examples are user IDs.</p>
 <h4 id="high-quality-henry">High Quality Henry</h4>
 <p>a highly competent programmer.</p>
 <h4 id="higher-order-function-higher-order-function">Higher Order Function, Higher-Order Function</h4>
@@ -2508,6 +2518,8 @@ fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
 
 <span class="hljs-comment">// logs [3, 4, 5]</span>
 </code></pre>
+<h4 id="revenue-operations-revops">Revenue Operations (RevOps)</h4>
+<p>an organizational framework to combine revenue related activies together.</p>
 <h4 id="reverse-dns-lookup-reverse-dns-resolution-rdns">Reverse DNS Lookup, Reverse DNS Resolution (rDNS)</h4>
 <p>querying the Domain Name System (DNS) to determine the domain name associated with an IP address.</p>
 <p>Reverse DNS is the reverse of &quot;forward&quot; DNS, which determines the IP addresses mapped to a domain name.</p>
@@ -2651,6 +2663,9 @@ fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
 <h4 id="smalltalk">Smalltalk</h4>
 <p>a compiled, object-oriented, dynamically typed, reflective programming language.</p>
 <p>Smalltalk programs are usually compiled to bytecode. Smalltalk first appeared in 1972 and was designed at Xerox PARC.</p>
+<h4 id="smoke-testing-confidence-testing-sanity-testing-build-verification-test-bvt-build-acceptance-test">Smoke Testing, Confidence Testing, Sanity Testing, Build Verification Test (BVT), Build Acceptance Test</h4>
+<p>preliminary software testing to uncover simple failures that can cause severe issues.</p>
+<p>Smoke tests typically test the most prominent parts of an application.</p>
 <h4 id="smug-report">Smug Report</h4>
 <p>a bug submitted by a person with an exaggerated sense of self-worth.</p>
 <h4 id="smurf-naming-convention">Smurf Naming Convention</h4>
