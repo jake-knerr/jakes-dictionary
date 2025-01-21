@@ -1026,6 +1026,12 @@ In other words, coupling measures how closely connected two modules are.
 
 Typically, coupling is inversely proportional to _cohesion_.
 
+#### Covering Indexes
+
+an index in a database that contains all the columns needed to return the requested data.
+
+Therefore, the database only needs to access the index alone, which is typically faster
+
 #### Cowboy Coding
 
 a derogatory term for development without a defined or structured team.
@@ -4063,6 +4069,10 @@ fn(1, 2, 3, 4, 5);
 
 // logs [3, 4, 5]
 ```
+
+#### Retrieval-augmented Generation (RAG)
+
+the process of giving a generative AI access to internal data.
 
 #### Revenue Operations (RevOps)
 
