@@ -3121,7 +3121,9 @@ An example of mocking is putting a stub in for a data model.
 
 #### Model Context Protocol (MCP)
 
-an open standard, open-source framework introduced by Anthropic in 2024 to standardize the way artificial intelligence systems integrate and share data with external systems. MCP provides a universal interface for reading files, executing functions, and handling contextual prompts.
+an open standard, open-source framework introduced by Anthropic in 2024 to standardize the way artificial intelligence systems integrate and share data with external systems.
+
+MCP provides a universal interface for reading files, executing functions, and handling contextual prompts.
 
 #### Model – View – Controller (MVC)
 
