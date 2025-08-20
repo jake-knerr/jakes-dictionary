@@ -3144,6 +3144,10 @@ Often, mocking is creating objects that simulate the behavior of dependencies th
 
 An example of mocking is putting a stub in for a data model.
 
+#### Model Context Protocol (MCP)
+
+an open standard, open-source framework introduced by Anthropic in 2024 to standardize the way artificial intelligence systems integrate and share data with external systems. MCP provides a universal interface for reading files, executing functions, and handling contextual prompts.
+
 #### Model – View – Controller (MVC)
 
 a design pattern for building applications that organizes components into the model (data), the user interface (view), and a controller that handles user interaction.
@@ -4305,6 +4309,12 @@ a distinct database server instance that holds a horizontal partition of data in
 Shards are typically used to spread the workload of a database system.
 
 See [Horizontal Partitioning](#horizontal-partitioning).
+
+#### Shebang
+
+is the characters #! at the beginning of a text file.
+
+A shebang causes Unix-like operating systems to treat such files as executables. The path after the shebang on the same line is the executable to run and the shebang's file contents are passed to the executable. For example, #! /bin/sh would cause the Bourne shell to run.
 
 #### Shim
 
